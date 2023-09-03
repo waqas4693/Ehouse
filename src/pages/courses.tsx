@@ -1,5 +1,6 @@
 import React from 'react'
 import { MainLayout } from '@/components/layout'
+import { NextPageWithLayout } from '@/interfaces/layout'
 import dynamic from 'next/dynamic'
 
 const DynamicCoursesEnglishLanguage = dynamic(() => import('@/components/courses-page/courses-english-language'));
@@ -7,7 +8,7 @@ const DynamicCoursesBusinessManagement = dynamic(() => import('@/components/cour
 const DynamicLifeSkillsAndCitizenship = dynamic(() => import('@/components/courses-page/courses-life-skills-citizenship-test'));
 const DynamicCoursesOnline = dynamic(() => import('@/components/courses-page/courses-online'));
 
-const Courses = () => {
+const Courses: NextPageWithLayout = () => {
   return (
     <div>
       <DynamicCoursesEnglishLanguage />
@@ -18,6 +19,6 @@ const Courses = () => {
   )
 }
 
-Courses.getLayout = (page: React.ReactNode): React.ReactNode => <MainLayout>{page}</MainLayout>;
+Courses.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default Courses;
+export default Courses
