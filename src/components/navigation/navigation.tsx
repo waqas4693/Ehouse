@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Link from 'next/link'; // <-- Import this
-import { navigations } from './navigation.data'
+import React, { FC } from 'react';
+import Box from '@mui/material/Box';
+import Link from 'next/link';
+import { navigations } from './navigation.data';
 
 const Navigation: FC = () => {
   return (
@@ -28,14 +28,23 @@ const Navigation: FC = () => {
 
             '&:hover': {
               color: 'primary.main',
-              '&>div': {
+              '& > div': {
                 display: 'block',
               },
             },
           }}
         >
-          <Link href={destination}>
-            <a>
+          <Link href={destination} passHref>
+            <Box
+              component="a"
+              sx={{
+                textDecoration: 'none', // remove underline
+                color: 'inherit', // inherit the text color
+                '&:visited': { // remove the blue color on visited links
+                  color: 'inherit',
+                },
+              }}
+            >
               <Box
                 sx={{
                   position: 'absolute',
@@ -48,12 +57,12 @@ const Navigation: FC = () => {
                 <img src="/images/headline-curve.svg" alt="Headline curve" />
               </Box>
               {label}
-            </a>
+            </Box>
           </Link>
         </Box>
       ))}
     </Box>
   )
-}
+};
 
 export default Navigation;

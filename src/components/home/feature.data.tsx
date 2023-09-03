@@ -13,22 +13,17 @@ interface Data {
 export const data: Data[] = [
   {
     title: 'Easy Accessable',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Learn how to progress your career with international exposure',
     icon: <ArtTrackIcon />,
   },
   {
     title: 'More Affordable Cost',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Learn how to manage and run a business like a true business professional ?',
     icon: <AttachMoneyIcon />,
   },
   {
     title: 'Flexible Study Time',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Learn how to adopt the skills and techniques you need to become an entrepreneur in your field of choice.',
     icon: <LocalLibraryIcon />,
-  },
-  {
-    title: 'Consultation With Mentor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />,
-  },
+  }
 ]
