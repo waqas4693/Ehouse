@@ -18,6 +18,6 @@ const Courses = () => {
   )
 }
 
-Courses.getLayout = (page: React.ReactNode) => <MainLayout>{page}</MainLayout>
+Courses.getLayout = (page: React.ReactNode): React.ReactNode => <MainLayout>{page}</MainLayout>;
 
-export default Courses
+export default Courses;
