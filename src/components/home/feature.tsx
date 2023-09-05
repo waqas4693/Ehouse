@@ -181,21 +181,28 @@ const HomeFeature: FC = () => {
               OR AN EMPLOYER?
             </Typography>
 
-            <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Looking to boost your career with a training programme in the UK ?
             </Typography>
-
-            <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Planning to become a manager through accredited business training ?
             </Typography>
-
             <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
               Struggling find the path entrepreneurship ?
             </Typography>
 
-            <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+              Then we’ve got you covered.
+            </Typography>
+
+            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Education House Leeds guarantee to open up new possibilities for you.
-              We are providing experiential workshops where participants can gain practical knowledge of how to run and manage a business. Our accredited training programmes give you the opportunity to learn and experience the following:
+            </Typography>
+
+            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+              We are providing experiential workshops where participants can gain practical knowledge of how
+              to run and manage a business. Our accredited training programmes give you the opportunity to
+              learn and experience the following:
             </Typography>
 
             <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>

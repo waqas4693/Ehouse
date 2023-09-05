@@ -14,7 +14,7 @@ export const data: Data[] = [
   {
     title: 'Easy Accessable',
     description: 'Learn how to progress your career with international exposure',
-    icon: <ArtTrackIcon />,
+    icon: < ArtTrackIcon />,
   },
   {
     title: 'More Affordable Cost',
@@ -25,5 +25,5 @@ export const data: Data[] = [
     title: 'Flexible Study Time',
     description: 'Learn how to adopt the skills and techniques you need to become an entrepreneur in your field of choice.',
     icon: <LocalLibraryIcon />,
-  }
+  },
 ]

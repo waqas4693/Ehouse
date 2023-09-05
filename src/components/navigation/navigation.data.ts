@@ -7,26 +7,14 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Courses',
-    path: '/courses',
+    path: 'popular-course',
   },
   {
-    label: 'International Students',
+    label: 'Contact',
     path: 'testimonial',
-  },
-  {
-    label: 'Policies',
-    path: 'mentors',
   },
   {
     label: 'Gallery',
     path: 'mentors',
-  },
-  {
-    label: 'Blog',
-    path: 'mentors',
-  },
-  {
-    label: 'Contact',
-    path: 'mentors',
-  },
+  }
 ]
