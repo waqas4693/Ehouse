@@ -3,9 +3,9 @@ import type { Testimonial } from '@/interfaces/testimonial'
 export const data: Array<Testimonial> = [
   {
     id: 1,
-    title: 'Detailed learning materials',
+    title: 'Select a course & explore it!',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      'Check start date, end date, learning outcomes, certification, fees and more',
     user: {
       id: 1,
       name: 'Luis Sera',

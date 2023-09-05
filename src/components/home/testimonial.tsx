@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton'
 import { styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
+import ArtTrackIcon from '@mui/icons-material/ArtTrack'
 
 import { TestimonialItem } from '@/components/testimonial'
 import { data } from './testimonial.data'
@@ -78,7 +79,7 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Testimonial What our{' '}
+              IT’S EASY,{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -89,12 +90,12 @@ const HomeTestimonial: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Students{' '}
+                IT’S BRILLIANT,{' '}
                 <Box
                   sx={{
                     position: 'absolute',
                     top: { xs: 20, md: 28 },
-                    left: 2,
+                    left: 50,
                     '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
                   }}
                 >
@@ -102,15 +103,103 @@ const HomeTestimonial: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              Say
+              IT WORKS!
             </Typography>
 
             <StyledSlickContainer>
-              <Slider ref={sliderRef} {...sliderConfig}>
+              {/* <Slider ref={sliderRef} {...sliderConfig}>
                 {data.map((item, index) => (
                   <TestimonialItem key={String(index)} item={item} />
                 ))}
-              </Slider>
+              </Slider> */}
+
+              {/* Point No 1 */}
+              <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+                <Box
+                  sx={{
+                    mr: 1,
+                    backgroundColor: 'primary.main',
+                    borderRadius: '50%',
+                    height: 36,
+                    width: 36,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'primary.contrastText',
+                    '& svg': {
+                      fontSize: 20,
+                    },
+                  }}
+                >
+                  < ArtTrackIcon />
+                </Box>
+                <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+                  <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+                    Select a course & explore it!
+                  </Typography>
+                  <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
+                    Check start date, end date, learning outcomes, certification, fees and more
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/* Point No 2 */}
+              <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+                <Box
+                  sx={{
+                    mr: 1,
+                    backgroundColor: 'primary.main',
+                    borderRadius: '50%',
+                    height: 36,
+                    width: 36,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'primary.contrastText',
+                    '& svg': {
+                      fontSize: 20,
+                    },
+                  }}
+                >
+                  < ArtTrackIcon />
+                </Box>
+                <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+                  <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+                    Fill in RA Form & wait for approval!
+                  </Typography>
+                  <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
+                    Upload supporting documents after the approval of registration assessment form</Typography>
+                </Box>
+              </Box>
+
+              {/* Point No 3 */}
+              <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+                <Box
+                  sx={{
+                    mr: 1,
+                    backgroundColor: 'primary.main',
+                    borderRadius: '50%',
+                    height: 36,
+                    width: 36,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'primary.contrastText',
+                    '& svg': {
+                      fontSize: 20,
+                    },
+                  }}
+                >
+                  < ArtTrackIcon />
+                </Box>
+                <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+                  <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+                    Get enrolled and join eHouse for a better future
+                  </Typography>
+                  <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
+                    Get a visa support letter, apply for a UK Visitor Visa and join a course or training programme</Typography>
+                </Box>
+              </Box>
             </StyledSlickContainer>
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>

@@ -102,8 +102,8 @@ const HomePopularCourse: FC = () => {
               }}
             >
               {/* fontSize: { xs: 30, md: 48 } */}
-              <Typography variant="h2" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 }}}>
-                Life Skills And UK Citizenship Test Prepration
+              <Typography variant="h2" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
+                English Language Courses
               </Typography>
             </Box>
           </Grid>
