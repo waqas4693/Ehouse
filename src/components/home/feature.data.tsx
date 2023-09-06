@@ -12,18 +12,18 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
-    description: 'Learn how to progress your career with international exposure',
+    title: 'General English Course',
+    description: 'Our General English Course enhances your basic language skills, the IELTS Preparation',
     icon: < ArtTrackIcon />,
   },
   {
-    title: 'More Affordable Cost',
-    description: 'Learn how to manage and run a business like a true business professional ?',
+    title: 'IELTS Preparation Course',
+    description: 'Course prepares you for all modules with real exam practice, and our Business English',
     icon: <AttachMoneyIcon />,
   },
   {
-    title: 'Flexible Study Time',
-    description: 'Learn how to adopt the skills and techniques you need to become an entrepreneur in your field of choice.',
+    title: 'Business English Course',
+    description: 'Course hones your professional communication and business vocabulary.',
     icon: <LocalLibraryIcon />,
   },
 ]

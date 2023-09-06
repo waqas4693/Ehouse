@@ -67,7 +67,7 @@ const HomeHero: FC = () => {
                   component="h2"
                   sx={{
                     position: 'relative',
-                    fontSize: { xs: 40, md: 72 },
+                    fontSize: { xs: 30, md: 62 },
                     letterSpacing: 1.5,
                     fontWeight: 'bold',
                     lineHeight: 1.3,
@@ -83,7 +83,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    Developing{' '}
+                    Unlocking{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -97,7 +97,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  Skills{' '}
+                  Language Brilliance{' '}
                   <Typography
                     component="span"
                     sx={{
@@ -141,14 +141,14 @@ const HomeHero: FC = () => {
                     "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
                   } */}
                   {
-                    'Creative Skill Development. Paving the way for business professionals'
+                    'Master English, Transform Opportunities. Your gateway to global success'
                   }
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
-                    Get Started
+                    Register Now
                   </StyledButton>
                 </ScrollLink>
                 {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>

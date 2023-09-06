@@ -153,7 +153,7 @@ const HomeFeature: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              ARE YOU A STUDENT,{' '}
+              ARE YOU AN ASPIRING LEARNER,{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -164,7 +164,7 @@ const HomeFeature: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                EMPLOYEE <br />
+                PROFESSIONAL, <br />
                 <Box
                   sx={{
                     position: 'absolute',
@@ -178,32 +178,32 @@ const HomeFeature: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              OR AN EMPLOYER?
+              OR A GLOBAL EXPLORER?
             </Typography>
 
-            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
-              Looking to boost your career with a training programme in the UK ?
+            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+              Dreaming of mastering the English language?
             </Typography>
-            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
-              Planning to become a manager through accredited business training ?
+            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+              Aiming to score high in the IELTS exam for study or immigration?
             </Typography>
-            <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-              Struggling find the path entrepreneurship ?
+            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
+              Wishing to communicate in English fluently in business settings?
             </Typography>
 
             <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Then we’ve got you covered.
             </Typography>
 
-            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+            {/* <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Education House Leeds guarantee to open up new possibilities for you.
-            </Typography>
+            </Typography> */}
 
-            <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+            {/* <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               We are providing experiential workshops where participants can gain practical knowledge of how
               to run and manage a business. Our accredited training programmes give you the opportunity to
               learn and experience the following:
-            </Typography>
+            </Typography> */}
 
             <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
               {data.map(({ title, description, icon }, index) => (
@@ -228,9 +228,9 @@ const HomeFeature: FC = () => {
                       {icon}
                     </Box>
                     <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-                      {/* <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+                      <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
                         {title}
-                      </Typography> */}
+                      </Typography>
                       <Typography sx={{ lineHeight: 1.3, color: 'text.secondary' }} variant="subtitle1">
                         {description}
                       </Typography>
