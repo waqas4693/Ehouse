@@ -18,7 +18,7 @@ export const data: Data[] = [
   },
   {
     title: 'IELTS Preparation Course',
-    description: 'Course prepares you for all modules with real exam practice, and our Business English',
+    description: 'Course prepares you for all modules with real exam practice',
     icon: <AttachMoneyIcon />,
   },
   {

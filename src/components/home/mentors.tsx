@@ -265,26 +265,8 @@ const HomeOurMentors: FC = () => {
                     lineHeight: 1.3,
                   }}
                 >
-                  Master English with Education House Leeds
+                  Master English With Education House Leeds
                 </Typography>
-                <Typography
-                  component="span"
-                  sx={{
-                    fontSize: 'inherit',
-                    fontWeight: 'inherit',
-                    position: 'relative',
-                    '& svg': {
-                      position: 'absolute',
-                      top: -16,
-                      right: -21,
-                      width: { xs: 22, md: 30 },
-                      height: 'auto',
-                    },
-                  }}
-                >
-                  {/* ... SVG code ... */}
-                </Typography>
-                {/* Rest of your code */}
               </Typography>
             </Box>
 
@@ -294,7 +276,7 @@ const HomeOurMentors: FC = () => {
                     "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
                   } */}
                 {
-                  'Master English, Transform Opportunities. Your gateway to global success'
+                  'Empowering You with World-Class English Courses for Global Success'
                 }
               </Typography>
             </Box>

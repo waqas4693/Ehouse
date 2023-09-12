@@ -6,7 +6,6 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 interface Exp {
   label: string
@@ -97,7 +96,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  Language Brilliance{' '}
+                  <br />Language Brilliance{' '}
                   <Typography
                     component="span"
                     sx={{
@@ -137,11 +136,13 @@ const HomeHero: FC = () => {
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant="h4">
-                  {/* {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
-                  } */}
                   {
-                    'Master English, Transform Opportunities. Your gateway to global success'
+                    'Master English, Transform Opportunities'
+                  }
+                </Typography>
+                <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant="h4">
+                  {
+                    'Your gateway to global success'
                   }
                 </Typography>
               </Box>

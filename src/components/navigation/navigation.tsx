@@ -3,18 +3,47 @@ import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 
+const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items }) => (
+  <Box sx={{
+    display: 'none',
+    backgroundColor: 'background.paper',
+    borderRadius: '4px',
+    position: 'absolute',
+    top: '100%',
+    zIndex: 1,
+    minWidth: '150px',
+    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+  }}>
+    {items?.map(item => (
+      <Box
+        component={ScrollLink}
+        key={item.path}
+        to={item.path}
+        spy={true}
+        smooth={true}
+        duration={350}
+        sx={{
+          display: 'block',
+          padding: '8px 12px',
+          textDecoration: 'none',
+          color: 'inherit',
+          '&:hover': {
+            backgroundColor: 'background.default',
+          },
+        }}
+      >
+        {item.label}
+      </Box>
+    ))}
+  </Box>
+);
+
 const Navigation: FC = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
-      {navigations.map(({ path: destination, label }) => (
+      {navigations.map(({ path: destination, label, dropdownItems }) => (
         <Box
-          component={ScrollLink}
           key={destination}
-          activeClass="current"
-          to={destination}
-          spy={true}
-          smooth={true}
-          duration={350}
           sx={{
             position: 'relative',
             color: 'text.disabled',
@@ -29,35 +58,20 @@ const Navigation: FC = () => {
             ...(destination === '/' && {
               color: 'primary.main',
             }),
-
-            '& > div': { display: 'none' },
-
-            '&.current>div': { display: 'block' },
-
-            '&:hover': {
-              color: 'primary.main',
-              '&>div': {
-                display: 'block',
-              },
+            '&:hover div': {
+              display: dropdownItems ? 'block' : 'none',
             },
           }}
         >
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 12,
-              transform: 'rotate(3deg)',
-              '& img': { width: 44, height: 'auto' },
-            }}
-          >
-            {/* eslint-disable-next-line */}
-            <img src="/images/headline-curve.svg" alt="Headline curve" />
+          <Box component={ScrollLink} activeClass="current" to={destination} spy={true} smooth={true} duration={350}>
+            {label}
           </Box>
-          {label}
+          {dropdownItems && <Dropdown items={dropdownItems} />}
         </Box>
       ))}
     </Box>
-  )
+  );
 }
+
 
 export default Navigation
