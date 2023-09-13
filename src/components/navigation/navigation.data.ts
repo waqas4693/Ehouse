@@ -13,7 +13,7 @@ export const navigations: Navigation[] = [
     label: 'International Students',
     path: 'testimonial',
     dropdownItems: [
-      { path: 'subDestination1', label: 'Apply For A Course' },
+      { path: '/apply-for-a-course', label: 'Apply For A Course' },
       { path: 'subDestination2', label: 'Entry Requirements' },
       { path: 'subDestination3', label: 'Arriving In The Uk' },
       { path: 'subDestination4', label: 'Direction And Location' },

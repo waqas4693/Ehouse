@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import { Link as ScrollLink } from 'react-scroll'
+import Link from 'next/link';
 import { navigations } from './navigation.data'
 
 const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items }) => (
@@ -16,12 +16,7 @@ const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items
   }}>
     {items?.map(item => (
       <Box
-        component={ScrollLink}
         key={item.path}
-        to={item.path}
-        spy={true}
-        smooth={true}
-        duration={350}
         sx={{
           display: 'block',
           padding: '8px 12px',
@@ -32,7 +27,7 @@ const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items
           },
         }}
       >
-        {item.label}
+        <Link href={item.path} passHref>{item.label}</Link>
       </Box>
     ))}
   </Box>
@@ -63,8 +58,8 @@ const Navigation: FC = () => {
             },
           }}
         >
-          <Box component={ScrollLink} activeClass="current" to={destination} spy={true} smooth={true} duration={350}>
-            {label}
+          <Box key={destination}>
+            <Link href={destination} passHref>{label}</Link>
           </Box>
           {dropdownItems && <Dropdown items={dropdownItems} />}
         </Box>
