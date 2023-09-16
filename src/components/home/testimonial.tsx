@@ -107,11 +107,6 @@ const HomeTestimonial: FC = () => {
             </Typography>
 
             <StyledSlickContainer>
-              {/* <Slider ref={sliderRef} {...sliderConfig}>
-                {data.map((item, index) => (
-                  <TestimonialItem key={String(index)} item={item} />
-                ))}
-              </Slider> */}
 
               {/* Point No 1 */}
               <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
@@ -204,7 +199,7 @@ const HomeTestimonial: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
+              <Image src="/images/home-testimonial.svg" width={520} height={540} quality={97} alt="Testimonial img" />
             </Box>
           </Grid>
         </Grid>
