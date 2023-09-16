@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicRefundPolicy = dynamic(() => import('@/components/policies/refund-policy'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const RefundPolicy: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicRefundPolicy />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+RefundPolicy.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default RefundPolicy

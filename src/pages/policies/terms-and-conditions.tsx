@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicTermsAndConditions = dynamic(() => import('@/components/policies/terms-and-conditions'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const TermsAndConditions: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicTermsAndConditions />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+TermsAndConditions.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default TermsAndConditions

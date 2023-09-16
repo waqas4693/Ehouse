@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicEntryRequirements = dynamic(() => import('@/components/international-students/entry-requirements'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const EntryRequirements: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicEntryRequirements />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+EntryRequirements.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default EntryRequirements

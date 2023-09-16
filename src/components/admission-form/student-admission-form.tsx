@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import {
   Button,
   Container,
@@ -13,30 +13,28 @@ import {
   InputLabel
 } from '@mui/material';
 
-const AdmissionForm = () => {
+const AdmissionForm: FC = () => {
   const [values, setValues] = useState({});
 
-  const handleChange = () => {
-    // setValues({
-    //   ...values,
-    //   [e.target.name]: e.target.value
-    // });
-  };
+  // const handleChange = () => {
+  //   setValues({
+  //     ...values,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = () => {
-    // e.preventDefault();
-    // Handle form submission logic here
-  };
+  // const handleSubmit = () => {
+  //   e.preventDefault();
+  // };
 
   return (
     <Container component="main" maxWidth="md">
       <CssBaseline />
-      <Typography component="h1" variant="h5" align="center">
+      {/* <Typography component="h1" variant="h5" align="center">
         Admission Form
       </Typography>
       <form onSubmit={handleSubmit} noValidate>
         
-        {/* Student Details */}
         <Typography variant="h6" gutterBottom>
           Student Details
         </Typography>
@@ -108,7 +106,6 @@ const AdmissionForm = () => {
           </Select>
         </FormControl>
 
-        {/* Contact Details */}
         <Typography variant="h6" gutterBottom>
           Contact Details
         </Typography>
@@ -143,7 +140,6 @@ const AdmissionForm = () => {
           onChange={handleChange}
         />
 
-        {/* Emergency Contact */}
         <Typography variant="h6" gutterBottom>
           Emergency Contact (Relative or friend)
         </Typography>
@@ -196,7 +192,7 @@ const AdmissionForm = () => {
         >
           Submit
         </Button>
-      </form>
+      </form> */}
     </Container>
   );
 };

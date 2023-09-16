@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicReviewQualityAssurancePolicy = dynamic(() => import('@/components/policies/review-quality-assurance-policy'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const ReviewQualityAssurancePolicy: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicReviewQualityAssurancePolicy />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+ReviewQualityAssurancePolicy.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default ReviewQualityAssurancePolicy

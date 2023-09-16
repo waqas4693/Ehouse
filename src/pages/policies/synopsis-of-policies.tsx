@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicSynopsisOfPolicies = dynamic(() => import('@/components/policies/synopsis-of-policies'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const SynopsisOfPolicies: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicSynopsisOfPolicies />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+SynopsisOfPolicies.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default SynopsisOfPolicies

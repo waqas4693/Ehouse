@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicUkVisa = dynamic(() => import('@/components/international-students/uk-visa'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const UkVisa: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicUkVisa />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+UkVisa.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default UkVisa

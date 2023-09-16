@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicParticipantAttendancePolicy = dynamic(() => import('@/components/policies/participant-attendance-policy'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const ParticipantAttendancePolicy: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicParticipantAttendancePolicy />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+ParticipantAttendancePolicy.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default ParticipantAttendancePolicy

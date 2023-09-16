@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const DynamicAccomodation = dynamic(() => import('@/components/international-students/accomodation'));
 
-const ApplyForACourse: NextPageWithLayout = () => {
+const Accomodation: NextPageWithLayout = () => {
     return (
         <div>
             <DynamicAccomodation />
@@ -13,6 +13,6 @@ const ApplyForACourse: NextPageWithLayout = () => {
     )
 }
 
-ApplyForACourse.getLayout = (page) => <MainLayout>{page}</MainLayout>
+Accomodation.getLayout = (page) => <MainLayout>{page}</MainLayout>
 
-export default ApplyForACourse
+export default Accomodation
