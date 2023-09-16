@@ -1,8 +1,8 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
-const ArrivingInUk = () => {
+const ArrivingInUk: FC = () => {
   return (
     <Box sx={{ px: 10, py: 5 }}>
       <Box sx={{ mb: 5 }}>

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -18,7 +18,7 @@ const rows = [
     courseData('Business English Course', '11 Months', '£ 4500'),
 ]
 
-const ApplyForACourse = () => {
+const ApplyForACourse: FC = () => {
     return (
         <Box sx={{ px: 10, py: 5 }}>
             <Box sx={{ mb: 3 }}>
