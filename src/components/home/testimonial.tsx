@@ -79,8 +79,8 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              It's easy,
-              it's brilliant
+              It&apos;s easy,
+              it&apos;s brilliant,
               it works!
             </Typography>
 
