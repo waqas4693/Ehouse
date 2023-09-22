@@ -74,16 +74,21 @@ const HomeNewsLetter: FC = () => {
         sx={{ maxWidth: '100%' }}
         variant="quilted"
         gap={12}
-        cols={3}
-        rowHeight={300}
+        cols={4}
+        rowHeight={280}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=280&h=280&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=280&h=280&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
+              style={{
+                borderRadius: '10px', // Border radius of 10px
+                width: '280px', // Fixed width
+                height: '280px', // Fixed height
+              }}
             />
           </ImageListItem>
         ))}

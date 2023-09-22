@@ -79,31 +79,9 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              IT’S EASY,{' '}
-              <Typography
-                component="mark"
-                sx={{
-                  position: 'relative',
-                  color: 'primary.main',
-                  fontSize: 'inherit',
-                  fontWeight: 'inherit',
-                  backgroundColor: 'unset',
-                }}
-              >
-                IT’S BRILLIANT,{' '}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    top: { xs: 20, md: 28 },
-                    left: 50,
-                    '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
-                  }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
-                </Box>
-              </Typography>
-              IT WORKS!
+              It's easy,
+              it's brilliant
+              it works!
             </Typography>
 
             <StyledSlickContainer>
@@ -199,7 +177,7 @@ const HomeTestimonial: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.svg" width={520} height={540} quality={97} alt="Testimonial img" />
+            <Image src="/images/home-feature.png" width={650} height={678} quality={97} alt="Feature img" />
             </Box>
           </Grid>
         </Grid>

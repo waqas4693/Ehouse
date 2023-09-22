@@ -41,7 +41,7 @@ const HomeFeature: FC = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
             <Box sx={{ position: 'relative' }}>
-              <Image src="/images/home-feature.svg" width={650} height={678} quality={97} alt="Feature img" />
+              <Image src="/images/home-feature.png" width={650} height={678} quality={97} alt="Feature img" />
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
@@ -57,44 +57,18 @@ const HomeFeature: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              ARE YOU AN ASPIRING LEARNER,{' '}
-              <Typography
-                component="mark"
-                sx={{
-                  position: 'relative',
-                  color: 'primary.main',
-                  fontSize: 'inherit',
-                  fontWeight: 'inherit',
-                  backgroundColor: 'unset',
-                }}
-              >
-                PROFESSIONAL, <br />
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    top: { xs: 20, md: 28 },
-                    transform: 'rotate(3deg)',
-                    left: 2,
-                    '& img': { width: { xs: 140, md: 175 }, height: 'auto' },
-                  }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
-                </Box>
-              </Typography>
-              OR A GLOBAL EXPLORER?
+              ARE you an aspiring Learner, Professional or a Global Explorer?
             </Typography>
 
-            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ fontSize: '18px', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Dreaming of mastering the English language?
             </Typography>
-            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ fontSize: '18px', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Aiming to score high in the IELTS exam for study or immigration?
             </Typography>
-            <Typography sx={{ fontWeight: 'bold', color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
+            <Typography sx={{ fontSize: '18px', color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Wishing to communicate in English fluently in business settings?
             </Typography>
-
             <Typography sx={{ color: 'text.secondary', mb: 1, ml: { xs: 0, md: 4 } }}>
               Then we’ve got you covered.
             </Typography>

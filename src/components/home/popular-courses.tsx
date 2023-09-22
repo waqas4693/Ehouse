@@ -101,7 +101,6 @@ const HomePopularCourse: FC = () => {
                 justifyContent: { xs: 'center', md: 'flex-start' },
               }}
             >
-              {/* fontSize: { xs: 30, md: 48 } */}
               <Typography variant="h2" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
                 English Language Courses
               </Typography>

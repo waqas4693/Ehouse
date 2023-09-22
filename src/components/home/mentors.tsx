@@ -48,43 +48,31 @@ const HomeOurMentors: FC = () => {
                   component="mark"
                   sx={{
                     position: 'relative',
-                    color: 'primary.main',
+                    color: 'secondary.main',
                     fontSize: 'inherit',
                     fontWeight: 'inherit',
                     backgroundColor: 'unset',
                   }}
                 >
                   Unlock Your Future{' '}
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      top: { xs: 24, md: 34 },
-                      left: 2,
-                      transform: 'rotate(3deg)',
-                      '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-                    }}
-                  >
-                    {/* eslint-disable-next-line */}
-                    <img src="/images/headline-curve.svg" alt="Headline curve" />
-                  </Box>
                 </Typography>
                 <Typography
-                  component="div" // Changed to div
+                  component="div"
                   sx={{
-                    mt: 5,
-                    display: 'block', // Added block display
+                    
+                    display: 'block',
                     fontSize: 'inherit',
                     fontWeight: 'inherit',
                     lineHeight: 1.3,
                   }}
                 >
-                  Master English With Education House Leeds
+                  Learn English With Education House Leeds
                 </Typography>
               </Typography>
             </Box>
 
             <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
-              <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant="h4">
+              <Typography sx={{ color: 'text.secondary', lineHeight: 1.6, fontSize: '18px', fontWeight: 400 }} variant="h4">
                 {
                   'Empowering You with World-Class English Courses for Global Success'
                 }
