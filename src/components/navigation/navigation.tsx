@@ -41,7 +41,6 @@ const Navigation: FC = () => {
           key={destination}
           sx={{
             position: 'relative',
-            color: 'text.disabled',
             cursor: 'pointer',
             fontWeight: 600,
             display: 'inline-flex',
@@ -53,20 +52,31 @@ const Navigation: FC = () => {
             ...(destination === '/' && {
               color: 'primary.main',
             }),
-            '&:hover div': {
+            // Add styles for links without dropdown items
+            ...{
+              '& a': {
+                color: 'grey.500', // Default text color
+                textDecoration: 'none', // Remove underline
+                transition: 'color 0.3s', // Transition for color change
+              },
+              '&:hover a': {
+                color: 'secondary.main', // Text color on hover
+              },
+            },
+            '&:hover > div': {
               display: dropdownItems ? 'block' : 'none',
             },
           }}
         >
-          <Box key={destination}>
-            <Link href={destination} passHref>{label}</Link>
-          </Box>
+          <Link href={destination} passHref>
+            <a>{label}</a>
+          </Link>
           {dropdownItems && <Dropdown items={dropdownItems} />}
         </Box>
       ))}
     </Box>
+
   );
 }
-
 
 export default Navigation

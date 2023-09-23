@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
+import { iconButtonClasses } from '@mui/material/IconButton'
 import { Course } from '@/interfaces/course'
 import Link from 'next/link';
 import Button from '@mui/material/Button'
