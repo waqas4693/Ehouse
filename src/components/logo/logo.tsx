@@ -10,7 +10,7 @@ interface Props {
 const Logo: FC<Props> = ({ onClick }) => {
   return (
     <Box onClick={onClick}>
-      <Image src="/images/ehouse-Logo.svg" width={100} height={79} alt='Logo' />
+      <Image src="/images/ehouse-logo.svg" width={100} height={79} alt='Logo' />
     </Box>
   )
 }
