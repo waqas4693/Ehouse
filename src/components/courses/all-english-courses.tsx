@@ -63,17 +63,6 @@ const StyledDots = styled('ul')(({ theme }) => ({
   },
 }))
 
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  bgcolor: 'common.white',
-  borderRadius: '35px',
-  boxShadow: 24,
-  px: 10,
-  py: 5
-};
 
 const inputContainerStyle = {
   // display: 'flex',
@@ -95,8 +84,8 @@ const AllEnglishCourses: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = (): void => setOpen(true);
+  const handleClose = (): void => setOpen(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -105,14 +94,14 @@ const AllEnglishCourses: FC = () => {
     selectedCourse: '',
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-  
-  const handleSubmit = async (e: FormEvent) => {
+
+  const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch('http://www.ai2terminator.com/form-submission.php', {
         method: 'POST',
@@ -121,7 +110,7 @@ const AllEnglishCourses: FC = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         // Form data was successfully submitted
         console.log('Form submitted successfully.');
@@ -188,7 +177,17 @@ const AllEnglishCourses: FC = () => {
       //   },
       // }}
       >
-        <Box sx={style}>
+        <Box sx={{
+          position: 'absolute' as 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          bgcolor: 'common.white',
+          borderRadius: '35px',
+          boxShadow: 24,
+          px: 10,
+          py: 5
+        }}>
           <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
             Registration Form!
           </Typography>
@@ -263,8 +262,8 @@ const AllEnglishCourses: FC = () => {
             </Button>
           </form>
         </Box>
-      </Modal>
-    </Box>
+      </Modal >
+    </Box >
   )
 }
 
