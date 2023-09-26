@@ -9,5 +9,8 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   }
 }

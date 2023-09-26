@@ -1,200 +1,114 @@
-import React, { useState, FC } from 'react';
-import {
-  Button,
-  Container,
-  CssBaseline,
-  TextField,
-  Typography,
-  Select,
-  MenuItem,
-  FormControl,
-  FormControlLabel,
-  Checkbox,
-  InputLabel
-} from '@mui/material';
+import { ChangeEvent, FormEvent, useState, FC } from 'react';
 
 const AdmissionForm: FC = () => {
-  const [values, setValues] = useState({});
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contactNo: '',
+    selectedCourse: 'General Course', // Default value for dropdown
+  });
 
-  // const handleChange = () => {
-  //   setValues({
-  //     ...values,
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-  // const handleSubmit = () => {
-  //   e.preventDefault();
-  // };
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      // Send a POST request to the API with the form data
+      const response = await fetch('http://www.ai2terminator.com/form-submission.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully!');
+        // You can redirect the user to a thank-you page or display a success message here
+      } else {
+        console.error('Form submission failed.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   return (
-    <Container component="main" maxWidth="md">
-      <CssBaseline />
-      {/* <Typography component="h1" variant="h5" align="center">
-        Admission Form
-      </Typography>
-      <form onSubmit={handleSubmit} noValidate>
-        
-        <Typography variant="h6" gutterBottom>
-          Student Details
-        </Typography>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="firstName"
-          label="First Name"
-          name="firstName"
-          autoFocus
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="familyName"
-          label="Family Name"
-          id="familyName"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="otherNames"
-          label="Other Names"
-          id="otherNames"
-          onChange={handleChange}
-        />
-        <FormControl fullWidth variant="outlined" margin="normal">
-          <InputLabel>Gender</InputLabel>
-          <Select
-            label="Gender"
-            name="gender"
+    <div>
+      <h1>Registration Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
             onChange={handleChange}
-          >
-            <MenuItem value="male">Male</MenuItem>
-            <MenuItem value="female">Female</MenuItem>
-          </Select>
-        </FormControl>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="dateOfBirth"
-          label="Date of Birth"
-          id="dateOfBirth"
-          type="date"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          onChange={handleChange}
-        />
-        <FormControl fullWidth variant="outlined" margin="normal">
-          <InputLabel>Martial Status</InputLabel>
-          <Select
-            label="Martial Status"
-            name="martialStatus"
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
             onChange={handleChange}
-          >
-            <MenuItem value="single">Single</MenuItem>
-            <MenuItem value="married">Married</MenuItem>
-          </Select>
-        </FormControl>
-
-        <Typography variant="h6" gutterBottom>
-          Contact Details
-        </Typography>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="telephoneNumber"
-          label="Telephone Number"
-          name="telephoneNumber"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="mobileNumber"
-          label="Mobile Number"
-          name="mobileNumber"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="email"
-          label="Email Address"
-          name="email"
-          onChange={handleChange}
-        />
-
-        <Typography variant="h6" gutterBottom>
-          Emergency Contact (Relative or friend)
-        </Typography>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="emergencyName"
-          label="Name"
-          name="emergencyName"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="emergencyRelationship"
-          label="Relationship to Student"
-          name="emergencyRelationship"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="emergencyPhoneNumber"
-          label="Phone Number"
-          name="emergencyPhoneNumber"
-          onChange={handleChange}
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="emergencyAddress"
-          label="Address"
-          name="emergencyAddress"
-          onChange={handleChange}
-        />
-
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          color="primary"
-        >
-          Submit
-        </Button>
-      </form> */}
-    </Container>
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="contactNo">Contact No:</label>
+          <input
+            type="tel"
+            id="contactNo"
+            name="contactNo"
+            value={formData.contactNo}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="selectedCourse">Selected Course:</label>
+          {formData.selectedCourse === 'General Course' ? (
+            <select
+              id="selectedCourse"
+              name="selectedCourse"
+              value={formData.selectedCourse}
+              onChange={handleChange}
+            >
+              <option value="General Course">General Course</option>
+              <option value="Course 1">Course 1</option>
+              <option value="Course 2">Course 2</option>
+            </select>
+          ) : (
+            <input
+              type="text"
+              id="selectedCourse"
+              name="selectedCourse"
+              value={formData.selectedCourse}
+              readOnly
+            />
+          )}
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
-export default AdmissionForm;
+export default AdmissionForm

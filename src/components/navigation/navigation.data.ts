@@ -7,7 +7,7 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Courses',
-    path: 'popular-course',
+    path: 'courses',
   },
   {
     label: 'International Students',

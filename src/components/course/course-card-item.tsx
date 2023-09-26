@@ -4,14 +4,15 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { iconButtonClasses } from '@mui/material/IconButton'
 import { Course } from '@/interfaces/course'
-import Link from 'next/link';
+import Link from 'next/link'
 import Button from '@mui/material/Button'
 
 interface Props {
-  item: Course
+  item: Course,
+  handleOpen: () => void;
 }
 
-const CourseCardItem: FC<Props> = ({ item }) => {
+const CourseCardItem: FC<Props> = ({ item, handleOpen }) => {
   return (
     <Box
       sx={{
@@ -23,7 +24,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         sx={{
           backgroundColor: 'background.paper',
           borderRadius: 4,
-          transition: (theme) => theme.transitions.create(['box-shadow']),
+          transition: theme => theme.transitions.create(['box-shadow']),
           '&:hover': {
             boxShadow: 2,
             [`& .${iconButtonClasses.root}`]: {
@@ -45,25 +46,21 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ px: 2 }}>
-          <Typography variant="h5" sx={{ fontSize: '16px', fontWeight: 600 }}>
+          <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 600 }}>
             {item.title}
           </Typography>
-          <Typography variant="h5" sx={{ fontSize: '16px', fontWeight: 500, color: 'text.secondary' }}>
+          <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 500, color: 'text.secondary' }}>
             {item.duration}
           </Typography>
         </Box>
         <Box sx={{ px: 2 }}>
-          <Typography variant="h5" sx={{ fontSize: '14px', fontWeight: 500 }}>
+          <Typography variant='h5' sx={{ fontSize: '14px', fontWeight: 500 }}>
             {'£' + item.price}
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 2, py: '20px' }}>
-          <Link href="#popular-course" passHref>
-            <Button
-              variant="contained"
-              color="secondary"
-              sx={{ flex: 1, borderRadius: '8px' }}
-            >
+          <Link href='#popular-course' passHref>
+            <Button variant='contained' onClick={handleOpen} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
               Register Now
             </Button>
           </Link>
