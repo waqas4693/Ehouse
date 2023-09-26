@@ -140,7 +140,7 @@ const HomeCourse: FC = () => {
       >
         <Fade in={open}>
           <Box sx={{
-            position: 'absolute' as 'absolute',
+            position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
@@ -148,7 +148,7 @@ const HomeCourse: FC = () => {
             bgcolor: 'background.paper',
             border: '2px solid #000',
             boxShadow: 24,
-            p: 4,
+            p: 4
           }}>
             <Typography id='register-now-modal-title' variant='h6' component='h2'>
               Register Now
