@@ -103,7 +103,7 @@ const AllEnglishCourses: FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://www.ai2terminator.com/form-submission.php', {
+      const response = await fetch('https://www.ai2terminator.com/form-submission.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
