@@ -178,7 +178,7 @@ const AllEnglishCourses: FC = () => {
       // }}
       >
         <Box sx={{
-          position: 'absolute' as 'absolute',
+          position: 'absolute',
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
