@@ -66,8 +66,8 @@ const HomeCourse: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = (): void => setOpen(true);
+  const handleClose = (): void => setOpen(false);
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -82,18 +82,6 @@ const HomeCourse: FC = () => {
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
-  }
-
-  const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
   }
 
   return (
@@ -151,7 +139,17 @@ const HomeCourse: FC = () => {
         component={Box as React.ElementType}
       >
         <Fade in={open}>
-          <Box sx={style}>
+          <Box sx={{
+            position: 'absolute' as 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 400,
+            bgcolor: 'background.paper',
+            border: '2px solid #000',
+            boxShadow: 24,
+            p: 4,
+          }}>
             <Typography id='register-now-modal-title' variant='h6' component='h2'>
               Register Now
             </Typography>
