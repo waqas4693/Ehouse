@@ -10,5 +10,5 @@ export interface DescriptiveCourse {
     suitableFor: string
     level: string
     registerationFee: string
-    price: number
+    price: string
   }

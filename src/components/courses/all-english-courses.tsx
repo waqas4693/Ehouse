@@ -14,7 +14,9 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close'
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { data } from './all-english-courses.data'
 
 interface SliderArrowArrow {
@@ -63,21 +65,19 @@ const StyledDots = styled('ul')(({ theme }) => ({
   },
 }))
 
-
-const inputContainerStyle = {
-  // display: 'flex',
-  // flexDirection: 'column',
-  // alignItems: 'center',
-  // width: '100%'
-};
-
 const customInputStyle = {
   input: {
     borderRadius: '8px',
     border: 'none',
-    // width: '50%',
   },
 };
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref,
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const AllEnglishCourses: FC = () => {
   const { breakpoints } = useTheme()
@@ -86,6 +86,8 @@ const AllEnglishCourses: FC = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = (): void => setOpen(true);
   const handleClose = (): void => setOpen(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -112,9 +114,7 @@ const AllEnglishCourses: FC = () => {
       });
 
       if (response.ok) {
-        // Form data was successfully submitted
-        console.log('Form submitted successfully.');
-        // You can reset the form or redirect to a thank you page here
+        setSnackbarOpen(true);
       } else {
         console.error('Form submission failed.');
       }
@@ -157,7 +157,6 @@ const AllEnglishCourses: FC = () => {
         <Typography variant="h1" sx={{ fontSize: 40, color: 'secondary.main' }}>
           Courses
         </Typography>
-
         <Slider {...sliderConfig}>
           {data.map((item) => (
             <DescriptiveCourseCardItem key={String(item.id)} item={item} handleOpen={handleOpen} />
@@ -262,8 +261,18 @@ const AllEnglishCourses: FC = () => {
             </Button>
           </form>
         </Box>
-      </Modal >
-    </Box >
+      </Modal>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={() => setSnackbarOpen(false)}
+      >
+        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
+          Success! Your form has been submitted.
+        </Alert>
+      </Snackbar>
+
+    </Box>
   )
 }
 
