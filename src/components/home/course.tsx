@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
@@ -9,6 +9,10 @@ import IconArrowForward from '@mui/icons-material/ArrowForward'
 import Backdrop from '@mui/material/Backdrop'
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
+import Snackbar from '@mui/material/Snackbar'
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
+import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { useTheme, styled } from '@mui/material/styles'
 import { IconButton, useMediaQuery } from '@mui/material'
 
@@ -61,6 +65,20 @@ const StyledDots = styled('ul')(({ theme }) => ({
   },
 }))
 
+const customInputStyle = {
+  input: {
+    borderRadius: '8px',
+    border: 'none',
+  },
+};
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref,
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 const HomeCourse: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
@@ -68,7 +86,49 @@ const HomeCourse: FC = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = (): void => setOpen(true);
   const handleClose = (): void => setOpen(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contactNo: '',
+    selectedCourse: '',
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent): Promise<void> => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('https://www.ai2terminator.com/form-submission.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSnackbarOpen(true);
+      } else {
+        console.error('Form submission failed.');
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
+  };
+
+  const [selectedCourse, setSelectedCourse] = useState<string>(''); // Initialize selectedCourse state
+
+  const handleSelectCourse = (courseName: string) => {
+    setSelectedCourse(courseName);
+    handleOpen();
+  };
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,
@@ -117,7 +177,7 @@ const HomeCourse: FC = () => {
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
               {data.map((item) => (
-                <CourseCardItem key={String(item.id)} item={item} handleOpen={handleOpen} />
+                <CourseCardItem key={String(item.id)} item={item} onRegisterClick={() => handleSelectCourse(item.title)} />
               ))}
             </Slider>
           </Grid>
@@ -125,40 +185,113 @@ const HomeCourse: FC = () => {
 
       </Container>
       <Modal
-        aria-labelledby='register-now-modal-title'
-        aria-describedby='register-now-modal-description'
+        aria-labelledby="register-now-modal-title"
+        aria-describedby="register-now-modal-description"
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        slots={{ backdrop: Backdrop }}
-        slotProps={{
-          backdrop: {
-            timeout: 500,
-          },
-        }}
-        component={Box as React.ElementType}
+      // slots={{ backdrop: Backdrop }}
+      // slotProps={{
+      //   backdrop: {
+      //     timeout: 500,
+      //   },
+      // }}
       >
-        <Fade in={open}>
-          <Box sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 400,
-            bgcolor: 'background.paper',
-            border: '2px solid #000',
-            boxShadow: 24,
-            p: 4
-          }}>
-            <Typography id='register-now-modal-title' variant='h6' component='h2'>
+        <Box sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          bgcolor: 'common.white',
+          borderRadius: '35px',
+          boxShadow: 24,
+          px: 10,
+          py: 5
+        }}>
+          <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
+            Registration Form!
+          </Typography>
+          <Typography align="center" sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
+            Enroll yourself to access this course.
+          </Typography>
+          <form onSubmit={handleSubmit}>
+            <Box sx={customInputStyle}>
+              <TextField
+                name="firstName"
+                label="First Name"
+                fullWidth
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.firstName}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name="lastName"
+                label="Last Name"
+                fullWidth
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.lastName}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name="email"
+                label="Email"
+                fullWidth
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.email}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name="contactNo"
+                label="Contact Number"
+                fullWidth
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.contactNo}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name="selectedCourse"
+                label="Selected Course"
+                fullWidth
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={selectedCourse}
+              />
+            </Box>
+            <Button
+              type="submit"
+              variant="contained"
+              color="secondary"
+              fullWidth
+              sx={{ mt: 3, borderRadius: '8px' }}
+            >
               Register Now
-            </Typography>
-            <Typography id='register-now-modal-description' sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </Box>
-        </Fade>
+            </Button>
+          </form>
+        </Box>
       </Modal>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={() => setSnackbarOpen(false)}
+      >
+        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
+          Success! Your form has been submitted.
+        </Alert>
+      </Snackbar>
     </Box>
   )
 }

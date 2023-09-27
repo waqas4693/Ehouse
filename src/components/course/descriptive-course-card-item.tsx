@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
@@ -9,10 +9,9 @@ import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 
 interface Props {
     item: DescriptiveCourse
-    handleOpen: () => void
-}
+    onRegisterClick: (courseName: string) => void;}
 
-const DescriptiveCourseCardItem: FC<Props> = ({ item, handleOpen }) => {
+const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
     return (
         <Box
             sx={{
@@ -148,9 +147,9 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, handleOpen }) => {
                     </Grid>
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 2, py: '20px' }}>
-                        <Button variant='contained' onClick={handleOpen} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
-                            Register Now
-                        </Button>
+                    <Button variant='contained' onClick={() => onRegisterClick(item.title)} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
+                        Register Now
+                    </Button>
                 </Box>
             </Box>
         </Box>

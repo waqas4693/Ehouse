@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
@@ -9,10 +9,10 @@ import Button from '@mui/material/Button'
 
 interface Props {
   item: Course,
-  handleOpen: () => void;
-}
+  onRegisterClick: (courseName: string) => void;}
 
-const CourseCardItem: FC<Props> = ({ item, handleOpen }) => {
+const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
+
   return (
     <Box
       sx={{
@@ -59,11 +59,9 @@ const CourseCardItem: FC<Props> = ({ item, handleOpen }) => {
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 2, py: '20px' }}>
-          <Link href='#popular-course' passHref>
-            <Button variant='contained' onClick={handleOpen} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
-              Register Now
-            </Button>
-          </Link>
+          <Button variant='contained' onClick={() => onRegisterClick(item.title)} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
+            Register Now
+          </Button>
         </Box>
       </Box>
     </Box>
