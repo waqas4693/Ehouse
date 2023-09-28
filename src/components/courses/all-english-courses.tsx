@@ -13,7 +13,7 @@ import Modal from '@mui/material/Modal'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
-import MuiAlert, { AlertProps } from '@mui/material/Alert'
+import MuiAlert, { AlertColor, AlertProps } from '@mui/material/Alert'
 import { data } from './all-english-courses.data'
 
 interface SliderArrowArrow {
@@ -81,6 +81,8 @@ const AllEnglishCourses: FC = () => {
   const handleOpen = (): void => setOpen(true)
   const handleClose = (): void => setOpen(false)
   const [snackbarOpen, setSnackbarOpen] = useState(false)
+  const [severity, setSeverity] = React.useState<AlertColor | undefined>('success')
+  const [selectedCourse, setSelectedCourse] = useState<string>('')
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -100,7 +102,6 @@ const AllEnglishCourses: FC = () => {
     });
   };
 
-
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = e.target
     setFormData(prevData => ({ ...prevData, [name]: value }))
@@ -118,19 +119,28 @@ const AllEnglishCourses: FC = () => {
         body: JSON.stringify(formData),
       })
 
-      if (response.ok) {
+      if (response.status === 201) {
         handleClose()
-        setSnackbarOpen(true)
+        handleSnackbarOpen('success')
         resetForm()
-      } else {
-        console.error('Form submission failed.')
+      } else if (response.status === 409) {
+        handleClose()
+        handleSnackbarOpen('error')
+        resetForm()
+      }else if (response.status === 500) {
+        handleClose()
+        handleSnackbarOpen('error')
+        resetForm()
       }
     } catch (error) {
       console.error('Error submitting the form:', error)
     }
   }
 
-  const [selectedCourse, setSelectedCourse] = useState<string>('') // Initialize selectedCourse state
+  const handleSnackbarOpen = (newSeverity: 'success' | 'error'): void => {
+    setSeverity(newSeverity);
+    setSnackbarOpen(true);
+  };
 
   const handleSelectCourse = (courseName: string): void => {
     setSelectedCourse(courseName)
@@ -187,12 +197,6 @@ const AllEnglishCourses: FC = () => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-      // slots={{ backdrop: Backdrop }}
-      // slotProps={{
-      //   backdrop: {
-      //     timeout: 500,
-      //   },
-      // }}
       >
         <Box
           sx={{
@@ -276,9 +280,15 @@ const AllEnglishCourses: FC = () => {
           </form>
         </Box>
       </Modal>
-      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={() => setSnackbarOpen(false)}>
-        <Alert onClose={() => setSnackbarOpen(false)} severity='success' sx={{ width: '100%' }}>
-          Success! Your form has been submitted.
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleClose}
+      >
+        <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+          {severity === 'success'
+            ? 'Success! Your form has been submitted.'
+            : 'A request with this email and course is already submitted'}
         </Alert>
       </Snackbar>
     </Box>

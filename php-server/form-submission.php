@@ -17,13 +17,23 @@ $email = $_POST['email'];
 $contactNo = $_POST['contactNo'];
 $selectedCourse = $_POST['selectedCourse'];
 
-$sql = "INSERT INTO registeration_requests (firstName, lastName, email, contactNo, selectedCourse)
-        VALUES ('$firstName', '$lastName', '$email', '$contactNo', '$selectedCourse')";
+// Check if the email and selected course already exist in the database
+$checkQuery = "SELECT id FROM registeration_requests WHERE email = '$email' AND selectedCourse = '$selectedCourse'";
+$result = $conn->query($checkQuery);
 
-if ($conn->query($sql) === TRUE) {
-    echo "Student data has been successfully saved!";
+if ($result->num_rows > 0) {
+    // Email and selected course combination already exists
+    http_response_code(409); // Conflict
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // Insert data into the table
+    $insertQuery = "INSERT INTO registeration_requests (firstName, lastName, email, contactNo, selectedCourse)
+                    VALUES ('$firstName', '$lastName', '$email', '$contactNo', '$selectedCourse')";
+
+    if ($conn->query($insertQuery) === TRUE) {
+        http_response_code(201); // Created
+    } else {
+        http_response_code(500); // Internal Server Error
+    }
 }
 
 $conn->close();
