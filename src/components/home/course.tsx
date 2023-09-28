@@ -125,7 +125,7 @@ const HomeCourse: FC = () => {
 
   const [selectedCourse, setSelectedCourse] = useState<string>(''); // Initialize selectedCourse state
 
-  const handleSelectCourse = (courseName: string) => {
+  const handleSelectCourse = (courseName: string): void => {
     setSelectedCourse(courseName);
     handleOpen();
   };
