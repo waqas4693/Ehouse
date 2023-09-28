@@ -9,12 +9,9 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import DescriptiveCourseCardItem from '@/components/course/descriptive-course-card-item'
-import Backdrop from '@mui/material/Backdrop'
 import Modal from '@mui/material/Modal'
-import Fade from '@mui/material/Fade'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import CloseIcon from '@mui/icons-material/Close'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { data } from './all-english-courses.data'
@@ -72,7 +69,7 @@ const customInputStyle = {
   },
 }
 
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert (props, ref) {
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />
 })
 
@@ -93,6 +90,17 @@ const AllEnglishCourses: FC = () => {
     selectedCourse: '',
   })
 
+  const resetForm = (): void => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      contactNo: '',
+      selectedCourse: '',
+    });
+  };
+
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = e.target
     setFormData(prevData => ({ ...prevData, [name]: value }))
@@ -111,7 +119,9 @@ const AllEnglishCourses: FC = () => {
       })
 
       if (response.ok) {
+        handleClose()
         setSnackbarOpen(true)
+        resetForm()
       } else {
         console.error('Form submission failed.')
       }
@@ -177,12 +187,12 @@ const AllEnglishCourses: FC = () => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        // slots={{ backdrop: Backdrop }}
-        // slotProps={{
-        //   backdrop: {
-        //     timeout: 500,
-        //   },
-        // }}
+      // slots={{ backdrop: Backdrop }}
+      // slotProps={{
+      //   backdrop: {
+      //     timeout: 500,
+      //   },
+      // }}
       >
         <Box
           sx={{
