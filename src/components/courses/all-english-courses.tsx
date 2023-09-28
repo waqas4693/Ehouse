@@ -119,6 +119,8 @@ const AllEnglishCourses: FC = () => {
         body: JSON.stringify(formData),
       })
 
+      console.log("Status Code = ", response.status)
+
       if (response.status === 201) {
         handleClose()
         handleSnackbarOpen('success')
@@ -127,7 +129,7 @@ const AllEnglishCourses: FC = () => {
         handleClose()
         handleSnackbarOpen('error')
         resetForm()
-      }else if (response.status === 500) {
+      } else if (response.status === 500) {
         handleClose()
         handleSnackbarOpen('error')
         resetForm()
@@ -282,7 +284,7 @@ const AllEnglishCourses: FC = () => {
       </Modal>
       <Snackbar
         open={snackbarOpen}
-        autoHideDuration={6000}
+        autoHideDuration={2000}
         onClose={handleClose}
       >
         <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
