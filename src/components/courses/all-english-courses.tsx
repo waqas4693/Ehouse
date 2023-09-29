@@ -111,6 +111,8 @@ const AllEnglishCourses: FC = () => {
   const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault()
 
+    console.log("Sending Request");
+
     try {
       const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
 
