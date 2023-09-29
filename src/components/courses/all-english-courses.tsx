@@ -14,6 +14,7 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert, { AlertColor, AlertProps } from '@mui/material/Alert'
+import axios from 'axios'
 import { data } from './all-english-courses.data'
 
 interface SliderArrowArrow {
@@ -111,13 +112,7 @@ const AllEnglishCourses: FC = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch('https://www.ai2terminator.com/form-submission.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
 
       console.log("Status Code = ", response.headers)
 
