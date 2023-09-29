@@ -146,6 +146,7 @@ const AllEnglishCourses: FC = () => {
 
   const handleSelectCourse = (courseName: string): void => {
     setSelectedCourse(courseName)
+    formData.selectedCourse = courseName
     handleOpen()
   }
 
