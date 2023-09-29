@@ -119,7 +119,7 @@ const AllEnglishCourses: FC = () => {
         body: JSON.stringify(formData),
       })
 
-      console.log("Status Code = ", response.status)
+      console.log("Status Code = ", response.headers)
 
       if (response.status === 201) {
         handleClose()
