@@ -86,7 +86,6 @@ const AllEnglishCourses: FC = () => {
   const handleOpen = (): void => setOpen(true);
   const handleClose = (): void => setOpen(false);
   const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' });
-
   const [selectedCourse, setSelectedCourse] = useState<string>('');
 
   const [formData, setFormData] = useState({

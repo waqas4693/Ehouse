@@ -6,13 +6,12 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
-import Backdrop from '@mui/material/Backdrop'
 import Modal from '@mui/material/Modal'
-import Fade from '@mui/material/Fade'
-import Snackbar from '@mui/material/Snackbar'
-import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import Snackbar from '@mui/material/Snackbar'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
+import axios from 'axios'
 import { useTheme, styled } from '@mui/material/styles'
 import { IconButton, useMediaQuery } from '@mui/material'
 
@@ -25,7 +24,7 @@ interface SliderArrowArrow {
   className?: 'string'
 }
 
-const SliderArrow: FC<SliderArrowArrow> = (props) => {
+const SliderArrow: FC<SliderArrowArrow> = props => {
   const { onClick, type, className } = props
   return (
     <IconButton
@@ -40,7 +39,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
         boxShadow: 1,
       }}
       disableRipple
-      color="inherit"
+      color='inherit'
       onClick={onClick}
       className={className}
     >
@@ -70,23 +69,21 @@ const customInputStyle = {
     borderRadius: '8px',
     border: 'none',
   },
-};
+}
 
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
-  props,
-  ref,
-) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />
+})
 
 const HomeCourse: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = (): void => setOpen(true);
-  const handleClose = (): void => setOpen(false);
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = (): void => setOpen(true)
+  const handleClose = (): void => setOpen(false)
+  const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' })
+  const [selectedCourse, setSelectedCourse] = useState<string>('')
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -94,51 +91,65 @@ const HomeCourse: FC = () => {
     email: '',
     contactNo: '',
     selectedCourse: '',
-  });
+  })
+
+  const resetForm = (): void => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      contactNo: '',
+      selectedCourse: '',
+    })
+  }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData(prevData => ({ ...prevData, [name]: value }))
+  }
 
   const handleSubmit = async (e: FormEvent): Promise<void> => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const response = await fetch('https://www.ai2terminator.com/form-submission.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
 
-      if (response.ok) {
-        setSnackbarOpen(true);
-      } else {
-        console.error('Form submission failed.');
+      const message = response.data.message
+
+      if (response.data.status === 'success') {
+        handleClose()
+        handleSnackbarOpen('success', message)
+        resetForm()
+      } else if (response.data.status === 'failure') {
+        handleClose()
+        handleSnackbarOpen('error', message)
+        resetForm()
       }
     } catch (error) {
-      console.error('Error submitting the form:', error);
+      console.error('Error submitting the form:', error)
     }
-  };
+  }
 
-  const [selectedCourse, setSelectedCourse] = useState<string>(''); // Initialize selectedCourse state
+  const handleSnackbarOpen = (newSeverity: string, newMessage: string): void => {
+    setSnackbar({ open: true, severity: newSeverity || 'success', message: newMessage })
+  }
 
   const handleSelectCourse = (courseName: string): void => {
-    setSelectedCourse(courseName);
-    handleOpen();
-  };
+    setSelectedCourse(courseName)
+    formData.selectedCourse = courseName
+    handleOpen()
+  }
+
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,
     speed: 300,
     slidesToShow: matchMobileView ? 1 : 3,
     slidesToScroll: 1,
-    prevArrow: <SliderArrow type="prev" />,
-    nextArrow: <SliderArrow type="next" />,
+    prevArrow: <SliderArrow type='prev' />,
+    nextArrow: <SliderArrow type='next' />,
     dots: true,
-    appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
+    appendDots: dots => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
@@ -146,7 +157,7 @@ const HomeCourse: FC = () => {
 
   return (
     <Box
-      id="popular-course"
+      id='popular-course'
       sx={{
         pt: {
           xs: 6,
@@ -156,7 +167,7 @@ const HomeCourse: FC = () => {
         backgroundColor: 'background.default',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
             <Box
@@ -168,7 +179,7 @@ const HomeCourse: FC = () => {
                 justifyContent: { xs: 'center', md: 'flex-start' },
               }}
             >
-              <Typography variant="h2" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
+              <Typography variant='h2' sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
                 English Language Courses
               </Typography>
             </Box>
@@ -176,13 +187,16 @@ const HomeCourse: FC = () => {
 
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
-              {data.map((item) => (
-                <CourseCardItem key={String(item.id)} item={item} onRegisterClick={() => handleSelectCourse(item.title)} />
+              {data.map(item => (
+                <CourseCardItem
+                  key={String(item.id)}
+                  item={item}
+                  onRegisterClick={() => handleSelectCourse(item.title)}
+                />
               ))}
             </Slider>
           </Grid>
         </Grid>
-
       </Container>
       <Modal
         aria-labelledby="register-now-modal-title"
@@ -190,24 +204,20 @@ const HomeCourse: FC = () => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-      // slots={{ backdrop: Backdrop }}
-      // slotProps={{
-      //   backdrop: {
-      //     timeout: 500,
-      //   },
-      // }}
       >
-        <Box sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          bgcolor: 'common.white',
-          borderRadius: '35px',
-          boxShadow: 24,
-          px: 10,
-          py: 5
-        }}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'common.white',
+            borderRadius: '35px',
+            boxShadow: 24,
+            px: 10,
+            py: 5,
+          }}
+        >
           <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
             Registration Form!
           </Typography>
@@ -271,26 +281,21 @@ const HomeCourse: FC = () => {
                 value={selectedCourse}
               />
             </Box>
-            <Button
-              type="submit"
-              variant="contained"
-              color="secondary"
-              fullWidth
-              sx={{ mt: 3, borderRadius: '8px' }}
-            >
+            <Button type="submit" variant="contained" color="secondary" fullWidth sx={{ mt: 3, borderRadius: '8px' }}>
               Register Now
             </Button>
           </form>
         </Box>
       </Modal>
-      <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={6000}
-        onClose={() => setSnackbarOpen(false)}
-      >
-        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
-          Success! Your form has been submitted.
-        </Alert>
+      <Snackbar open={snackbar.open} autoHideDuration={2000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
+        {snackbar.severity === 'success' ?
+          <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='success' sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+          : <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='error' sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+        }
       </Snackbar>
     </Box>
   )
