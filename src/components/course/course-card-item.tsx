@@ -1,15 +1,15 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
+import { iconButtonClasses } from '@mui/material/IconButton'
+import { Course } from '@/interfaces/course'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { iconButtonClasses } from '@mui/material/IconButton'
-import { Course } from '@/interfaces/course'
-import Link from 'next/link'
 import Button from '@mui/material/Button'
 
 interface Props {
   item: Course,
-  onRegisterClick: (courseName: string) => void;}
+  onRegisterClick: (courseName: string) => void;
+}
 
 const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
 
@@ -43,7 +43,8 @@ const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
             mb: 2,
           }}
         >
-          <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
+          <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} layout="fill"
+            objectFit="cover" />
         </Box>
         <Box sx={{ px: 2 }}>
           <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 600 }}>

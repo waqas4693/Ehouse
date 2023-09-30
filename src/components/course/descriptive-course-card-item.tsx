@@ -9,7 +9,8 @@ import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 
 interface Props {
     item: DescriptiveCourse
-    onRegisterClick: (courseName: string) => void;}
+    onRegisterClick: (courseName: string) => void;
+}
 
 const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
     return (
@@ -42,7 +43,8 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                         mb: 2,
                     }}
                 >
-                    <Image src={item.cover} width={760} height={600} alt={'Course ' + item.id} />
+                    <Image src={item.cover} width={760} height={600} alt={'Course ' + item.id} layout="fill"
+                        objectFit="cover" />
                 </Box>
                 <Box sx={{ px: 2 }}>
                     <Typography variant='h5' sx={{ fontSize: '28px', fontWeight: 600 }}>
