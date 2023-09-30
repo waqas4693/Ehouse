@@ -23,9 +23,9 @@ const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
         sx={{
           backgroundColor: 'background.paper',
           borderRadius: 4,
+          boxShadow: 4,
           transition: theme => theme.transitions.create(['box-shadow']),
           '&:hover': {
-            boxShadow: 2,
             [`& .${iconButtonClasses.root}`]: {
               backgroundColor: 'primary.main',
               color: 'primary.contrastText',

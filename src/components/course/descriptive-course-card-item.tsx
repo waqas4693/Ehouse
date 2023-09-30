@@ -9,7 +9,8 @@ import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 
 interface Props {
     item: DescriptiveCourse
-    onRegisterClick: (courseName: string) => void;}
+    onRegisterClick: (courseName: string) => void;
+}
 
 const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
     return (
@@ -23,27 +24,36 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                 sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 4,
+                    boxShadow: 4,
                     transition: theme => theme.transitions.create(['box-shadow']),
                     '&:hover': {
-                        boxShadow: 2,
                         [`& .${iconButtonClasses.root}`]: {
                             backgroundColor: 'primary.main',
                             color: 'primary.contrastText',
-                            boxShadow: 2,
+                            boxShadow: 2
                         },
                     },
                 }}
             >
-                <Box
+                {/* <Box
                     sx={{
-                        lineHeight: 0,
-                        overflow: 'hidden',
-                        borderRadius: '16px 16px 0 0',
+                        // overflow: 'hidden',
+                        borderRadius: 4,
                         mb: 2,
+                        backgroundColor: 'primary.main',
                     }}
-                >
-                    <Image src={item.cover} width={512} height={393} alt={'Course ' + item.id} />
-                </Box>
+                > */}
+                <div style={{ position: 'relative', width: '100%', height: '200px', marginBottom: '20px' }}>
+                    <Image
+                        src={item.cover}
+                        alt={`Course ${item.id}`}
+                        layout="fill"
+                        objectFit="cover"
+                        style={{ borderRadius: '16px 16px 0 0' }}
+                    />
+                </div>
+                {/* <Image src={item.cover} width={512} height={393} alt={'Course ' + item.id} /> */}
+                {/* </Box> */}
                 <Box sx={{ px: 2 }}>
                     <Typography variant='h5' sx={{ fontSize: '28px', fontWeight: 600 }}>
                         {item.title}
