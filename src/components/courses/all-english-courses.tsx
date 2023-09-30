@@ -285,7 +285,7 @@ const AllEnglishCourses: FC = () => {
       >
         <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
           {severity === 'success'
-            ? 'Success! Your form has been submitted.'
+            ? 'Success! Your form has been Your admission form has been received. The admission team will respond within 48 hours.'
             : 'A request with this email and course is already submitted'}
         </Alert>
       </Snackbar>

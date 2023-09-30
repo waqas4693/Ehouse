@@ -33,32 +33,14 @@ $checkQuery = "SELECT student_id FROM registeration_requests WHERE email = '$ema
 $result = $conn->query($checkQuery);
 
 if ($result->num_rows > 0) {
-    $response = array(
-        'status' => 'failure',
-        'message' => 'A request is already under process with this course and email address'
-    );
-
-    header('Content-Type: application/json');
-    echo json_encode($response);
+    http_response_code(409);
 } else {
     $insertQuery = "INSERT INTO registeration_requests (firstName, lastName, email, contactNo, selectedCourse) VALUES ('$firstName', '$lastName', '$email', '$contactNo', '$selectedCourse')";
 
     if ($conn->query($insertQuery) === TRUE) {
-        $response = array(
-            'status' => 'success',
-            'message' => 'Your admission form has been received. The admission team will respond within 48 hours.'
-        );
-
-        header('Content-Type: application/json');
-        echo json_encode($response);
+        http_response_code(200);
     } else {
-        $response = array(
-            'status' => 'failure',
-            'message' => 'Internal Serve Error. Please Contact Admin'
-        );
-
-        header('Content-Type: application/json');
-        echo json_encode($response);
+        http_response_code(500);
     }
 }
 
