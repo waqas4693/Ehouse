@@ -276,7 +276,7 @@ const AllEnglishCourses: FC = () => {
           </form>
         </Box>
       </Modal>
-      <Snackbar open={snackbar.open} autoHideDuration={2000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
+      <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'right' }} open={snackbar.open} autoHideDuration={6000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
         {snackbar.severity === 'success' ? (
           <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='success' sx={{ width: '100%' }}>
             {snackbar.message}
