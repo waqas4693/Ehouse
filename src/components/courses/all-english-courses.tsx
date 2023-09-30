@@ -114,7 +114,7 @@ const AllEnglishCourses: FC = () => {
     try {
       const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
 
-      console.log("Response = ", response)
+      console.log("Response = ", response['data']['message'])
 
       if (response.status === 200) {
         handleClose()
