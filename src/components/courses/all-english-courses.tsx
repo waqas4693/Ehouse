@@ -111,14 +111,12 @@ const AllEnglishCourses: FC = () => {
   const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault()
 
-    console.log("Sending Request");
-
     try {
       const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
 
-      console.log("Status Code = ", response.headers)
+      console.log("Error Message = ", response.data)
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         handleClose()
         handleSnackbarOpen('success')
         resetForm()
