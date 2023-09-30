@@ -76,6 +76,7 @@ const customInputStyle = {
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
+Alert.displayName = 'Alert';
 
 const AllEnglishCourses: FC = () => {
   const { breakpoints } = useTheme();
