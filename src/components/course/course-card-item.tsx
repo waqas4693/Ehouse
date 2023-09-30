@@ -42,7 +42,7 @@ const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
             mb: 2,
           }}
         >
-          <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
+          <Image src={item.cover} width={512} height={393} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ px: 2 }}>
           <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 600 }}>
