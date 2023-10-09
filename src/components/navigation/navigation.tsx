@@ -1,20 +1,23 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
+import React, { FC, useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
 import Link from 'next/link';
-import { navigations } from './navigation.data'
 
-const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items }) => (
-  <Box sx={{
-    display: 'none',
-    backgroundColor: 'background.paper',
-    borderRadius: '4px',
-    position: 'absolute',
-    top: '100%',
-    zIndex: 1,
-    minWidth: '150px',
-    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
-  }}>
-    {items?.map(item => (
+import { navigations } from './navigation.data';
+
+const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items }) => (
+  <Box
+    sx={{
+      display: 'none',
+      backgroundColor: 'background.paper',
+      borderRadius: '4px',
+      position: 'absolute',
+      top: '100%',
+      zIndex: 1,
+      minWidth: '150px',
+      boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+    }}
+  >
+    {items?.map((item) => (
       <Box
         key={item.path}
         sx={{
@@ -27,15 +30,26 @@ const Dropdown: FC<{ items: typeof navigations[0]["dropdownItems"] }> = ({ items
           },
         }}
       >
-        <Link href={item.path} passHref>{item.label}</Link>
+        <Link href={item.path} passHref>
+          {item.label}
+        </Link>
       </Box>
     ))}
   </Box>
 );
 
 const Navigation: FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Use the window.onload event to detect when client-side JavaScript is ready.
+    window.onload = () => {
+      setIsLoading(false);
+    };
+  }, []);
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+    <Box sx={{ display: isLoading ? 'none' : 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label, dropdownItems }) => (
         <Box
           key={destination}
@@ -52,16 +66,13 @@ const Navigation: FC = () => {
             ...(destination === '/' && {
               color: 'primary.main',
             }),
-            // Add styles for links without dropdown items
-            ...{
-              '& a': {
-                color: 'grey.500', // Default text color
-                textDecoration: 'none', // Remove underline
-                transition: 'color 0.3s', // Transition for color change
-              },
-              '&:hover a': {
-                color: 'secondary.main', // Text color on hover
-              },
+            '& a': {
+              color: 'grey.500',
+              textDecoration: 'none',
+              transition: 'color 0.3s',
+            },
+            '&:hover a': {
+              color: 'secondary.main',
             },
             '&:hover > div': {
               display: dropdownItems ? 'block' : 'none',
@@ -75,8 +86,7 @@ const Navigation: FC = () => {
         </Box>
       ))}
     </Box>
-
   );
-}
+};
 
-export default Navigation
+export default Navigation;
