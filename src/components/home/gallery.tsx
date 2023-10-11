@@ -58,9 +58,9 @@ const HomeGallery: FC = () => {
               alt={item.title}
               loading="lazy"
               style={{
-                borderRadius: '10px', // Border radius of 10px
-                width: '280px', // Fixed width
-                height: '280px', // Fixed height
+                borderRadius: '10px',
+                width: '280px',
+                height: '280px',
               }}
             />
           </ImageListItem>

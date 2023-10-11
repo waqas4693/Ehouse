@@ -7,7 +7,7 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Courses',
-    path: 'courses',
+    path: '/courses',
   },
   {
     label: 'International Students',
@@ -35,6 +35,6 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Gallery',
-    path: 'mentors',
+    path: '/gallery',
   }
 ]
