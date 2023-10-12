@@ -39,7 +39,7 @@ const HomeRecognizingInstitutes: FC = () => {
         sx={{ maxWidth: '100%' }}
         variant="quilted"
         gap={20}
-        cols={3}
+        cols={4}
         rowHeight={280}
       >
         {itemData.map((item) => (
