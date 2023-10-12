@@ -25,6 +25,7 @@ const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items
           padding: '8px 12px',
           textDecoration: 'none',
           color: 'inherit',
+          fontWeight: 400,
           '&:hover': {
             backgroundColor: 'background.default',
           },
@@ -68,7 +69,6 @@ const Navigation: FC = () => {
             }),
             '& a': {
               color: 'grey.500',
-              fontWeight: dropdownItems ? 600 : 400,
               textDecoration: 'none',
               transition: 'color 0.3s',
             },

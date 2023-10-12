@@ -92,7 +92,7 @@ const ContactForm: FC = () => {
         >
             <Container maxWidth="lg">
                 <form onSubmit={handleSubmit}>
-                    <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
+                    <Typography variant="h2" color="secondary.main" fontSize="36px">
                         Contact Us
                     </Typography>
                     <Grid container spacing={2}>
@@ -155,7 +155,7 @@ const ContactForm: FC = () => {
                                 type="submit"
                                 variant="contained"
                                 color="secondary"
-                                fullWidth
+                                
                                 sx={{ mt: 3, borderRadius: '8px' }}
                             >
                                 Submit
