@@ -48,7 +48,7 @@ const HomeFeature: FC = () => {
               component="h2"
               sx={{
                 position: 'relative',
-                fontSize: { xs: 40, md: 50 },
+                fontSize: { xs: 20, md: 38 },
                 ml: { xs: 0, md: 4 },
                 mt: 2,
                 mb: 3,
