@@ -3,7 +3,7 @@ import { MainLayout } from '@/components/layout'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import dynamic from 'next/dynamic'
 
-const DynamicContactUsForm = dynamic(() => import('@/components/courses/all-english-courses'));
+const DynamicContactUsForm = dynamic(() => import('@/components/contact-us/contact-form'));
 
 const ContactUsPage: NextPageWithLayout = () => {
     return (
