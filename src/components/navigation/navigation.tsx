@@ -56,20 +56,16 @@ const Navigation: FC = () => {
           sx={{
             position: 'relative',
             cursor: 'pointer',
-            fontWeight: 600,
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             px: { xs: 0, md: 3 },
             mb: { xs: 3, md: 0 },
             fontSize: { xs: '1.2rem', md: 'inherit' },
-            ...(destination === '/' && {
-              color: 'primary.main',
-            }),
             '& a': {
-              color: 'grey.500',
               textDecoration: 'none',
               transition: 'color 0.3s',
+              fontWeight: dropdownItems ? 600 : 400, // Set different font weights
             },
             '&:hover a': {
               color: 'secondary.main',
