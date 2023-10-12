@@ -9,6 +9,8 @@ const DynamicHomeCourse = dynamic(() => import('../components/home/course'))
 const DynamicHomeFeature2 = dynamic(() => import('../components/home/feature-2'))
 const DynamicHomeVideo = dynamic(() => import('../components/home/video'))
 const DynamicHomeGallery = dynamic(() => import('../components/home/gallery'))
+const DynamicHomeGallery2 = dynamic(() => import('../components/home/recognizing-institutes'))
+
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -19,6 +21,7 @@ const Home: NextPageWithLayout = () => {
       <DynamicHomeFeature2 />
       {/* <DynamicHomeVideo /> */}
       <DynamicHomeGallery />
+      <DynamicHomeGallery2 />
     </>
   )
 }

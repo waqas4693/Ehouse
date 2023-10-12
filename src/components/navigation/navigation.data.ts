@@ -11,7 +11,7 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'International Students',
-    path: 'testimonial',
+    path: '',
     dropdownItems: [
       { path: '/international-students/apply-for-a-course', label: 'Apply For A Course' },
       { path: '/international-students/entry-requirements', label: 'Entry Requirements' },
@@ -24,7 +24,7 @@ export const navigations: Navigation[] = [
   },
   {
     label: 'Policies',
-    path: 'testimonial',
+    path: '',
     dropdownItems: [
       { path: '/policies/participant-attendance-policy', label: 'Participant Attendance And Punctuality Policy' },
       { path: '/policies/review-quality-assurance-policy', label: 'Internal Review And Quality Assurance Policy' },
@@ -36,5 +36,9 @@ export const navigations: Navigation[] = [
   {
     label: 'Gallery',
     path: '/gallery',
+  },
+  {
+    label: 'Contact Us',
+    path: '/contact-us',
   }
 ]
