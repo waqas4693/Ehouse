@@ -56,7 +56,7 @@ const Navigation: FC = () => {
           sx={{
             position: 'relative',
             cursor: 'pointer',
-            // fontWeight: 600,
+            fontWeight: 600,
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',

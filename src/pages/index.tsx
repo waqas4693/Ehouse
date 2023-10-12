@@ -20,8 +20,9 @@ const Home: NextPageWithLayout = () => {
       <DynamicHomeFeature />
       <DynamicHomeFeature2 />
       {/* <DynamicHomeVideo /> */}
-      <DynamicHomeGallery />
       <DynamicHomeGallery2 />
+      <DynamicHomeGallery />
+      
     </>
   )
 }

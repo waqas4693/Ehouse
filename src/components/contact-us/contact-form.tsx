@@ -92,11 +92,11 @@ const ContactForm: FC = () => {
         >
             <Container maxWidth="lg">
                 <form onSubmit={handleSubmit}>
+                    <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
+                        Contact Us
+                    </Typography>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                            <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
-                                Registration Form!
-                            </Typography>
                             <TextField
                                 name="firstName"
                                 label="First Name"
@@ -154,7 +154,7 @@ const ContactForm: FC = () => {
                             <Button
                                 type="submit"
                                 variant="contained"
-                                color="primary"
+                                color="secondary"
                                 fullWidth
                                 sx={{ mt: 3, borderRadius: '8px' }}
                             >

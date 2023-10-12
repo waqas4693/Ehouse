@@ -37,7 +37,7 @@ const HomeGallery: FC = () => {
     <Box
       sx={{
         backgroundColor: 'background.paper',
-        py: { xs: 8, md: 10 },
+        pb: { xs: 8, md: 10 },
         display: 'flex',
         justifyContent: 'center',
         overflow: 'hidden'
@@ -48,7 +48,7 @@ const HomeGallery: FC = () => {
         variant="quilted"
         gap={20}
         cols={3}
-        rowHeight={280}
+        // rowHeight={280}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -59,7 +59,7 @@ const HomeGallery: FC = () => {
               loading="lazy"
               style={{
                 borderRadius: '10px',
-                width: '280px',
+                width: '400px',
                 height: '280px',
               }}
             />
