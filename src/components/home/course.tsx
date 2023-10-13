@@ -219,7 +219,7 @@ const HomeCourse: FC = () => {
           }}
         >
           <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
-            Registration Form!
+            Admission Form!
           </Typography>
           <Typography align="center" sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
             Enroll yourself to access this course.

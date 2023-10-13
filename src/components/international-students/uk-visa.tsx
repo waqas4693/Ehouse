@@ -26,7 +26,7 @@ const UkVisa: FC = () => {
               backgroundColor: 'unset',
             }}
           >
-            Uk Visa{' '}
+            UK Visa{' '}
             <Box
               sx={{
                 position: 'absolute',

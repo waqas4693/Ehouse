@@ -1,17 +1,18 @@
 import React, { FC } from 'react'
-import { Box } from '@mui/material'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props {
-  onClick?: () => void
   variant?: 'primary' | 'secondary'
 }
 
-const Logo: FC<Props> = ({ onClick }) => {
+const Logo: FC<Props> = () => {
   return (
-    <Box onClick={onClick}>
-      <Image src="/images/ehouse-logo.svg" width={100} height={79} alt='Logo' />
-    </Box>
+    <Link href="/" passHref>
+      <a style={{ cursor: 'pointer' }}>
+        <Image src="/images/ehouse-logo.svg" width={100} height={79} alt="Logo" />
+      </a>
+    </Link>
   )
 }
 

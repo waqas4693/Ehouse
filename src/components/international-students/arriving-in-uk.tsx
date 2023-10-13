@@ -26,7 +26,7 @@ const ArrivingInUk: FC = () => {
               backgroundColor: 'unset',
             }}
           >
-            Arriving In The Uk{' '}
+            Arriving In The UK{' '}
             <Box
               sx={{
                 position: 'absolute',
