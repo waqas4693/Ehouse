@@ -38,7 +38,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         underline="hover"
         sx={{
           display: 'block',
-          mb: 1,
+          // mb: 1,
           color: 'primary.contrastText',
         }}
       >
