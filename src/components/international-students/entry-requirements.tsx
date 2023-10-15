@@ -10,41 +10,19 @@ const EntryRequirements: FC = () => {
           component="h2"
           sx={{
             position: 'relative',
-            fontSize: { xs: 20, md: 41 },
+            color: 'secondary.main',
+            fontSize: { xs: 15, md: 36 },
             letterSpacing: 1.5,
             fontWeight: 'bold',
             lineHeight: 1.3,
           }}
         >
-          <Typography
-            component="mark"
-            sx={{
-              position: 'relative',
-              color: 'primary.main',
-              fontSize: 'inherit',
-              fontWeight: 'inherit',
-              backgroundColor: 'unset',
-            }}
-          >
-            Entry Requirements{' '}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: { xs: 24, md: 34 },
-                left: 2,
-                transform: 'rotate(3deg)',
-                '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-              }}
-            >
-              {/* eslint-disable-next-line */}
-              <img src="/images/headline-curve.svg" alt="Headline curve" />
-            </Box>
-          </Typography>
+          Entry Requirements
         </Typography>
       </Box>
 
       <Box sx={{ mb: 1, width: { xs: '100%', md: '70%' } }}>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant="h5">
+        <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="h5">
           {
             'There are no specific recommended prior learning requirements for business and management' +
             ' training at level 2. Communicating in English at reasonable competency level will be ' +

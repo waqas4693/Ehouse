@@ -40,13 +40,13 @@ const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items
 );
 
 const Navigation: FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Use the window.onload event to detect when client-side JavaScript is ready.
-    window.onload = () => {
-      setIsLoading(false);
-    };
+    // window.onload = () => {
+    //   setIsLoading(false);
+    // };
   }, []);
 
   return (
