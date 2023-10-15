@@ -9,7 +9,7 @@ const DynamicHomeCourse = dynamic(() => import('../components/home/course'))
 const DynamicHomeFeature2 = dynamic(() => import('../components/home/feature-2'))
 const DynamicHomeVideo = dynamic(() => import('../components/home/video'))
 const DynamicHomeGallery = dynamic(() => import('../components/home/gallery'))
-const DynamicHomeGallery2 = dynamic(() => import('../components/home/recognizing-institutes'))
+const DynamicRecognizingInstitutes = dynamic(() => import('../components/home/recognizing-institutes'))
 
 
 const Home: NextPageWithLayout = () => {
@@ -20,9 +20,8 @@ const Home: NextPageWithLayout = () => {
       <DynamicHomeFeature />
       <DynamicHomeFeature2 />
       {/* <DynamicHomeVideo /> */}
-      <DynamicHomeGallery2 />
       <DynamicHomeGallery />
-      
+      <DynamicRecognizingInstitutes />
     </>
   )
 }
