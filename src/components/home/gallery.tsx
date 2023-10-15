@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
@@ -48,7 +49,7 @@ const HomeGallery: FC = () => {
         variant="quilted"
         gap={20}
         cols={3}
-        // rowHeight={280}
+      // rowHeight={280}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
