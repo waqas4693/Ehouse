@@ -46,38 +46,14 @@ const HomeHero: FC = () => {
                   component="h2"
                   sx={{
                     position: 'relative',
-                    fontSize: { xs: 30, md: 62 },
+                    fontSize: { xs: 35, md: 40 },
                     letterSpacing: 1.5,
                     fontWeight: 'bold',
                     lineHeight: 1.3,
                     color: 'common.white'
                   }}
                 >
-                  <Typography
-                    component="mark"
-                    sx={{
-                      position: 'relative',
-                      color: 'primary.main',
-                      fontSize: 'inherit',
-                      fontWeight: 'inherit',
-                      backgroundColor: 'unset',
-                    }}
-                  >
-                    Unlocking{' '}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: { xs: 24, md: 34 },
-                        left: 2,
-                        transform: 'rotate(3deg)',
-                        '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-                      }}
-                    >
-                      {/* eslint-disable-next-line */}
-                      <img src="/images/headline-curve.svg" alt="Headline curve" />
-                    </Box>
-                  </Typography>
-                  <br />Language Brilliance{' '}
+                  Unlocking Language Brilliance
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>

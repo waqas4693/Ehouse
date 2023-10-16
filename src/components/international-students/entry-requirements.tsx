@@ -42,6 +42,13 @@ const EntryRequirements: FC = () => {
         <li style={{ marginBottom: '1rem' }}>
           <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
             <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+              Age should be 18 or plus years
+            </Typography>
+          </Box>
+        </li>
+        <li style={{ marginBottom: '1rem' }}>
+          <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
+            <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
               Fundamental familiarity with simple ways of representing data like graphs, flow charts, percentage and etc
             </Typography>
           </Box>
@@ -50,6 +57,35 @@ const EntryRequirements: FC = () => {
           <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
             <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
               Some experience of running a business or working for a business or background of business studies
+            </Typography>
+          </Box>
+        </li>
+
+        <li style={{ marginBottom: '1rem' }}>
+          <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
+            <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+              Basic understanding of English
+            </Typography>
+          </Box>
+        </li>
+        <li style={{ marginBottom: '1rem' }}>
+          <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
+            <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+              10 years schooling or above with 50 % marks in English in latest qualification
+            </Typography>
+          </Box>
+        </li>
+        <li style={{ marginBottom: '1rem' }}>
+          <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
+            <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+              Ensure that you can meet the financial obligations associated with the course, including tuition fees and any additional costs
+            </Typography>
+          </Box>
+        </li>
+        <li style={{ marginBottom: '1rem' }}>
+          <Box sx={{ display: 'inline-block', backgroundColor: 'common.white', boxShadow: 1, borderRadius: 4 }}>
+            <Typography variant="h6" sx={{ px: 2, py: 1.5, fontSize: '1rem', mb: 1, color: 'secondary.main' }}>
+              A passport valid for at least six months is required
             </Typography>
           </Box>
         </li>

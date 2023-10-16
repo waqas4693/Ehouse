@@ -40,16 +40,38 @@ const HomeGallery: FC = () => {
         backgroundColor: 'background.paper',
         pb: { xs: 8, md: 10 },
         display: 'flex',
-        justifyContent: 'center',
-        overflow: 'hidden'
+        flexDirection: 'column',
+        alignItems: 'center',
+        overflow: 'hidden',
       }}
     >
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: '40px',
+          color: 'secondary.main',
+          fontWeight: 600,
+          py: 2
+        }}
+      >
+        Explore Campus Life
+      </Typography>
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: '18px',
+          color: '#909090',
+          fontWeight: 400,
+          pb: 2
+        }}
+      >
+        Join our community of students around the world helping you succeed.
+      </Typography>
       <ImageList
         sx={{ maxWidth: '100%' }}
         variant="quilted"
         gap={20}
         cols={3}
-      // rowHeight={280}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -68,6 +90,7 @@ const HomeGallery: FC = () => {
         ))}
       </ImageList>
     </Box>
+
   )
 }
 
