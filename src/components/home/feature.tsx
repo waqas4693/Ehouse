@@ -40,7 +40,7 @@ const HomeFeature: FC = () => {
         <Grid container spacing={3} sx={{ px: 7 }}>
           <Grid item xs={12} md={5}>
             <Box sx={{ position: 'relative' }}>
-              <Image src="/images/home-feature.png" width={475} height={430} quality={97} alt="Feature img" />
+              <Image src="/images/home-feature.svg" width={475} height={430} quality={97} alt="Feature 1" />
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
@@ -53,7 +53,7 @@ const HomeFeature: FC = () => {
                 mt: 2,
                 mb: 3,
                 lineHeight: 1,
-                fontWeight: 'bold',
+                fontWeight: 'bold'
               }}
             >
               ARE you an aspiring Learner, Professional or a Global Explorer?

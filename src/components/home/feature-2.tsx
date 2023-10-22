@@ -128,7 +128,7 @@ const HomeFeature2: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-            <Image src="/images/home-feature-2.png" width={475} height={430} quality={97} alt="Feature img" />
+            <Image src="/images/home-feature-2.svg" width={475} height={430} quality={97} alt="Feature 2" />
             </Box>
           </Grid>
         </Grid>
