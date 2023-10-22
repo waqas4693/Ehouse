@@ -42,7 +42,8 @@ const typography: TypographyOptions = {
     fontWeight: '400'
   },
   body2: {
-    fontSize: '0.9rem',
+    fontSize: '14px',
+    fontWeight: '600'
   },
   subtitle1: {
     fontSize: '0.85rem',
