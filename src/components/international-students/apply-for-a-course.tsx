@@ -1,14 +1,12 @@
 import React, { FC } from 'react'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { StyledButton } from '@/components/styled-button'
+import Grid from '@mui/material/Grid'
 
-function courseData (
+import HomeCourse from '@/components/home/course'
+
+
+function courseData(
   courseName: string,
   duration: string,
   price: string
@@ -16,106 +14,87 @@ function courseData (
   return { courseName, duration, price }
 }
 
-const rows = [
-  courseData('General English Course', '11 Months', '£ 4500'),
-  courseData('IELTS Preparation Course', '11 Months', '£ 4500'),
-  courseData('Business English Course', '11 Months', '£ 4500'),
-]
 
 const ApplyForACourse: FC = () => {
+
+  const applyforacourse = [
+    { text: 'Fill in Online Registration Assessment Form' },
+    { text: 'Wait for approval of Registration Assessment Form' },
+    { text: 'Get Visa Support Letter and apply for UK Visitor Visa to join course' }
+  ];
+
   return (
-    <Box sx={{ px: 10, py: 5 }}>
-      <Box sx={{ mb: 3 }}>
-        <Typography
-          component='h2'
-          sx={{
-            position: 'relative',
-            fontSize: { xs: 20, md: 41 },
-            letterSpacing: 1.5,
-            fontWeight: 'bold',
-            lineHeight: 1.3,
-          }}
-        >
-          <Typography
-            component='mark'
-            sx={{
-              position: 'relative',
-              color: 'primary.main',
-              fontSize: 'inherit',
-              fontWeight: 'inherit',
-              backgroundColor: 'unset',
-            }}
-          >
-            Apply For A Course{' '}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: { xs: 24, md: 34 },
-                left: 2,
-                transform: 'rotate(3deg)',
-                '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
-              }}
-            >
-              {/* eslint-disable-next-line */}
-              <img src='/images/headline-curve.svg' alt='Headline curve' />
+    <Box>
+      <Box sx={{ px: 10, py: 5 }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={8}>
+            <Box sx={{ mb: 3 }}>
+              <Typography
+                variant="h2"
+                sx={{
+                  position: 'relative',
+                  color: 'secondary.main',
+                  fontSize: { xs: 15, md: 36 },
+                  letterSpacing: 1.5,
+                  fontWeight: 'bold',
+                  lineHeight: 1.3,
+                }}
+              >
+                Apply For A Course
+              </Typography>
             </Box>
-          </Typography>
-          <Typography
-            component='div'
-            sx={{
-              mt: 5,
-              display: 'block',
-              fontSize: 'inherit',
-              fontWeight: 'inherit',
-              lineHeight: 1.3,
-            }}
-          >
-            Training in 3 easy steps
-          </Typography>
-        </Typography>
+
+            <Box sx={{ mb: 3 }}>
+              <Typography sx={{ lineHeight: 1.6, fontSize: '28px', fontWeight: 600 }} variant="body1">
+                Training in 3 easy steps
+              </Typography>
+            </Box>
+
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              {applyforacourse.map((item, index) => (
+                <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 30 }}>
+                  <img src="/images/red-arrow.svg" alt="Arrow" style={{ marginRight: '8px', transform: 'translateY(3px)' }} />
+                  {item.text}
+                </li>
+              ))}
+
+            </ul>
+
+
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <img src="/images/applyforacourse.svg" alt="Image" style={{ width: '100%' }} />
+          </Grid>
+        </Grid>
       </Box>
 
-      <Box sx={{ mb: 1, width: { xs: '100%', md: '70%' } }}>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant='h5'>
-          {'Fill in Online Registration Assessment Form'}
-        </Typography>
-      </Box>
-      <Box sx={{ mb: 1, width: { xs: '100%', md: '70%' } }}>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant='h5'>
-          {'Wait for approval of Registration Assessment Form'}
-        </Typography>
-      </Box>
-      <Box sx={{ mb: 5, width: { xs: '100%', md: '70%' } }}>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }} variant='h5'>
-          {'Get Visa Support Letter and apply for UK Visitor Visa to join course'}
-        </Typography>
-      </Box>
+      <Box sx={{ px: 10, py: 5, backgroundColor: 'white' }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={12}>
+            <Box sx={{ mb: 3 }}>
+              <Typography
+                variant="h2"
+                sx={{
+                  position: 'relative',
+                  color: 'secondary.main',
+                  fontSize: { xs: 15, md: 36 },
+                  letterSpacing: 1.5,
+                  fontWeight: 'bold',
+                  lineHeight: 1.3,
+                }}
+              >
+                Courses
+              </Typography>
+            </Box>
+            <Box>
+              <HomeCourse style={{ backgroundColor: 'white' }} />
+            </Box>
 
-      <Table sx={{ boxShadow: 1, borderRadius: 4, backgroundColor: 'common.white' }} aria-label='courses table'>
-        <TableHead>
-          <TableRow>
-            <TableCell>Course Name</TableCell>
-            <TableCell>Duration</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell>Action</TableCell>
-          </TableRow>
-        </TableHead>
+          </Grid>
 
-        <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.courseName}>
-              <TableCell component='th' scope='row'>
-                {row.courseName}
-              </TableCell>
-              <TableCell>{row.duration}</TableCell>
-              <TableCell>{row.price}</TableCell>
-              <TableCell>
-                <StyledButton>Register Now</StyledButton>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+
+        </Grid>
+      </Box>
     </Box>
   )
 }
