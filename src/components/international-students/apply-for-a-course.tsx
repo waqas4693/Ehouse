@@ -87,7 +87,7 @@ const ApplyForACourse: FC = () => {
               </Typography>
             </Box>
             <Box>
-              <HomeCourse style={{ backgroundColor: 'white' }} />
+              <HomeCourse />
             </Box>
 
           </Grid>
