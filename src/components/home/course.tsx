@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
+import Checkbox from '@mui/material/Checkbox'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import Modal from '@mui/material/Modal'
@@ -218,11 +219,26 @@ const HomeCourse: FC = () => {
             py: 5,
           }}
         >
+          <IconButton
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              top: '-20px',
+              right: '-20px',
+              zIndex: 1,
+            }}
+          >
+            <img
+              src="/images/form-close-button.svg"
+              alt="Close Button"
+              style={{ cursor: 'pointer' }}
+            />
+          </IconButton>
           <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
             Admission Form!
           </Typography>
           <Typography align="center" sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
-            Enroll yourself to access this course.
+            Please fill in the form below
           </Typography>
           <form onSubmit={handleSubmit}>
             <Box sx={customInputStyle}>
@@ -280,6 +296,15 @@ const HomeCourse: FC = () => {
                 sx={{ mt: 1 }}
                 value={selectedCourse}
               />
+              <Typography
+                variant="body1"
+                sx={{ display: 'flex', alignItems: 'center', mt: 1 }}
+              >
+                <Checkbox
+                // Handle the checkbox state
+                />
+                By submitting this form you agree to our Terms and Conditions
+              </Typography>
             </Box>
             <Button type="submit" variant="contained" color="secondary" fullWidth sx={{ mt: 3, borderRadius: '8px' }}>
               Register Now
