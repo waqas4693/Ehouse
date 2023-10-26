@@ -15,7 +15,7 @@ const Footer: FC = () => {
         <Grid container spacing={1}>
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
-              <Typography component="h2" variant="h2" sx={{ mb: 2, color: '#FFFFFF' }}>
+              <Typography component="h3" variant="h3" sx={{ mb: 2, color: '#FFFFFF' }}>
                 Education House Leeds
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>

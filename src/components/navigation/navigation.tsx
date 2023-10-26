@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
 
@@ -40,17 +40,14 @@ const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items
 );
 
 const Navigation: FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Use the window.onload event to detect when client-side JavaScript is ready.
-    // window.onload = () => {
-    //   setIsLoading(false);
-    // };
+    setIsClient(true); // Set isClient to true when the component is mounted.
   }, []);
 
   return (
-    <Box sx={{ display: isLoading ? 'none' : 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }}}>
       {navigations.map(({ path: destination, label, dropdownItems }) => (
         <Box
           key={destination}
@@ -80,10 +77,15 @@ const Navigation: FC = () => {
             },
           }}
         >
-          <Link href={destination} passHref>
-            <a>{label}</a>
-          </Link>
-          {dropdownItems && <Dropdown items={dropdownItems} />}
+          {isClient ? ( // Render when the client-side JavaScript takes over
+            <Link href={destination} passHref>
+              <a>{label}</a>
+            </Link>
+          ) : (
+            // Render a loading placeholder until the client-side JavaScript takes over
+            <div>Loading...</div>
+          )}
+          {dropdownItems && isClient && <Dropdown items={dropdownItems} />} {/* Render the dropdown only when isClient is true */}
         </Box>
       ))}
     </Box>
