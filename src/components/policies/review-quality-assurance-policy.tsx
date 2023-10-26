@@ -1,47 +1,137 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
 
 const QualityAssurancePolicy: FC = () => {
+
+  const reviewandquality = [
+    {
+      text: 'Quality of training / teaching.'
+    },
+    {
+      text: 'Experience of learners, teachers, assessors and eHouse management staff.'
+    },
+    { text: 'Repute and image of Education House Leeds (eHouse).' }
+  ];
+
   return (
     <Box sx={{ px: 10, py: 5 }}>
-      <Box sx={{ mb: 5 }}>
-        <Typography
-          component="h2"
-          sx={{
-            position: 'relative',
-            fontSize: { xs: 20, md: 41 },
-            letterSpacing: 1.5,
-            fontWeight: 'bold',
-            lineHeight: 1.3,
-          }}
-        >
-          <Typography
-            component="mark"
-            sx={{
-              position: 'relative',
-              color: 'primary.main',
-              fontSize: 'inherit',
-              fontWeight: 'inherit',
-              backgroundColor: 'unset',
-            }}
-          >
-            Quality Assurance Policy{' '}
-            <Box
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={12}>
+
+          <Box sx={{ mb: 2 }}>
+            <Typography
+              variant="h2"
               sx={{
-                position: 'absolute',
-                top: { xs: 24, md: 34 },
-                left: 2,
-                transform: 'rotate(3deg)',
-                '& img': { width: { xs: 146, md: 210 }, height: 'auto' },
+                position: 'relative',
+                color: 'secondary.main',
+                fontSize: { xs: 15, md: 36 },
+                letterSpacing: 1.5,
+                fontWeight: 'bold',
+                lineHeight: 1.3,
               }}
             >
-              {/* eslint-disable-next-line */}
-              <img src="/images/headline-curve.svg" alt="Headline curve" />
-            </Box>
-          </Typography>
-        </Typography>
-      </Box>
+              Synopsis of Internal Review & Quality Assurance Policy
+            </Typography>
+          </Box>
+
+          <Box sx={{ mb: 3 }}>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
+              Regular Quality Review and Standardization Meetings (QRS Meetings) will be held in order to improve the
+            </Typography>
+
+          </Box>
+
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {reviewandquality.map((item, index) => (
+              <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>
+                <img src="/images/red-arrow.svg" alt="Arrow" style={{ marginRight: '8px', transform: 'translateY(3px)' }} />
+                {item.text}
+              </li>
+            ))}
+          </ul>
+
+          <Box sx={{ mb: 2 }}>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
+              QRS Meetings will be conducted according to below mentioned
+            </Typography>
+
+          </Box>
+
+
+          <Box sx={{ mb: 2 }}>
+            <Typography
+              variant="h2"
+              sx={{
+                position: 'relative',
+                color: 'secondary.main',
+                fontSize: { xs: 15, md: 28 },
+                letterSpacing: 1.5,
+                fontWeight: 'bold',
+                lineHeight: 1.3,
+              }}
+            >
+              Purpose of QRS Meetings
+            </Typography>
+
+            <Typography
+              variant="h2"
+              sx={{
+                position: 'relative',
+                color: 'black',
+                paddingTop: '15px',
+                fontSize: { xs: 15, md: 28 },
+                letterSpacing: 1.5,
+                fontWeight: 'bold',
+                lineHeight: 1.3,
+              }}
+            >
+              To:
+            </Typography>
+
+
+            <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensure courses are effective and achieving their aims and objectives.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Clearly define the roles and responsibilities of staff.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Review the feedback formsof all participants and staff.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Identify areas requiring improvement.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Share best practices.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensure compliance with relevant codes of practice.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensure the implementation of policies and procedures.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Implement changes and developments.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Provide a consistent experience and knowledge for all participants.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Contribute to the continuous development of teaching / training and administrative staff.
+              </li>
+              <li >
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Continuous review and improvement of the feedback audit trail.
+              </li>
+
+            </ul>
+          </Box>
+
+
+        </Grid>
+      </Grid>
     </Box>
   )
 }
