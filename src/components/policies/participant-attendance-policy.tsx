@@ -391,8 +391,8 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <Box sx={{ mb: 3 }}>
               <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
-                For unseen absence, participant should contact SWO. Responsible trainer / teacher will mark the participant ‘absent’ and ask for “an explanation for an absence" on
-                his / her arrival. In addition, teacher / trainer should draw the participant’s attention to the attendance policy and stress that non-attendance will be followed up
+                For unseen absence, participant should contact SWO. Responsible trainer / teacher will mark the participant &quot;absent&quot; and ask for “an explanation for an absence&quot; on
+                his / her arrival. In addition, teacher / trainer should draw the participant&quot;s attention to the attendance policy and stress that non-attendance will be followed up
                 and dealt with.
               </Typography>
 

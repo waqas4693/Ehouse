@@ -76,6 +76,9 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
   return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
 });
 
+Alert.displayName = 'Alert';
+
+
 const HomeCourse: FC = () => {
   const { breakpoints } = useTheme();
   const matchMobileView = useMediaQuery(breakpoints.down('md'));
@@ -289,7 +292,7 @@ const HomeCourse: FC = () => {
           </Grid>
         </Grid>
       </Container>
-      
+
       <Snackbar
         open={snackbar.open}
         autoHideDuration={6000}
