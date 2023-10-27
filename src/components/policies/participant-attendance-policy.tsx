@@ -180,7 +180,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Where absences/lateness can be foreseen in advance, the participant should notify Student Welfare Officer (SWO). Appropriate evidence should be provided to
-                  SWO for absence to be classed as “authorized".
+                  SWO for absence to be classed as &quot;authorized&quot;.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>For unforeseen absences, such as illness, the participant must contact SWO for his / her absence as early as possible on the first day of absence and every subsequent
