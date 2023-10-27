@@ -9,7 +9,7 @@ const Accomodation: FC = () => {
     {
       text: 'Could provide the necessary assistance to ensure that delegates secure suitable accommodation for the duration of their course / training'
     },
-    { text: 'Would send a list of hotels within walking distance from the training centre on request.' }
+    { text: 'Would send a list of hotels within walking distance from the training centre on request. ' }
   ];
   return (
     <Box sx={{ px: 10, py: 5 }}>
