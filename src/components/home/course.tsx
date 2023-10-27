@@ -1,32 +1,32 @@
-import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Checkbox from '@mui/material/Checkbox'
-import IconArrowBack from '@mui/icons-material/ArrowBack'
-import IconArrowForward from '@mui/icons-material/ArrowForward'
-import Modal from '@mui/material/Modal'
-import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
-import Snackbar from '@mui/material/Snackbar'
-import MuiAlert, { AlertProps } from '@mui/material/Alert'
-import axios from 'axios'
-import { useTheme, styled } from '@mui/material/styles'
-import { IconButton, useMediaQuery } from '@mui/material'
+import React, { FC, useState, ChangeEvent, FormEvent } from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Slider, { Settings } from 'react-slick';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Checkbox from '@mui/material/Checkbox';
+import IconArrowBack from '@mui/icons-material/ArrowBack';
+import IconArrowForward from '@mui/icons-material/ArrowForward';
+import Modal from '@mui/material/Modal';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
+import axios from 'axios';
+import { useTheme, styled } from '@mui/material/styles';
+import { IconButton, useMediaQuery } from '@mui/material';
 
-import { data } from './course.data'
-import { CourseCardItem } from '@/components/course'
+import { data } from './course.data';
+import { CourseCardItem } from '@/components/course';
 
 interface SliderArrowArrow {
-  onClick?: () => void
-  type: 'next' | 'prev'
-  className?: 'string'
+  onClick?: () => void;
+  type: 'next' | 'prev';
+  className?: 'string';
 }
 
 const SliderArrow: FC<SliderArrowArrow> = props => {
-  const { onClick, type, className } = props
+  const { onClick, type, className } = props;
   return (
     <IconButton
       sx={{
@@ -46,8 +46,8 @@ const SliderArrow: FC<SliderArrowArrow> = props => {
     >
       {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
     </IconButton>
-  )
-}
+  );
+};
 
 const StyledDots = styled('ul')(({ theme }) => ({
   '&.slick-dots': {
@@ -63,28 +63,28 @@ const StyledDots = styled('ul')(({ theme }) => ({
       },
     },
   },
-}))
+}));
 
 const customInputStyle = {
   input: {
     borderRadius: '8px',
     border: 'none',
   },
-}
+};
 
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />
-})
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
+  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
+});
 
 const HomeCourse: FC = () => {
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
+  const { breakpoints } = useTheme();
+  const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
-  const [open, setOpen] = React.useState(false)
-  const handleOpen = (): void => setOpen(true)
-  const handleClose = (): void => setOpen(false)
-  const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' })
-  const [selectedCourse, setSelectedCourse] = useState<string>('')
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = (): void => setOpen(true);
+  const handleClose = (): void => setOpen(false);
+  const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' });
+  const [selectedCourse, setSelectedCourse] = useState<string>('');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -92,7 +92,16 @@ const HomeCourse: FC = () => {
     email: '',
     contactNo: '',
     selectedCourse: '',
-  })
+    acceptTerms: false, // Added acceptTerms for checkbox
+  });
+
+  const [errors, setErrors] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contactNo: '',
+    checkbox: '', // Error message for the checkbox
+  });
 
   const resetForm = (): void => {
     setFormData({
@@ -101,45 +110,126 @@ const HomeCourse: FC = () => {
       email: '',
       contactNo: '',
       selectedCourse: '',
-    })
-  }
+      acceptTerms: false,
+    });
+    setErrors({
+      firstName: '',
+      lastName: '',
+      email: '',
+      contactNo: '',
+      checkbox: '',
+    });
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
-    const { name, value } = e.target
-    setFormData(prevData => ({ ...prevData, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData(prevData => ({ ...prevData, [name]: value }));
+  };
+
+  const validateForm = (): boolean => {
+    let isValid = true;
+
+    if (!formData.firstName) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        firstName: 'Please enter your first name.',
+      }));
+      isValid = false;
+    } else {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        firstName: '',
+      }));
+    }
+
+    if (!formData.lastName) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        lastName: 'Please enter your last name.',
+      }));
+      isValid = false;
+    } else {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        lastName: '',
+      }));
+    }
+
+    if (!formData.email) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        email: 'Please enter your email.',
+      }));
+      isValid = false;
+    } else {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        email: '',
+      }));
+    }
+
+    if (!formData.contactNo) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        contactNo: 'Please enter your contact number.',
+      }));
+      isValid = false;
+    } else {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        contactNo: '',
+      }));
+    }
+
+    if (!formData.acceptTerms) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        checkbox: 'Please accept the Terms and Conditions.',
+      }));
+      isValid = false;
+    } else {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        checkbox: '',
+      }));
+    }
+
+    return isValid;
+  };
 
   const handleSubmit = async (e: FormEvent): Promise<void> => {
-    e.preventDefault()
+    e.preventDefault();
 
-    try {
-      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
+    if (validateForm()) {
+      try {
+        const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
 
-      const message = response.data.message
+        const message = response.data.message;
 
-      if (response.data.status === 'success') {
-        handleClose()
-        handleSnackbarOpen('success', message)
-        resetForm()
-      } else if (response.data.status === 'failure') {
-        handleClose()
-        handleSnackbarOpen('error', message)
-        resetForm()
+        if (response.data.status === 'success') {
+          handleClose();
+          handleSnackbarOpen('success', message);
+          resetForm();
+        } else if (response.data.status === 'failure') {
+          handleClose();
+          handleSnackbarOpen('error', message);
+          resetForm();
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
       }
-    } catch (error) {
-      console.error('Error submitting the form:', error)
     }
-  }
+  };
 
   const handleSnackbarOpen = (newSeverity: string, newMessage: string): void => {
-    setSnackbar({ open: true, severity: newSeverity || 'success', message: newMessage })
-  }
+    setSnackbar({ open: true, severity: newSeverity || 'success', message: newMessage });
+  };
 
   const handleSelectCourse = (courseName: string): void => {
-    setSelectedCourse(courseName)
-    formData.selectedCourse = courseName
-    handleOpen()
-  }
+    setSelectedCourse(courseName);
+    formData.selectedCourse = courseName;
+    handleOpen();
+  };
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -154,7 +244,7 @@ const HomeCourse: FC = () => {
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
-  }
+  };
 
   return (
     <Box
@@ -199,131 +289,24 @@ const HomeCourse: FC = () => {
           </Grid>
         </Grid>
       </Container>
-      <Modal
-        aria-labelledby="register-now-modal-title"
-        aria-describedby="register-now-modal-description"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
+      
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
       >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            bgcolor: 'common.white',
-            borderRadius: '35px',
-            boxShadow: 24,
-            px: 10,
-            py: 5,
-          }}
-        >
-          <IconButton
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              top: '-20px',
-              right: '-20px',
-              zIndex: 1,
-            }}
-          >
-            <img
-              src="/images/form-close-button.svg"
-              alt="Close Button"
-              style={{ cursor: 'pointer' }}
-            />
-          </IconButton>
-          <Typography variant="h2" align="center" color="secondary.main" fontSize="48px">
-            Admission Form!
-          </Typography>
-          <Typography align="center" sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
-            Please fill in the form below
-          </Typography>
-          <form onSubmit={handleSubmit}>
-            <Box sx={customInputStyle}>
-              <TextField
-                name="firstName"
-                label="First Name"
-                fullWidth
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
-                sx={{ mt: 1 }}
-                value={formData.firstName}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
-              />
-              <TextField
-                name="lastName"
-                label="Last Name"
-                fullWidth
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
-                sx={{ mt: 1 }}
-                value={formData.lastName}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
-              />
-              <TextField
-                name="email"
-                label="Email"
-                fullWidth
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
-                sx={{ mt: 1 }}
-                value={formData.email}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
-              />
-              <TextField
-                name="contactNo"
-                label="Contact Number"
-                fullWidth
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
-                sx={{ mt: 1 }}
-                value={formData.contactNo}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
-              />
-              <TextField
-                name="selectedCourse"
-                label="Selected Course"
-                fullWidth
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
-                sx={{ mt: 1 }}
-                value={selectedCourse}
-              />
-              <Typography
-                variant="body1"
-                sx={{ display: 'flex', alignItems: 'center', mt: 1 }}
-              >
-                <Checkbox
-                // Handle the checkbox state
-                />
-                By submitting this form you agree to our Terms and Conditions
-              </Typography>
-            </Box>
-            <Button type="submit" variant="contained" color="secondary" fullWidth sx={{ mt: 3, borderRadius: '8px' }}>
-              Register Now
-            </Button>
-          </form>
-        </Box>
-      </Modal>
-      <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
-        {snackbar.severity === 'success' ?
+        {snackbar.severity === 'success' ? (
           <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='success' sx={{ width: '100%' }}>
             {snackbar.message}
           </Alert>
-          : <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='error' sx={{ width: '100%' }}>
+        ) : (
+          <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='error' sx={{ width: '100%' }}>
             {snackbar.message}
           </Alert>
-        }
+        )}
       </Snackbar>
     </Box>
-  )
-}
+  );
+};
 
 export default HomeCourse
