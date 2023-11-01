@@ -87,11 +87,13 @@ const ApplyForACourse: FC = () => {
             }}>
               <TableHead sx={{
                 position: 'relative',
-                color: 'white',
+                color: 'common.white',
                 backgroundColor: 'secondary.main',
 
               }} >
-                <TableRow>
+                <TableRow sx={{
+                  color: 'common.white'
+                }}>
                   {columns.map((column, index) => (
                     <TableCell key={index}>{column}</TableCell>
                   ))}
