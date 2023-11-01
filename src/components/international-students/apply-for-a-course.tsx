@@ -83,7 +83,7 @@ const ApplyForACourse: FC = () => {
 
             <Table sx={{
               border: '1px solid lightgray',
-              borderRadius: '10px'
+              borderRadius: '12px'
             }}>
               <TableHead sx={{
                 position: 'relative',
