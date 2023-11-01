@@ -292,6 +292,95 @@ const HomeCourse: FC = () => {
           </Grid>
         </Grid>
       </Container>
+      <Modal
+        aria-labelledby='register-now-modal-title'
+        aria-describedby='register-now-modal-description'
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'common.white',
+            borderRadius: '35px',
+            boxShadow: 24,
+            px: 10,
+            py: 5,
+          }}
+        >
+          <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
+            Admission Form!
+          </Typography>
+          <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
+            Enroll yourself to access this course.
+          </Typography>
+          <form onSubmit={handleSubmit}>
+            <Box sx={customInputStyle}>
+              <TextField
+                name='firstName'
+                label='First Name'
+                fullWidth
+                variant='filled'
+                size='small'
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.firstName}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name='lastName'
+                label='Last Name'
+                fullWidth
+                variant='filled'
+                size='small'
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.lastName}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name='email'
+                label='Email'
+                fullWidth
+                variant='filled'
+                size='small'
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.email}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name='contactNo'
+                label='Contact Number'
+                fullWidth
+                variant='filled'
+                size='small'
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={formData.contactNo}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+              />
+              <TextField
+                name='selectedCourse'
+                label='Selected Course'
+                fullWidth
+                variant='filled'
+                size='small'
+                InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                sx={{ mt: 1 }}
+                value={selectedCourse}
+              />
+            </Box>
+            <Button type='submit' variant='contained' color='secondary' fullWidth sx={{ mt: 3, borderRadius: '8px' }}>
+              Register Now
+            </Button>
+          </form>
+        </Box>
+      </Modal>
 
       <Snackbar
         open={snackbar.open}

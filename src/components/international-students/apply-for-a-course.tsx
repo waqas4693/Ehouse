@@ -3,7 +3,16 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
-import HomeCourse from '@/components/home/course'
+import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material';
+
+const columns = ['Training/Short Course Name', 'Level', 'Wks / Days', 'Start Date', 'End Date', 'Fees', 'Actions'];
+
+const data = [
+  ['Principles of Team Leading', 'Level 2', '6 Weeks', '07-09-2021', '13-10-2021', '£3,200'],
+  ['Principles of business administration', 'Level 2', '6 Weeks', '07-09-2021', '13-10-2021', '£3,200'],
+  ['Principles of customer service', 'Level 2', '6 Weeks', '07-09-2021', '13-10-2021', '£3,200'],
+  // Add more rows as needed
+];
 
 
 function courseData(
@@ -71,28 +80,42 @@ const ApplyForACourse: FC = () => {
       <Box sx={{ px: 10, py: 5, backgroundColor: 'white' }}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={12}>
-            <Box sx={{ mb: 3 }}>
-              <Typography
-                variant="h2"
-                sx={{
-                  position: 'relative',
-                  color: 'secondary.main',
-                  fontSize: { xs: 15, md: 36 },
-                  letterSpacing: 1.5,
-                  fontWeight: 'bold',
-                  lineHeight: 1.3,
-                }}
-              >
-                Courses
-              </Typography>
-            </Box>
-            <Box>
-              <HomeCourse />
-            </Box>
 
+            <Table sx={{
+              border: '1px solid lightgray',
+              borderRadius: '10px'
+            }}>
+              <TableHead sx={{
+                position: 'relative',
+                color: 'white',
+                backgroundColor: 'secondary.main',
+
+              }} >
+                <TableRow>
+                  {columns.map((column, index) => (
+                    <TableCell key={index}>{column}</TableCell>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {data.map((row, rowIndex) => (
+                  <TableRow key={rowIndex}>
+                    {row.map((cell, cellIndex) => (
+                      <TableCell key={cellIndex}>{cell}</TableCell>
+                    ))}
+                    <TableCell>
+                      <Button variant="contained" sx={{
+                        position: 'relative',
+                        backgroundColor: 'secondary.main'
+                      }} >
+                        Register Now
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
           </Grid>
-
-
         </Grid>
       </Box>
     </Box>
