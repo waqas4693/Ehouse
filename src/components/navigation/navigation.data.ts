@@ -18,8 +18,7 @@ export const navigations: Navigation[] = [
       { path: '/international-students/arriving-in-uk', label: 'Arriving In The UK' },
       { path: '/international-students/direction-and-location', label: 'Direction And Location' },
       { path: '/international-students/accomodation', label: 'Accomodation' },
-      { path: '/international-students/uk-visa', label: 'UK Visa' },
-      { path: '/international-students/student-visa', label: 'Short Term Study Visa' },
+      { path: '/international-students/uk-visa', label: 'Short Term Study Visa' }
     ]
   },
   {
@@ -30,7 +29,7 @@ export const navigations: Navigation[] = [
       { path: '/policies/review-quality-assurance-policy', label: 'Internal Review And Quality Assurance Policy' },
       { path: '/policies/refund-policy', label: 'Refund Policy' },
       { path: '/policies/synopsis-of-policies', label: 'Synopsis Of Policies' },
-      { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' },
+      { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' }
     ]
   },
   {
