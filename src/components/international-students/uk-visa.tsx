@@ -60,12 +60,13 @@ const UkVisa: FC = () => {
     },
   ];
 
-  const grid1 = questionsAndAnswers.slice(0, 7).map((qa) => (
-      <ExpandableSection question={qa.question} answer={qa.answer} />
+  const grid1 = questionsAndAnswers.slice(0, 6).map((qa, index) => (
+
+    <ExpandableSection question={qa.question} answer={qa.answer} key={index} />
   ));
 
-  const grid2 = questionsAndAnswers.slice(7).map((qa) => (
-      <ExpandableSection question={qa.question} answer={qa.answer} />
+  const grid2 = questionsAndAnswers.slice(6).map((qa, index) => (
+    <ExpandableSection question={qa.question} answer={qa.answer} key={index} />
   ));
 
   return (

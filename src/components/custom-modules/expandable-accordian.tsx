@@ -10,9 +10,9 @@ interface ExpandableSectionProps {
 const ExpandableSection: FC<ExpandableSectionProps> = ({ question, answer }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleExpand = () => {
+  const handleExpand = (): void => {
     setExpanded(!expanded);
-  };
+  };  
 
   return (
     <Accordion expanded={expanded} onChange={handleExpand} sx={{py: 1}}>
