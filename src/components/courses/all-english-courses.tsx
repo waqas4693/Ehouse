@@ -132,7 +132,6 @@ const AllEnglishCourses: FC = () => {
 
     try {
       const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
-
       const message = response.data.message
 
       if (response.data.status === 'success') {

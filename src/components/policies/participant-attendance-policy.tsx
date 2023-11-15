@@ -64,10 +64,10 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <Box sx={{ mb: 2 }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -201,7 +201,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -265,10 +265,10 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <Box sx={{ mb: 2 }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -338,17 +338,17 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <Box sx={{ mb: 2 }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
                 }}
               >
-                An Absence WIill Not Be Authorized For any Of The following reasons:
+                An Absence Will Not Be Authorized For any Of The following reasons:
               </Typography>
             </Box>
 
@@ -423,10 +423,10 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <Box sx={{ mb: 2 }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -442,16 +442,14 @@ const ParticipantAttendancePolicy: FC = () => {
                 All staff are responsible for ensuring the good attendance and punctuality of their participants and for dealing with attendance and punctuality issues whenever they
                 occur.
               </Typography>
-
             </Box>
-
 
             <Box sx={{ mb: 2 }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -583,8 +581,7 @@ const ParticipantAttendancePolicy: FC = () => {
               </ul>
             </Box>
 
-
-            <Box sx={{ mb: 2 }}>
+            {/* <Box sx={{ mb: 2 }}>
               <Typography
                 variant="h2"
                 sx={{
@@ -604,11 +601,9 @@ const ParticipantAttendancePolicy: FC = () => {
               <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
                 Responsible staff for attendance and punctuality
               </Typography>
-
             </Box>
 
             <Box sx={{ mb: 2 }}>
-
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Trainer / Teacher.
@@ -619,12 +614,10 @@ const ParticipantAttendancePolicy: FC = () => {
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>QAC Appointed member
                 </li>
-
               </ul>
-            </Box>
+            </Box> */}
 
-
-            <Box sx={{ mb: 2 }}>
+            {/* <Box sx={{ mb: 2 }}>
               <Typography
                 variant="h2"
                 sx={{
@@ -638,10 +631,9 @@ const ParticipantAttendancePolicy: FC = () => {
               >
                 Abbreviation
               </Typography>
-            </Box>
+            </Box> */}
 
-            <Box sx={{ mb: 2 }}>
-
+            {/* <Box sx={{ mb: 2 }}>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>SWO : Student Welfare Officer.
@@ -649,17 +641,11 @@ const ParticipantAttendancePolicy: FC = () => {
                 <li style={{ lineHeight: 1.5 }}>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>QAC : Quality Assurance Committee.
                 </li>
-
               </ul>
-            </Box>
-
-
-
-
-
+            </Box> */}
           </Grid>
         </Grid >
-      </Box >
+      </Box>
 
       <Box sx={{ backgroundColor: '#fff' }}>
 
@@ -681,11 +667,9 @@ const ParticipantAttendancePolicy: FC = () => {
                 Reach out to us
               </Typography>
             </Box>
-
           </Grid>
 
           <Grid item xs={12} md={6}>
-
             <Box sx={{ float: 'right' }}>
               <Typography
                 variant="h2"

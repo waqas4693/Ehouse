@@ -1,15 +1,22 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
+import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
-import MuiAlert, { AlertProps } from '@mui/material/Alert'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YoutubeIcon from '@mui/icons-material/YouTube';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import Link from '@mui/material/Link';
 import axios from 'axios'
 import Typography from '@mui/material/Typography'
-import { useTheme, styled } from '@mui/material/styles'
-import { IconButton, useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
+import { useMediaQuery } from '@mui/material'
+import { LinkedIn } from '@mui/icons-material'
 
 const customInputStyle = {
     input: {
@@ -124,18 +131,28 @@ const ContactForm: FC = () => {
 
                         <Box sx={{ mb: 3, display: 'flex', alignItems: 'start' }}>
                             <img src="/images/icons/phone.svg" alt="Image" style={{ width: '30px', marginRight: '15px' }} />
-                            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
+                            <Typography sx={{ fontSize: '16px' }} variant="body1">
                                 <b>Phone:</b> +44 (0) 7455 222 161 <br />
                                 <b>Phone:</b> +44 (0) 113 322 6557 <br />
                                 <b>Email:</b> info@ehouse.org.uk <br />
-                                <b>Website:</b> www.ehouse.org.uk <br />
-                                Follow Us:
+                                <b>Follow Us:</b>
+                                <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
+                                    <InstagramIcon sx={{ ml: 1, color: 'secondary.main' }} />
+                                </Link>
+                                <Link href="https://www.facebook.com/Training4Biz/?view_public_for=133224183810380" target="_blank" rel="noopener noreferrer">
+                                    <FacebookIcon sx={{ ml: 1, color: 'secondary.main' }} />
+                                </Link>
+                                <Link href="https://www.linkedin.com/company/educationhouseleeds/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon sx={{ ml: 1, color: 'secondary.main' }} />
+                                </Link>
+                                <Link href="https://www.youtube.com/channel/UCInCkv901I2a_oYONAbgVbQ" target="_blank" rel="noopener noreferrer">
+                                    <YoutubeIcon sx={{ ml: 1, color: 'secondary.main' }} />
+                                </Link>
+                                <Link href="https://www.pinterest.co.uk/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
+                                    <PinterestIcon sx={{ ml: 1, color: 'secondary.main' }} />
+                                </Link>
                             </Typography>
                         </Box>
-
-
-
-
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <img src="/images/contact_us.svg" alt="Image" style={{ width: '100%' }} />

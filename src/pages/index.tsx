@@ -7,7 +7,7 @@ const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
 const DynamicHomeFeature = dynamic(() => import('../components/home/feature'))
 const DynamicHomeCourse = dynamic(() => import('../components/home/course'))
 const DynamicHomeFeature2 = dynamic(() => import('../components/home/feature-2'))
-const DynamicHomeVideo = dynamic(() => import('../components/home/video'))
+// const DynamicHomeVideo = dynamic(() => import('../components/home/video'))
 const DynamicHomeGallery = dynamic(() => import('../components/home/gallery'))
 const DynamicRecognizingInstitutes = dynamic(() => import('../components/home/recognizing-institutes'))
 

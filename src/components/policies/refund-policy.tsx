@@ -37,7 +37,7 @@ const RefundPolicy: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 36 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -66,7 +66,7 @@ const RefundPolicy: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -122,7 +122,7 @@ const RefundPolicy: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -148,7 +148,7 @@ const RefundPolicy: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',

@@ -9,7 +9,6 @@ const SynopsisOfPolicies: FC = () => {
       <Box sx={{ px: 10, py: 5 }}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={12}>
-
             <Box sx={{ mb: 2 }}>
               <Typography
                 variant="h2"
@@ -69,7 +68,7 @@ const SynopsisOfPolicies: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -103,7 +102,7 @@ const SynopsisOfPolicies: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -133,7 +132,7 @@ const SynopsisOfPolicies: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
@@ -158,7 +157,7 @@ const SynopsisOfPolicies: FC = () => {
                 variant="h2"
                 sx={{
                   position: 'relative',
-                  color: 'secondary.main',
+                  color: '#000',
                   fontSize: { xs: 15, md: 28 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',

@@ -1,7 +1,14 @@
-import React, { FC } from 'react'
+import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
 import Box from '@mui/material/Box'
+import Snackbar from '@mui/material/Snackbar'
+import Checkbox from '@mui/material/Checkbox'
 import Typography from '@mui/material/Typography'
+import Modal from '@mui/material/Modal'
+import TextField from '@mui/material/TextField'
+import IconButton from '@mui/material/IconButton'
 import Grid from '@mui/material/Grid'
+import axios from 'axios'
+import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material'
 
 // function courseData(
@@ -12,16 +19,89 @@ import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/m
 //   return { courseName, duration, price }
 // }
 
-const ApplyForACourse: FC = () => {
-  const columns = ['Training/Short Course Name', 'Level', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
+  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />
+})
+Alert.displayName = 'Alert'
 
-  const coursesNames = [['General English Course'], ['IELTS Preparation Course'], ['Business English Course']]
+const customInputStyle = {
+  input: {
+    borderRadius: '8px',
+    border: 'none',
+  },
+}
+
+const ApplyForACourse: FC = () => {
+  const columns = ['Short Course', 'Certification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
+
+  const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course']
 
   // const applyforacourse = [
   //   { text: 'Fill in Online Registration Assessment Form' },
   //   { text: 'Wait for approval of Registration Assessment Form' },
   //   { text: 'Get Visa Support Letter and apply for UK Visitor Visa to join course' }
   // ];
+
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = (): void => setOpen(true)
+  const handleClose = (): void => setOpen(false)
+  const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' })
+  const [selectedCourse, setSelectedCourse] = useState<string>('')
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contactNo: '',
+    selectedCourse: '',
+  })
+
+  const resetForm = (): void => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      contactNo: '',
+      selectedCourse: '',
+    })
+  }
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
+    const { name, value } = e.target
+    setFormData(prevData => ({ ...prevData, [name]: value }))
+  }
+
+  const handleSubmit = async (e: FormEvent): Promise<void> => {
+    e.preventDefault()
+
+    try {
+      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
+
+      const message = response.data.message
+
+      if (response.data.status === 'success') {
+        handleClose()
+        handleSnackbarOpen('success', message)
+        resetForm()
+      } else if (response.data.status === 'failure') {
+        handleClose()
+        handleSnackbarOpen('error', message)
+        resetForm()
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error)
+    }
+  }
+
+  const handleSnackbarOpen = (newSeverity: string, newMessage: string): void => {
+    setSnackbar({ open: true, severity: newSeverity || 'success', message: newMessage })
+  }
+
+  const handleSelectCourse = (courseName: string): void => {
+    setSelectedCourse(courseName)
+    formData.selectedCourse = courseName
+    handleOpen()
+  }
 
   return (
     <Box>
@@ -86,6 +166,7 @@ const ApplyForACourse: FC = () => {
               sx={{
                 border: '1px solid lightgray',
                 borderRadius: '12px',
+                textAlign: 'center',
               }}
             >
               <TableHead
@@ -111,17 +192,21 @@ const ApplyForACourse: FC = () => {
               <TableBody>
                 {coursesNames.map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
-                    {row.map((cell, cellIndex) => (
-                      <TableCell key={cellIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
-                        {cell}
-                      </TableCell>
-                    ))}
+                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
+                      {row}
+                    </TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Level 2</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£4500</TableCell>
                     <TableCell>
-                      <Button type='submit' variant='contained' color='secondary' sx={{ borderRadius: '8px' }}>
+                      <Button
+                        type='submit'
+                        variant='contained'
+                        color='secondary'
+                        sx={{ borderRadius: '8px' }}
+                        onClick={() => handleSelectCourse(row)}
+                      >
                         Register Now
                       </Button>
                     </TableCell>
@@ -131,6 +216,128 @@ const ApplyForACourse: FC = () => {
             </Table>
           </Grid>
         </Grid>
+        <Modal
+          aria-labelledby='register-now-modal-title'
+          aria-describedby='register-now-modal-description'
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              bgcolor: 'common.white',
+              borderRadius: '35px',
+              boxShadow: 24,
+              px: 10,
+              py: 5,
+            }}
+          >
+            <IconButton
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                top: '-20px',
+                right: '-20px',
+                zIndex: 1,
+              }}
+            >
+              <img src='/images/form-close-button.svg' alt='Close Button' style={{ cursor: 'pointer' }} />
+            </IconButton>
+            <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
+              Admission Form!
+            </Typography>
+            <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
+              Please fill in the form below
+            </Typography>
+            <form onSubmit={handleSubmit}>
+              <Box sx={customInputStyle}>
+                <TextField
+                  name='firstName'
+                  label='First Name'
+                  fullWidth
+                  variant='filled'
+                  size='small'
+                  InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                  sx={{ mt: 1 }}
+                  value={formData.firstName}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                />
+                <TextField
+                  name='lastName'
+                  label='Last Name'
+                  fullWidth
+                  variant='filled'
+                  size='small'
+                  InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                  sx={{ mt: 1 }}
+                  value={formData.lastName}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                />
+                <TextField
+                  name='email'
+                  label='Email'
+                  fullWidth
+                  variant='filled'
+                  size='small'
+                  InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                  sx={{ mt: 1 }}
+                  value={formData.email}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                />
+                <TextField
+                  name='contactNo'
+                  label='Contact Number'
+                  fullWidth
+                  variant='filled'
+                  size='small'
+                  InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                  sx={{ mt: 1 }}
+                  value={formData.contactNo}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                />
+                <TextField
+                  name='selectedCourse'
+                  label='Selected Course'
+                  fullWidth
+                  variant='filled'
+                  size='small'
+                  InputProps={{ disableUnderline: true, style: customInputStyle.input }}
+                  sx={{ mt: 1 }}
+                  value={selectedCourse}
+                />
+                <Typography variant='body1' sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                  <Checkbox
+                  // Handle the checkbox state
+                  />
+                  By submitting this form you agree to our Terms and Conditions
+                </Typography>
+              </Box>
+              <Button type='submit' variant='contained' color='secondary' fullWidth sx={{ mt: 3, borderRadius: '8px' }}>
+                Register Now
+              </Button>
+            </form>
+          </Box>
+        </Modal>
+        <Snackbar
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          open={snackbar.open}
+          autoHideDuration={6000}
+          onClose={() => setSnackbar({ ...snackbar, open: false })}
+        >
+          {snackbar.severity === 'success' ? (
+            <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='success' sx={{ width: '100%' }}>
+              {snackbar.message}
+            </Alert>
+          ) : (
+            <Alert onClose={() => setSnackbar({ ...snackbar, open: false })} severity='error' sx={{ width: '100%' }}>
+              {snackbar.message}
+            </Alert>
+          )}
+        </Snackbar>
       </Box>
     </Box>
   )

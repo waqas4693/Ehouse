@@ -25,8 +25,8 @@ export const navigations: Navigation[] = [
     label: 'Policies',
     path: '',
     dropdownItems: [
-      { path: '/policies/participant-attendance-policy', label: 'Participant Attendance And Punctuality Policy' },
-      { path: '/policies/review-quality-assurance-policy', label: 'Internal Review And Quality Assurance Policy' },
+      { path: '/policies/participant-attendance-policy', label: 'Student / Participant Attendance And Punctuality Policy' },
+      // { path: '/policies/review-quality-assurance-policy', label: 'Internal Review And Quality Assurance Policy' },
       { path: '/policies/refund-policy', label: 'Refund Policy' },
       { path: '/policies/synopsis-of-policies', label: 'Synopsis Of Policies' },
       { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' }
