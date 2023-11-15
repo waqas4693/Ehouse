@@ -46,8 +46,8 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {ParticipantAttendance.map((item, index) => (
-                <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>
-                  <img src="/images/red-arrow.svg" alt="Arrow" style={{ marginRight: '8px', transform: 'translateY(3px)' }} />
+                <li key={index} style={{ fontSize: '14px', fontWeight: 400 }}>
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>
                   {item.text}
                 </li>
               ))}
@@ -68,7 +68,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -83,7 +83,6 @@ const ParticipantAttendancePolicy: FC = () => {
                 Education House Leeds expects 100% attendance and punctuality at all timetabled sessions including role-plays, tutorials and etc. Any participant who has not
                 achieved at least 90% attendance without full justification will be withdrawn from Education House Leeds through disciplinary procedure.
               </Typography>
-
             </Box>
 
             <Typography
@@ -104,16 +103,14 @@ const ParticipantAttendancePolicy: FC = () => {
 
             <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
               <li >
-                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Attendance will be regularly monitored throughout participants’ time at ehosue.
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Attendance will be regularly monitored throughout participants’ time at ehosue.
               </li>
               <li >
-                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Attendance of all participants will be reviewed according to below mentioned:
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Attendance of all participants will be reviewed according to below mentioned:
               </li>
-
             </ul>
 
-
-            <Box sx={{ backgroundColor: '#fff', border: '2px lightgray solid', borderRadius: '5px', width: '100%', mb: 2 }}>
+            <Box sx={{ backgroundColor: '#fff', border: '2px lightgray solid', borderRadius: '5px', width: '50%', mb: 2 }}>
 
               <Grid container sx={{ margin: 0, p: 4 }} >
                 <Grid item xs={12} md={6} >
@@ -130,15 +127,12 @@ const ParticipantAttendancePolicy: FC = () => {
                   >
                     Course Duration
                   </Typography>
-
                   <Typography sx={{ lineHeight: 1.6, fontSize: '16px', py: 2 }} variant="body1">
                     1 Week
                   </Typography>
-
                   <Typography sx={{ lineHeight: 1.6, fontSize: '16px', py: 2 }} variant="body1">
                     4 Weeks
                   </Typography>
-
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography
@@ -173,25 +167,25 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Participants are expected to give a good reason with evidence for all absences.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Participants are expected to give a good reason with evidence for all absences.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Participants are expected to provide a reasonable justification for any lateness. Teaching staff have the right to refuse entrance in class for late comers.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Participants are expected to provide a reasonable justification for any lateness. Teaching staff have the right to refuse entrance in class for late comers.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Where absences/lateness can be foreseen in advance, the participant should notify Student Welfare Officer (SWO). Appropriate evidence should be provided to
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Where absences/lateness can be foreseen in advance, the participant should notify Student Welfare Officer (SWO). Appropriate evidence should be provided to
                   SWO for absence to be classed as &quot;authorized&quot;.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>For unforeseen absences, such as illness, the participant must contact SWO for his / her absence as early as possible on the first day of absence and every subsequent
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>For unforeseen absences, such as illness, the participant must contact SWO for his / her absence as early as possible on the first day of absence and every subsequent
                   day unless they are signed off by a doctor for a given period. On the following day, participants must provide evidence their absence before authorised absence can be
                   marked in registers.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Non-attendance may be dealt under Education House Leeds’s disciplinary procedure and may result in a final written warning or expulsion.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Non-attendance may be dealt under Education House Leeds’s disciplinary procedure and may result in a final written warning or expulsion.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Participants are normally expected to make medical and other appointments outside the timetabled hours.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Participants are normally expected to make medical and other appointments outside the timetabled hours.
                 </li>
               </ul>
             </Box>
@@ -202,7 +196,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -242,22 +236,22 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>All attendance registers must be marked in time and accurately.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>All attendance registers must be marked in time and accurately.
 
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Staff member responsible for the session must complete the register markings ( presence, absence or lateness ) ASAP before pm. If staff member persistently fails
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Staff member responsible for the session must complete the register markings ( presence, absence or lateness ) ASAP before pm. If staff member persistently fails
                   to mark a register or marks register late, he / she may be subject to disciplinary action. Where the attendance register remains outstanding for 5 days the
                   presumption will be for disciplinary action..
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Staff writing academic references for participant / student may refer to participant or student record of attendance.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Staff writing academic references for participant / student may refer to participant or student record of attendance.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Participants will be withdrawn from their course / training if they fail to respond to warnings or breach the terms of their Attendance Agreement. ( if applicable)
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Participants will be withdrawn from their course / training if they fail to respond to warnings or breach the terms of their Attendance Agreement. ( if applicable)
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>A formal written report on a participant’s attendance may be made to the participant’s sponsor or his/her employer.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>A formal written report on a participant’s attendance may be made to the participant’s sponsor or his/her employer.
                 </li>
 
               </ul>
@@ -269,7 +263,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -284,16 +278,16 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Whether the case is reasonable.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Whether the case is reasonable.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>The number of absences taken by the individual.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>The number of absences taken by the individual.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Repetitions of the same justification.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Repetitions of the same justification.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Whether the justification is with evidence.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Whether the justification is with evidence.
                 </li>
 
               </ul>
@@ -319,19 +313,19 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Medical appointments which cannot be made outside of timetabled hours.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Medical appointments which cannot be made outside of timetabled hours.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Religious holiday.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Religious holiday.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Attendance at a funeral.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Attendance at a funeral.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Severe disruption the transport network.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Severe disruption the transport network.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Driving test.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Driving test.
                 </li>
               </ul>
             </Box>
@@ -342,7 +336,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -356,25 +350,25 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Holidays.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Holidays.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Babysitting.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Babysitting.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Driving lessons.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Driving lessons.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Birthdays.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Birthdays.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Leisure activities.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Leisure activities.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Shopping.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Shopping.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Full or Part-time work (other than work experience).
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Full or Part-time work (other than work experience).
                 </li>
               </ul>
             </Box>
@@ -427,7 +421,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -450,7 +444,7 @@ const ParticipantAttendancePolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -464,22 +458,22 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Complete the register markings ( presence, absence or lateness ) ASAP before pm.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Complete the register markings ( presence, absence or lateness ) ASAP before pm.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Follow-up absence on participant’ arrival on the day next to absent day or the following day.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Follow-up absence on participant’ arrival on the day next to absent day or the following day.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Promote good punctuality and attendance through his/her own behaviour and teaching standards.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Promote good punctuality and attendance through his/her own behaviour and teaching standards.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Working with the participant to improve attendance.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Working with the participant to improve attendance.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Dealing with any personal/pastoral issues that affect poor attendance and punctuality.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Dealing with any personal/pastoral issues that affect poor attendance and punctuality.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Reporting persistent issues of participants to SWO and follow up any absences and ascertain reasons.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Reporting persistent issues of participants to SWO and follow up any absences and ascertain reasons.
                 </li>
 
               </ul>
@@ -506,45 +500,45 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Carrying out immediate follow-up to an absence and recording reasons for absence and lateness
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Carrying out immediate follow-up to an absence and recording reasons for absence and lateness
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Monitoring attendance and punctuality issues at team meetings and taking early action to resolve issues
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Monitoring attendance and punctuality issues at team meetings and taking early action to resolve issues
 
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensuring that registers are marked accurately and timely and follow up on any unmarked register.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Ensuring that registers are marked accurately and timely and follow up on any unmarked register.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensuring that, in the event of a staff member being absent, the register is taken or reallocated on the timetable in case of long term absence.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Ensuring that, in the event of a staff member being absent, the register is taken or reallocated on the timetable in case of long term absence.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensuring that major changes to timetables are communicated to QAC appointed staff member.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Ensuring that major changes to timetables are communicated to QAC appointed staff member.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Making initial contact with an absent participant to find out the reasons for the absence.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Making initial contact with an absent participant to find out the reasons for the absence.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Writing written warnings to participants if required.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Writing written warnings to participants if required.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Writing formal attendance report to participant’s sponsor / employer if required.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Writing formal attendance report to participant’s sponsor / employer if required.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Processing authorized absence
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Processing authorized absence
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Recording the results of any conversations and conveying this information to the QAC appointed staff.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Recording the results of any conversations and conveying this information to the QAC appointed staff.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Maintaining records relating to punctuality and attendance and details of any evidence produced to support absences and lateness.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Maintaining records relating to punctuality and attendance and details of any evidence produced to support absences and lateness.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensuring minor changes to timetables are communicated to QAC appointed staff.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Ensuring minor changes to timetables are communicated to QAC appointed staff.
                 </li>
 
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Liaising with employers in order to improve attendance and resolves issues.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Liaising with employers in order to improve attendance and resolves issues.
                 </li>
               </ul>
             </Box>
@@ -569,13 +563,13 @@ const ParticipantAttendancePolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Arranging a cover and ensuring that the register is marked accordingly in case of attendance staff member’s sickness.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Arranging a cover and ensuring that the register is marked accordingly in case of attendance staff member’s sickness.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Audit of attendance register on daily / weekly / monthly basis.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Audit of attendance register on daily / weekly / monthly basis.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensuring that participant /student’s absence is communicated to his / her employer or sponsor ASAP or to Home office for 10 consecutive key contacts (if applicable ).
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Ensuring that participant /student’s absence is communicated to his / her employer or sponsor ASAP or to Home office for 10 consecutive key contacts (if applicable ).
                 </li>
 
               </ul>
@@ -606,13 +600,13 @@ const ParticipantAttendancePolicy: FC = () => {
             <Box sx={{ mb: 2 }}>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Trainer / Teacher.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Trainer / Teacher.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Student Welfare Officer.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>Student Welfare Officer.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>QAC Appointed member
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>QAC Appointed member
                 </li>
               </ul>
             </Box> */}
@@ -636,10 +630,10 @@ const ParticipantAttendancePolicy: FC = () => {
             {/* <Box sx={{ mb: 2 }}>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>SWO : Student Welfare Officer.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>SWO : Student Welfare Officer.
                 </li>
                 <li style={{ lineHeight: 1.5 }}>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>QAC : Quality Assurance Committee.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>QAC : Quality Assurance Committee.
                 </li>
               </ul>
             </Box> */}

@@ -38,7 +38,7 @@ const TermsAndConditions: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -48,10 +48,10 @@ const TermsAndConditions: FC = () => {
               </Typography>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Training / course can’t be changed for which Short term study visa was obtained.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Training / course can’t be changed for which Short term study visa was obtained.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Training / course deferral’s request will be on the discretion of ehouse.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Training / course deferral’s request will be on the discretion of ehouse.
                 </li>
               </ul>
             </Box>
@@ -62,7 +62,7 @@ const TermsAndConditions: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -73,60 +73,60 @@ const TermsAndConditions: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>All due fees must be paid in full before receiving Acceptance Letter for ST Study visa. Failure to make payment on time will result in an automatic cancellation.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>All due fees must be paid in full before receiving Acceptance Letter for ST Study visa. Failure to make payment on time will result in an automatic cancellation.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Training / course fee may be changed without prior notification.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Training / course fee may be changed without prior notification.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Training / course fees do NOT include:
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Training / course fees do NOT include:
 
                   <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, marginLeft: '1.30em' }}>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Travelling and accommodation.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Travelling and accommodation.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Social programmes or tickets for external events.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Social programmes or tickets for external events.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Registration fees with awarding bodies
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Registration fees with awarding bodies
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>External examination fees.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>External examination fees.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Personal and health insurance.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Personal and health insurance.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Bank charges on international money transfers.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Bank charges on international money transfers.
                     </li>
                   </ul>
                 </li>
 
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Training / course fees include:
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Training / course fees include:
 
                   <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, marginLeft: '1.30em' }}>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Cost of tuition.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Cost of tuition.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Course material (in hard copy and digital formats).
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Course material (in hard copy and digital formats).
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Pre-arrival documentation including support letters for visa applications.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Pre-arrival documentation including support letters for visa applications.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Welcome packs.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Welcome packs.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Internet access.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Internet access.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Accredited course certificates.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Accredited course certificates.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Course photographs.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Course photographs.
                     </li>
                   </ul>
                 </li>
@@ -139,7 +139,7 @@ const TermsAndConditions: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -149,10 +149,10 @@ const TermsAndConditions: FC = () => {
               </Typography>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Refund claims mustsupported giving thereason for visa refusaltogether with documentary evidence (original visa refusal letter, etc.).
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund claims mustsupported giving thereason for visa refusaltogether with documentary evidence (original visa refusal letter, etc.).
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Refund request will be processed within four weeks of receiving the refund application with necessary documentation.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund request will be processed within four weeks of receiving the refund application with necessary documentation.
                 </li>
               </ul>
             </Box>
@@ -163,7 +163,7 @@ const TermsAndConditions: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,

@@ -38,7 +38,7 @@ const RefundPolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 36 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -51,10 +51,10 @@ const RefundPolicy: FC = () => {
             <Box sx={{ mb: 2, backgroundColor: 'rgba(221, 73, 73, 0.1)', padding: '10px', borderRadius: '10px' }}>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Refund claims must be supported by the reason for the refusal of a visa with documentary evidence (original visa refusal letter, etc.)
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund claims must be supported by the reason for the refusal of a visa with documentary evidence (original visa refusal letter, etc.)
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Refund request will be processed within 4 weeks after receiving the refund application with necessary documentation.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund request will be processed within 4 weeks after receiving the refund application with necessary documentation.
                 </li>
               </ul>
 
@@ -67,7 +67,7 @@ const RefundPolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -78,38 +78,38 @@ const RefundPolicy: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If training cancelled by the participant because of any reason.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If training cancelled by the participant because of any reason.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If participant obtains a Visa, regardless of his / her travel or entry to UK.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant obtains a Visa, regardless of his / her travel or entry to UK.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If participant / student failure to prove guanine intention of training or study.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant / student failure to prove guanine intention of training or study.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If training is not being attended for any reason after obtaining Visa.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If training is not being attended for any reason after obtaining Visa.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If the application for a Visa is rejected as a result of an applicant’s own mistake in their application such as a failure to:
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If the application for a Visa is rejected as a result of an applicant’s own mistake in their application such as a failure to:
 
                   <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, marginLeft: '1.30em' }}>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Submit correct documentation.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Submit correct documentation.
                     </li>
                     <li>
-                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Provide evidence of the required maintenance funds and etc.
+                      <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Provide evidence of the required maintenance funds and etc.
                     </li>
                   </ul>
 
                   <li>
-                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If new regulations or any event results in eHouse losing the ability to sponsor the participant and participant have got the Visa or has not applied Visa.
+                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If new regulations or any event results in eHouse losing the ability to sponsor the participant and participant have got the Visa or has not applied Visa.
                   </li>
                   <li style={{ lineHeight: 1.5 }}>
-                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If participant is found to have obtained a Visa by deception (for example, by submitting false documentation to eHouse / the British High Commission / Embassy )
+                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant is found to have obtained a Visa by deception (for example, by submitting false documentation to eHouse / the British High Commission / Embassy )
                     and he/ she may be stopped taking training / course.
                   </li>
                   <li>
-                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>If course or training is cancelled or stopped permanently by Education House Leeds because of National or International Crisis or Disaster.
+                    <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If course or training is cancelled or stopped permanently by Education House Leeds because of National or International Crisis or Disaster.
                   </li>
                 </li>
 
@@ -123,7 +123,7 @@ const RefundPolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -149,7 +149,7 @@ const RefundPolicy: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -159,10 +159,10 @@ const RefundPolicy: FC = () => {
               </Typography>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Registration fee paid is not refundable.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Registration fee paid is not refundable.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Course or training fee is not transferable to any other participant.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Course or training fee is not transferable to any other participant.
                 </li>
               </ul>
             </Box>

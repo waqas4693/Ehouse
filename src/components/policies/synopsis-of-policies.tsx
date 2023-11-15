@@ -31,7 +31,7 @@ const SynopsisOfPolicies: FC = () => {
                 sx={{
                   position: 'relative',
                   color: 'black',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -54,10 +54,10 @@ const SynopsisOfPolicies: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Complies with the Health & Safety at Work laws. Any incidents are to be reported and recorded by the Health and Safety Manager of eHouse.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Complies with the Health & Safety at Work laws. Any incidents are to be reported and recorded by the Health and Safety Manager of eHouse.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Has a responsibility to protect participants’ health, safety and wellbeing whilst they are studying and we take the security of participants and their belonging in
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Has a responsibility to protect participants’ health, safety and wellbeing whilst they are studying and we take the security of participants and their belonging in
                   eHouse very seriously.
                 </li>
               </ul>
@@ -69,7 +69,7 @@ const SynopsisOfPolicies: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -84,10 +84,10 @@ const SynopsisOfPolicies: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Takes seriously its responsibility to safeguard all participants during their time as participants.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Takes seriously its responsibility to safeguard all participants during their time as participants.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Ensures that all staff are trained to deal with safeguarding in a professional and sensitive way.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Ensures that all staff are trained to deal with safeguarding in a professional and sensitive way.
                 </li>
               </ul>
 
@@ -103,7 +103,7 @@ const SynopsisOfPolicies: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -118,10 +118,10 @@ const SynopsisOfPolicies: FC = () => {
 
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Recognises respect and inclusionas fundamental values in the delivery of professional training.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Recognises respect and inclusionas fundamental values in the delivery of professional training.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Will not tolerate bullying, harassment or victimisation and will ensure that every delegate/ participant has the right not to be bullied or harassed and has the right
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Will not tolerate bullying, harassment or victimisation and will ensure that every delegate/ participant has the right not to be bullied or harassed and has the right
                   to complain without victimisation.
                 </li>
               </ul>
@@ -133,7 +133,7 @@ const SynopsisOfPolicies: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -143,10 +143,10 @@ const SynopsisOfPolicies: FC = () => {
               </Typography>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Our participants reflect the population at large & include people with a variety of faiths, beliefs, ethnicities, abilities, sexual & gender orientations.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Our participants reflect the population at large & include people with a variety of faiths, beliefs, ethnicities, abilities, sexual & gender orientations.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Under eHouse’s Equality & Diversity Policyall participants have the right to learn& achieve and to be treated fairly in all aspects of their learning at eHouse.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Under eHouse’s Equality & Diversity Policyall participants have the right to learn& achieve and to be treated fairly in all aspects of their learning at eHouse.
                 </li>
               </ul>
             </Box>
@@ -158,7 +158,7 @@ const SynopsisOfPolicies: FC = () => {
                 sx={{
                   position: 'relative',
                   color: '#000',
-                  fontSize: { xs: 15, md: 28 },
+                  fontSize: { xs: 15, md: 20 },
                   letterSpacing: 1.5,
                   fontWeight: 'bold',
                   lineHeight: 1.3,
@@ -168,16 +168,16 @@ const SynopsisOfPolicies: FC = () => {
               </Typography>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Education House Leeds fully complies with all rules of data protection as stated in the GDPR.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Education House Leeds fully complies with all rules of data protection as stated in the GDPR.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>Participants’ information is stored and used for effective and efficient communication by eHouse staff with participants and / or their employers.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Participants’ information is stored and used for effective and efficient communication by eHouse staff with participants and / or their employers.
                 </li>
                 <li >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>These pieces of information include participant’s name, age, address, details of next of kin, employers’ details, professional and academic qualifications.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>These pieces of information include participant’s name, age, address, details of next of kin, employers’ details, professional and academic qualifications.
                 </li>
                 <li style={{ lineHeight: 1.5, }} >
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.10em' }}>&bull; </span>We store participant details on an electronic systems that provides access onlyto authorized staff members. Third party or public access to data is denied.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>We store participant details on an electronic systems that provides access onlyto authorized staff members. Third party or public access to data is denied.
                   Participants can access their own information by means of a written request. We make sure the information is used fairly and lawfully for specific and essential
                   purposes. Information on our database is not given to third parties except the with written permission of the student /participant concerned.
                 </li>
