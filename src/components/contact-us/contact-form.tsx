@@ -290,7 +290,7 @@ const ContactForm: FC = () => {
 
                     <Grid item xs={12} md={6}>
                         <Box sx={{ alignItems: 'center', display: 'flex', float: 'right' }}>
-                            <img src="/images/icons/logo_whatsapp.svg" alt="Image" style={{ width: '50px', marginRight: '15px' }} />
+                            <img src="/images/whatsapp.svg" alt="Image" style={{ width: '50px', marginRight: '15px' }} />
                             <Typography
                                 variant="h2"
                                 sx={{
