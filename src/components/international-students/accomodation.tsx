@@ -56,11 +56,11 @@ const Accomodation: FC = () => {
 
           <Box sx={{ mb: 2 }}>
             <Typography
-              variant='h2'
+              variant="h3"
               sx={{
                 position: 'relative',
-                color: 'secondary.main',
-                fontSize: { xs: 15, md: 36 },
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
                 letterSpacing: 1.5,
                 fontWeight: 'bold',
                 lineHeight: 1.3,
@@ -91,11 +91,11 @@ const Accomodation: FC = () => {
         <Grid item xs={12} md={12}>
           <Box sx={{ mb: 2 }}>
             <Typography
-              variant='h3'
+              variant="h3"
               sx={{
                 position: 'relative',
                 color: '#000',
-                fontSize: { xs: 15, md: 36 },
+                fontSize: { xs: 15, md: 20 },
                 letterSpacing: 1.5,
                 fontWeight: 'bold',
                 lineHeight: 1.3,
@@ -105,7 +105,7 @@ const Accomodation: FC = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ mb: 2, backgroundColor: 'rgba(221, 73, 73, 0.1)', padding: '20px', borderRadius: '10px' }}>
+          <Box sx={{ mb: 2, borderRadius: '10px' }}>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {notePoints.map((item, index) => (
                 <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>

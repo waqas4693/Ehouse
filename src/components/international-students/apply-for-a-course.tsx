@@ -32,7 +32,7 @@ const customInputStyle = {
 }
 
 const ApplyForACourse: FC = () => {
-  const columns = ['Short Course', 'Certification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
+  const columns = ['Short Course', 'Qualification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
 
   const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course']
 
@@ -195,7 +195,7 @@ const ApplyForACourse: FC = () => {
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
                       {row}
                     </TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Level 2</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Certificate</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£4500</TableCell>

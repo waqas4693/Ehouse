@@ -48,7 +48,7 @@ const RefundPolicy: FC = () => {
               </Typography>
             </Box>
 
-            <Box sx={{ mb: 2, backgroundColor: 'rgba(221, 73, 73, 0.1)', padding: '10px', borderRadius: '10px' }}>
+            <Box sx={{ mb: 2, borderRadius: '10px' }}>
               <ul style={{ lineHeight: 1.2, listStyle: 'none', padding: 0, }}>
                 <li>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund claims must be supported by the reason for the refusal of a visa with documentary evidence (original visa refusal letter, etc.)

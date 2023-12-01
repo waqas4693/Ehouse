@@ -41,11 +41,11 @@ const ArrivingInUk: FC = () => {
 
           <Box sx={{ mb: 2 }}>
             <Typography
-              variant="h2"
+              variant="h3"
               sx={{
                 position: 'relative',
-                color: 'secondary.main',
-                fontSize: { xs: 15, md: 36 },
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
                 letterSpacing: 1.5,
                 fontWeight: 'bold',
                 lineHeight: 1.3,
@@ -108,11 +108,11 @@ const ArrivingInUk: FC = () => {
 
           <Box sx={{ mb: 2 }}>
             <Typography
-              variant="h2"
+              variant="h3"
               sx={{
                 position: 'relative',
-                color: 'secondary.main',
-                fontSize: { xs: 15, md: 36 },
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
                 letterSpacing: 1.5,
                 fontWeight: 'bold',
                 lineHeight: 1.3,
@@ -142,11 +142,11 @@ const ArrivingInUk: FC = () => {
 
           <Box sx={{ mb: 2 }}>
             <Typography
-              variant="h2"
+              variant="h3"
               sx={{
                 position: 'relative',
-                color: 'secondary.main',
-                fontSize: { xs: 15, md: 36 },
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
                 letterSpacing: 1.5,
                 fontWeight: 'bold',
                 lineHeight: 1.3,

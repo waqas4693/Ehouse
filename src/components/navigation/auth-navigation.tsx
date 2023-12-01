@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
+import { StyledButton } from '../styled-button'
 
 const AuthNavigation: FC = () => {
   return (
@@ -7,7 +8,7 @@ const AuthNavigation: FC = () => {
       {/* <StyledButton disableHoverEffect={true} variant="outlined">
         Sign In
       </StyledButton> */}
-      {/* <StyledButton disableHoverEffect={true}>Register Now</StyledButton> */}
+      <StyledButton color="secondary" disableHoverEffect={true}>Student Login</StyledButton>
     </Box>
   )
 }
