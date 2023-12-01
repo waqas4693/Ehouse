@@ -1,6 +1,4 @@
 import React, { ReactNode } from 'react'
-import ArtTrackIcon from '@mui/icons-material/ArtTrack'
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary'
 
 interface Data {
@@ -13,12 +11,12 @@ export const data: Data[] = [
   {
     title: 'General English Course',
     description: 'Our General English Course enhances your basic language skills, the IELTS Preparation',
-    icon: < ArtTrackIcon />,
+    icon: < LocalLibraryIcon />,
   },
   {
     title: 'IELTS Preparation Course',
     description: 'Course prepares you for all modules with real exam practice',
-    icon: <AttachMoneyIcon />,
+    icon: <LocalLibraryIcon />,
   },
   {
     title: 'Business English Course',

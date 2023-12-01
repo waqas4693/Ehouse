@@ -56,11 +56,9 @@ const Footer: FC = () => {
         }}
       >
         <ul>
-          <li>Participant Attendance Policy</li>
-          <li>Quality Assurance Policy</li>
-          <li>Refund Policy</li>
-          <li>Synopsis of Policy</li>
-          <li>Terms & Conditions</li>
+          <li>EduSupplements</li>
+          <li>Business Management</li>
+          <li>Life Skills</li>
         </ul>
       </Box>
       <hr style={{
