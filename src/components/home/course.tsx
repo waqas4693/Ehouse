@@ -205,7 +205,7 @@ const HomeCourse: FC = () => {
 
     console.log("Form submittion started");
 
-    if (validateForm()) {
+    // if (validateForm()) {
       console.log("Form validated");
       try {
         const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
@@ -224,7 +224,7 @@ const HomeCourse: FC = () => {
       } catch (error) {
         console.error('Error submitting the form:', error);
       }
-    }
+    // }
   };
 
   const handleSnackbarOpen = (newSeverity: string, newMessage: string): void => {
