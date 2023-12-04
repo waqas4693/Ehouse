@@ -203,7 +203,10 @@ const HomeCourse: FC = () => {
   const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
 
+    console.log("Form submittion started");
+
     if (validateForm()) {
+      console.log("Form validated");
       try {
         const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
 
