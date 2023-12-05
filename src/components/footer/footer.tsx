@@ -56,7 +56,7 @@ const Footer: FC = () => {
         }}
       >
         <ul>
-          <li>EduSupplements</li>
+          <li>eduSupplements</li>
           <li>Business Management</li>
           <li>Life Skills</li>
         </ul>
