@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import { StyledButton } from '../styled-button'
-import Link from 'next/link'
+import Link from '@mui/material/Link';
 
 const AuthNavigation: FC = () => {
   return (

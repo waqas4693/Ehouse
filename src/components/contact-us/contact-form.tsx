@@ -16,7 +16,6 @@ import axios from 'axios'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 import { useMediaQuery } from '@mui/material'
-import { LinkedIn } from '@mui/icons-material'
 
 const customInputStyle = {
     input: {
