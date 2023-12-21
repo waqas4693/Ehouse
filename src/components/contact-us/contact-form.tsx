@@ -136,7 +136,7 @@ const ContactForm: FC = () => {
                                     <b>Email:</b> info@ehouse.org.uk <br /><br />
                                     <b>Follow Us:</b>
                                 </div>
-                                <div sx={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '10px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '10px' }}>
                                     <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
                                         <InstagramIcon sx={{ color: 'secondary.main' }} />
                                     </Link>
