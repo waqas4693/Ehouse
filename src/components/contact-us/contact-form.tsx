@@ -129,15 +129,40 @@ const ContactForm: FC = () => {
 
                         <Box sx={{ mb: 3, display: 'flex', alignItems: 'start' }}>
                             <img src="/images/icons/phone.svg" alt="Image" style={{ width: '30px', marginRight: '15px' }} />
+                            <Typography sx={{ fontSize: '16px', display: 'flex', alignItems: 'center' }} variant="body1">
+                                <div>
+                                    <b>Phone:</b> +44 (0) 7455 222 161 <br />
+                                    <b>Phone:</b> +44 (0) 113 322 6557 <br />
+                                    <b>Email:</b> info@ehouse.org.uk <br /><br />
+                                    <b>Follow Us:</b>
+                                </div>
+                                <div sx={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '10px' }}>
+                                    <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
+                                        <InstagramIcon sx={{ color: 'secondary.main' }} />
+                                    </Link>
+                                    <Link href="https://www.facebook.com/Training4Biz/?view_public_for=133224183810380" target="_blank" rel="noopener noreferrer">
+                                        <FacebookIcon sx={{ color: 'secondary.main' }} />
+                                    </Link>
+                                    <Link href="https://www.linkedin.com/company/educationhouseleeds/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+                                        <LinkedInIcon sx={{ color: 'secondary.main' }} />
+                                    </Link>
+                                    <Link href="https://www.youtube.com/channel/UCInCkv901I2a_oYONAbgVbQ" target="_blank" rel="noopener noreferrer">
+                                        <YoutubeIcon sx={{ color: 'secondary.main' }} />
+                                    </Link>
+                                    <Link href="https://www.pinterest.co.uk/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
+                                        <PinterestIcon sx={{ color: 'secondary.main' }} />
+                                    </Link>
+                                </div>
+                            </Typography>
+                        </Box>
+
+
+                        {/* <Box sx={{ mb: 3, display: 'flex', alignItems: 'start' }}>
+                            <img src="/images/icons/phone.svg" alt="Image" style={{ width: '30px', marginRight: '15px' }} />
                             <Typography sx={{ fontSize: '16px' }} variant="body1">
                                 <b>Phone:</b> +44 (0) 7455 222 161 <br />
                                 <b>Phone:</b> +44 (0) 113 322 6557 <br />
                                 <b>Email:</b> info@ehouse.org.uk <br /><br />
-                            </Typography>
-                        </Box>
-
-                        <Box sx={{ mb: 3, display: 'flex', alignItems: 'start' }}>
-                            <Typography sx={{ fontSize: '16px' }} variant="body1">
                                 <b>Follow Us:</b>
                                 <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
                                     <InstagramIcon sx={{ ml: 1, color: 'secondary.main' }} />
@@ -155,7 +180,7 @@ const ContactForm: FC = () => {
                                     <PinterestIcon sx={{ ml: 1, color: 'secondary.main' }} />
                                 </Link>
                             </Typography>
-                        </Box>
+                        </Box> */}
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <img src="/images/contact_us.svg" alt="Image" style={{ width: '100%' }} />
