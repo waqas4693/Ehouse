@@ -74,7 +74,7 @@ const Footer: FC = () => {
           <Grid item xs={12} md={9}>
             <Box sx={{ width: { xs: '100%', md: 360 } }}>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Copyright © 2014 - 2021 Education House Leeds
+                Copyright © 2014 - 2024 Education House Leeds
               </Typography>
             </Box>
           </Grid>

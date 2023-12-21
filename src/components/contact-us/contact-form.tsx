@@ -62,8 +62,7 @@ const ContactForm: FC = () => {
         e.preventDefault()
 
         try {
-            const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
-
+            const response = await axios.post('https://admin.ehouse.org.uk/contact-us-form.php', formData)
             const message = response.data.message
 
             if (response.data.status === 'success') {
@@ -133,7 +132,12 @@ const ContactForm: FC = () => {
                             <Typography sx={{ fontSize: '16px' }} variant="body1">
                                 <b>Phone:</b> +44 (0) 7455 222 161 <br />
                                 <b>Phone:</b> +44 (0) 113 322 6557 <br />
-                                <b>Email:</b> info@ehouse.org.uk <br />
+                                <b>Email:</b> info@ehouse.org.uk <br /><br />
+                            </Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3, display: 'flex', alignItems: 'start' }}>
+                            <Typography sx={{ fontSize: '16px' }} variant="body1">
                                 <b>Follow Us:</b>
                                 <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
                                     <InstagramIcon sx={{ ml: 1, color: 'secondary.main' }} />
@@ -173,7 +177,7 @@ const ContactForm: FC = () => {
             >
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2355.507716733784!2d-1.5253290232755128!3d53.81604297242934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795b8a59967569%3A0x501778685c752dec!2s11%20Hares%20View%2C%20Harehills%2C%20Leeds%20LS8%204LH%2C%20UK!5e0!3m2!1sen!2sus!4v1698858884459!5m2!1sen!2sus" width="600" height="450" style={{ border: '0' }} ></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2355.507716733784!2d-1.5253290232755128!3d53.81604297242934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795b8a59967569%3A0x501778685c752dec!2s11%20Hares%20View%2C%20Harehills%2C%20Leeds%20LS8%204LH%2C%20UK!5e0!3m2!1sen!2sus!4v1698858884459!5m2!1sen!2sus" width="600" height="450" style={{ border: '0' }}></iframe>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Container maxWidth="lg">
@@ -241,7 +245,6 @@ const ContactForm: FC = () => {
                                             type="submit"
                                             variant="contained"
                                             color="secondary"
-
                                             sx={{ mt: 3, borderRadius: '8px' }}
                                         >
                                             Submit
@@ -265,7 +268,6 @@ const ContactForm: FC = () => {
 
             </Box>
             <Box sx={{ backgroundColor: '#fff' }}>
-
                 <Grid container sx={{ px: 10, py: 7 }}>
                     <Grid item xs={12} md={6}>
 
@@ -284,7 +286,6 @@ const ContactForm: FC = () => {
                                 Reach out to us
                             </Typography>
                         </Box>
-
                     </Grid>
 
                     <Grid item xs={12} md={6}>
@@ -304,12 +305,8 @@ const ContactForm: FC = () => {
                                 +447455 222161
                             </Typography>
                         </Box>
-
-
                     </Grid>
                 </Grid>
-
-
             </Box>
         </Box>
     )
