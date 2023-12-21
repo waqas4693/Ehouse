@@ -134,8 +134,8 @@ const ContactForm: FC = () => {
                                     <b>Phone:</b> +44 (0) 7455 222 161 <br />
                                     <b>Phone:</b> +44 (0) 113 322 6557 <br />
                                     <b>Email:</b> info@ehouse.org.uk <br /><br />
-                                    <b>Follow Us:</b>
                                 </div>
+                                <div><b>Follow Us:</b></div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '10px' }}>
                                     <Link href="https://www.instagram.com/educationhouseleeds/" target="_blank" rel="noopener noreferrer">
                                         <InstagramIcon sx={{ color: 'secondary.main' }} />
