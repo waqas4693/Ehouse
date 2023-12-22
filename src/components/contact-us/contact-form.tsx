@@ -443,7 +443,7 @@ const ContactForm: FC = () => {
     const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
     const { register, handleSubmit, setValue, formState: { errors } } = useForm<FormData>();
-    const onSubmit = async (data: FormData) => {
+    const onSubmit = async (data: FormData): Promise<void> => {
         try {
             const response = await axios.post('https://admin.ehouse.org.uk/contact-us-form.php', data)
             const message = response.data.message
