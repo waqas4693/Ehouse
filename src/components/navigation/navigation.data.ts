@@ -29,7 +29,8 @@ export const navigations: Navigation[] = [
       // { path: '/policies/review-quality-assurance-policy', label: 'Internal Review And Quality Assurance Policy' },
       { path: '/policies/refund-policy', label: 'Refund Policy' },
       { path: '/policies/synopsis-of-policies', label: 'Synopsis Of Policies' },
-      { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' }
+      { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' },
+      { path: '/policies/student-and-staff-guidance', label: 'Student and Staff Guidance' }
     ]
   },
   {
