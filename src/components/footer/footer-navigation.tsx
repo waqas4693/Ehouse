@@ -8,6 +8,10 @@ import { FooterSectionTitle } from '@/components/footer'
 
 const courseMenu: Array<Navigation> = [
   {
+    label: 'Test Your Level Of English',
+    path: 'https://class.efset.org/school/start-test?test_id=ea45c32e-779c-4f5e-8f3f-c3220f1fac3f'
+  },
+  {
     label: 'Road 2 IELTS',
     path: 'https://rtigt.clarityenglish.com/#prefix=EHL',
   },
