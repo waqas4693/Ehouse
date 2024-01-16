@@ -102,7 +102,7 @@ const Footer: FC = () => {
                     height: 'auto',
                   },
                 }}
-                href={'https://www.facebook.com/ieltspreparation.ehouse'}
+                href={'https://www.facebook.com/Training4Biz/?view_public_for=133224183810380'}
               >
                 {/* eslint-disable-next-line */}
                 <FacebookIcon />Business Traning
@@ -135,7 +135,7 @@ const Footer: FC = () => {
                     height: 'auto',
                   },
                 }}
-                href={'https://www.facebook.com/Training4Biz/?view_public_for=133224183810380'}
+                href={'https://www.facebook.com/ieltspreparation.ehouse'}
               >
                 {/* eslint-disable-next-line */}
                 <FacebookIcon />IELTS Prepration
