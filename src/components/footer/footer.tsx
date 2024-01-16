@@ -3,7 +3,10 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
+import Link from '@mui/material/Link'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import { FooterNavigation, FooterSocialLinks, FooterFacebookLinks } from '@/components/footer'
+
 
 const Footer: FC = () => {
   return (
@@ -72,15 +75,89 @@ const Footer: FC = () => {
       <Container sx={{ pt: 5, width: '70%' }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={9}>
-            <Box sx={{ width: { xs: '100%', md: 360 } }}>
-              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Copyright © 2014 - 2024 Education House Leeds
-              </Typography>
+          <Box
+              component="li"
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 0.5,
+              }}
+            >
+              <Link
+                target="_blank"
+                sx={{
+                  lineHeight: 0,
+                  display: 'flex',
+                  height: 36,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '50%',
+                  color: 'inherit',
+                  '&:hover': {
+                    backgroundColor: 'secondary.main',
+                  },
+                  '& img': {
+                    fill: 'currentColor',
+                    width: 22,
+                    height: 'auto',
+                  },
+                }}
+                href={'https://www.facebook.com/ieltspreparation.ehouse'}
+              >
+                {/* eslint-disable-next-line */}
+                <FacebookIcon />Business Traning
+              </Link>
+            </Box>
+            <Box
+              component="li"
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 0.5,
+              }}
+            >
+              <Link
+                target="_blank"
+                sx={{
+                  lineHeight: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: 36,
+                  borderRadius: '50%',
+                  color: 'inherit',
+                  '&:hover': {
+                    backgroundColor: 'secondary.main',
+                  },
+                  '& img': {
+                    fill: 'currentColor',
+                    width: 22,
+                    height: 'auto',
+                  },
+                }}
+                href={'https://www.facebook.com/Training4Biz/?view_public_for=133224183810380'}
+              >
+                {/* eslint-disable-next-line */}
+                <FacebookIcon />IELTS Prepration
+              </Link>
             </Box>
           </Grid>
           <Grid item xs={12} md={3}>
             <FooterSocialLinks />
           </Grid>
+        </Grid>
+      </Container>
+      <Container sx={{ pt: 5, width: '30%' }}>
+        <Grid container spacing={1} alignItems="center" justifyContent="center">
+          <Grid item xs={12} md={12}>
+          <Box sx={{ width: { xs: '100%', md: 360 } }}>
+              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
+                Copyright © 2014 - 2024 Education House Leeds
+              </Typography>
+            </Box>
+          
+          </Grid>
+          
         </Grid>
       </Container>
     </Box>

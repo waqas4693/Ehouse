@@ -1,29 +1,17 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YoutubeIcon from '@mui/icons-material/YouTube';
-import PinterestIcon from '@mui/icons-material/Pinterest';
 import { SocialLink } from '@/interfaces/social-link'
 
 export const socialLinks: SocialLink[] = [
   {
-    name: 'Instagram',
-    link: 'https://www.instagram.com/educationhouseleeds/',
+    name: 'Business Traning',
+    link: 'https://www.facebook.com/Training4Biz/?view_public_for=133224183810380',
   },
   {
-    name: 'Linkedin',
-    link: 'https://www.linkedin.com/company/educationhouseleeds/?viewAsMember=true',
-  },
-  {
-    name: 'Youtube',
-    link: 'https://www.youtube.com/channel/UCInCkv901I2a_oYONAbgVbQ',
-  },
-  {
-    name: 'Pinterest',
-    link: 'https://www.pinterest.co.uk/educationhouseleeds/',
+    name: 'IELTS Prepration',
+    link: 'https://www.facebook.com/ieltspreparation.ehouse',
   }
 ]
 
@@ -62,19 +50,15 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
       }}
       href={item.link}
     >
-      
       {/* eslint-disable-next-line */}
-      {item.name === 'Instagram' && <InstagramIcon />}
-      {item.name === 'Facebook' && <FacebookIcon />}
-      {item.name === 'Linkedin' && <LinkedInIcon />}
-      {item.name === 'Youtube' && <YoutubeIcon />}
-      {item.name === 'Pinterest' && <PinterestIcon />}
+      {item.name === 'Business Traning' && <FacebookIcon />}Business Traning
+      {item.name === 'IELTS Prepration' && <FacebookIcon />}IELTS Prepration
     </Link>
   </Box>
 )
 
 // default
-const SocialLinks: FC = () => {
+const FacebookLinks: FC = () => {
   return (
     <Box sx={{ ml: -1 }}>
       <Box
@@ -95,4 +79,4 @@ const SocialLinks: FC = () => {
   )
 }
 
-export default SocialLinks
+export default FacebookLinks
