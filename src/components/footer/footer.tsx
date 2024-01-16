@@ -80,12 +80,13 @@ const Footer: FC = () => {
               sx={{
                 display: 'inline-block',
                 color: 'primary.contrastText',
-                mr: 0.5,
+                mr: 3,
               }}
             >
               <Link
                 target="_blank"
                 sx={{
+                  textDecoration: 'none',
                   lineHeight: 0,
                   display: 'flex',
                   height: 36,
@@ -120,6 +121,7 @@ const Footer: FC = () => {
                 target="_blank"
                 sx={{
                   lineHeight: 0,
+                  textDecoration: 'none',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
