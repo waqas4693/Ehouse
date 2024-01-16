@@ -106,7 +106,7 @@ const Footer: FC = () => {
                 href={'https://www.facebook.com/Training4Biz/?view_public_for=133224183810380'}
               >
                 {/* eslint-disable-next-line */}
-                <FacebookIcon />Business Traning
+                <FacebookIcon />Business Management Training
               </Link>
             </Box>
             <Box
