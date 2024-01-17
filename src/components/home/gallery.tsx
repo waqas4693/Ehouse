@@ -8,27 +8,27 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 const itemData = [
   {
-    img: '/images/gallery/reception_1.jpg',
+    img: '/images/gallery/1.jpg',
     title: 'Reception',
   },
   {
-    img: '/images/gallery/reception_2.jpg',
+    img: '/images/gallery/2.jpg',
     title: 'Reception-2',
   },
   {
-    img: '/images/gallery/training-room_2.jpg',
+    img: '/images/gallery/3.jpg',
     title: 'Traning Room',
   },
   {
-    img: '/images/gallery/conference-room.jpg',
+    img: '/images/gallery/4.jpg',
     title: 'Conference-Room',
   },
   {
-    img: '/images/gallery/cafetaria_1.jpg',
+    img: '/images/gallery/5.jpg',
     title: 'Cafeteria',
   },
   {
-    img: '/images/gallery/cafetaria_2.jpg',
+    img: '/images/gallery/6.jpg',
     title: 'Cafeteria-2',
   }
 ];
