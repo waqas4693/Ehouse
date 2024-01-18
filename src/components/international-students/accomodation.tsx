@@ -42,7 +42,7 @@ const Accomodation: FC = () => {
           <Box sx={{ mb: 3 }}>
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
               At Education House Leeds, we want to make sure you have a smooth experience during your 
-              course or training. Although we don't handle accommodation bookings directly, 
+              course or training. Although we don&apos;t handle accommodation bookings directly, 
               we encourage our participants to take charge and find their own places to stay.
             </Typography>
           </Box>
