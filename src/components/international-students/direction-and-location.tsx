@@ -269,6 +269,60 @@ const mosquesDetails: ServiceLocationDetails[] = [
   },
 ]
 
+const synagogueAndJewsCommunityCentersDetails: ServiceLocationDetails[] = [
+  {
+    locationName: 'United Hebrew Congregation Leeds',
+    locationAddress: '151 Shadwell Lane, Leeds, LS17 8DW',
+    locationPhone: ' 0113 269 6141',
+    locationWebsite: 'https://www.uhcleeds.com/',
+  },
+  {
+    locationName: 'Sinai Synagogue',
+    locationAddress: ' 2A Roman Ave, Roundhay, Leeds LS8 2AN',
+    locationPhone: '0113 266 5256',
+    locationWebsite: 'https://www.sinaileeds.uk/',
+  },
+  {
+    locationName: 'Beth Hamidrash Hagadol',
+    locationAddress: 'Caretakers House, 399 Street Ln, Moortown, Leeds LS17 6HQ',
+    locationPhone: '0113 269 2181',
+    locationWebsite: 'https://www.bhhs.co.uk/',
+  },
+  {
+    locationName: 'Leeds Jewish Welfare Board',
+    locationAddress: 'Community Centre, Marjorie and Arnold Ziff Building, 311 Stonegate Rd, Moortown, Leeds LS17 6AZ',
+    locationPhone: '0113 268 4211',
+    locationWebsite: '',
+  },
+]
+
+const hinduTemplesGurudawaraDetails: ServiceLocationDetails[] = [
+  {
+    locationName: 'Leeds Hindu Mandir',
+    locationAddress: '36 Alexandra Rd, Burley, Leeds LS6 1RF',
+    locationPhone: '0113 275 7024',
+    locationWebsite: '',
+  },
+  {
+    locationName: 'BAPS Shri Swaminarayan Mandir',
+    locationAddress: '1 Weaver St, Burley, Leeds LS4 2AU',
+    locationPhone: '07929 416749',
+    locationWebsite: 'https://www.baps.org/Global-Network/UK-and-Europe/Leeds.aspx',
+  },
+  {
+    locationName: 'The Sikh Temple',
+    locationAddress: '192 Chapeltown Rd, Leeds LS7 4HZ',
+    locationPhone: '0113 262 9073',
+    locationWebsite: 'https://m.facebook.com/SikhTempleLeeds/',
+  },
+  {
+    locationName: 'Ramgarhia Board Gurdwara Leeds',
+    locationAddress: ' 8-10 Chapeltown Rd, Leeds LS7 3AP',
+    locationPhone: '0113 262 0085',
+    locationWebsite: 'https://www.ramgarhiaboardleeds.org/',
+  },
+]
+
 const airportService = serviceData('Airport', 'AIRPORT AROUND US', [airportDetails])
 const railwayStationService = serviceData('Railway Station', 'RAILWAY STATION AROUND US', [railwayStationDetails])
 const librariesService = serviceData('Libraries', 'LIBRARIES AROUND USFounded in 1768...', librariesDetails)
@@ -285,6 +339,8 @@ const citizenAdviceService = serviceData(
   citizenAdviceDetails
 )
 const mosquesService = serviceData('Mosques', 'MOSQUES AROUND US', mosquesDetails)
+const synagogueAndJewsCommunityCentersDetailsServices = serviceData('Synagogue and Jews Community Centers', 'SYNAGOGUE AROUND US', synagogueAndJewsCommunityCentersDetails)
+const hinduTemplesGurudawaraService = serviceData('Hindu Temples / Gurudawara', 'Hindu Temples / Gurudawara AROUND US', hinduTemplesGurudawaraDetails)
 
 const rows = [
   airportService,
@@ -299,6 +355,8 @@ const rows = [
   dentalPracticeService,
   citizenAdviceService,
   mosquesService,
+  synagogueAndJewsCommunityCentersDetailsServices,
+  hinduTemplesGurudawaraService
 ]
 
 const DirectionAndLocation: FC = () => {
