@@ -8,30 +8,30 @@ const UkVisa: FC = () => {
   const questionsAndAnswers = [
     {
       question: 'What type of Visa do I need to apply for a training / short course?',
-      answer: 'Standard Visitor Visa',
+      answer: 'Short Term Study Visa',
     },
     {
-      question: 'What is the age limit to apply for a Standard Visitor Visa?',
+      question: 'What is the age limit to apply for a Short Term Study Visa?',
       answer: '18 years or Over',
     },
     {
-      question: 'What is the student Standard Visitor Visa validity?',
+      question: 'What is the student Short Term Study Visa validity?',
       answer: 'Six Months',
     },
     {
-      question: 'Can I extend my Standard Visitor Visa in the UK?',
+      question: 'Can I extend my Short Term Study Visa in the UK?',
       answer: 'No',
     },
     {
-      question: 'Can I switch my Standard Visitor Visa into any other immigration category visa?',
+      question: 'Can I switch my Short Term Study Visa into any other immigration category visa?',
       answer: 'No',
     },
     {
-      question: 'Is there any English Language requirement for the Standard Visitor Visa?',
+      question: 'Is there any English Language requirement for the Short Term Study Visa?',
       answer: 'No',
     },
     {
-      question: 'Are there any minimum academic requirements for the Standard Visitor Visa?',
+      question: 'Are there any minimum academic requirements for the Short Term Study Visa?',
       answer: 'No',
     },
     {
