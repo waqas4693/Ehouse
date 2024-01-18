@@ -4,12 +4,6 @@ import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
 const Accomodation: FC = () => {
-  const accomodation = [
-    {
-      text: 'We help guide our students/delegates to reliable websites like Zoopla, Rightmove, and Gumtree, where you can explore a variety of options for suitable accommodations. This way, you can focus on your learning without worrying about where to stay.',
-    },
-  ]
-
   const notePoints = [
     {
       text: 'Accommodation costs are not included in the course/training fees.',
@@ -39,15 +33,15 @@ const Accomodation: FC = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ mb: 1 }}>
+          <Box sx={{ mb: 5 }}>
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
-              At Education House Leeds, we want to make sure you have a smooth experience during your 
-              course or training. Although we don&apos;t handle accommodation bookings directly, 
+              At Education House Leeds, we want to make sure you have a smooth experience during your
+              course or training. Although we don&apos;t handle accommodation bookings directly,
               we encourage our participants to take charge and find their own places to stay.
             </Typography>
           </Box>
 
-          <Box sx={{ mb: 2 }}>
+          <Box sx={{ mb: 1 }}>
             <Typography
               variant="h3"
               sx={{
@@ -63,18 +57,19 @@ const Accomodation: FC = () => {
             </Typography>
           </Box>
 
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            {accomodation.map((item, index) => (
-              <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>
-                <img
-                  src='/images/red-arrow.svg'
-                  alt='Arrow'
-                  style={{ marginRight: '8px', transform: 'translateY(3px)' }}
-                />
-                {item.text}
-              </li>
-            ))}
-          </ul>
+          <Box sx={{ mb: 3 }}>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '14px' }} variant='body1'>
+              <img
+                src='/images/red-arrow.svg'
+                alt='Arrow'
+                style={{ marginRight: '8px', transform: 'translateY(3px)' }}
+              />
+              We help guide our students/delegates to reliable websites like Zoopla, Rightmove, and Gumtree,
+              where you can explore a variety of options for suitable accommodations.
+              This way, you can focus on your learning without worrying about where to stay.
+            </Typography>
+          </Box>
+
         </Grid>
         <Grid item xs={12} md={4}>
           <img src='/images/accommodation.svg' alt='Image' style={{ width: '100%' }} />
