@@ -6,23 +6,17 @@ import Grid from '@mui/material/Grid'
 const Accomodation: FC = () => {
   const accomodation = [
     {
-      text: 'We are committed to ensuring that our students / delegates have a seamless experience during their course or training. We offer dedicated assistance in finding suitable accommodation for the entire duration of their program.',
-    },
-    {
-      text: 'Additionally, upon request, we are more than happy to provide a selected list of hotels located within convenient walking distance from Education House Leeds. This way, students / delegates can focus on their learning without any worries about lodging arrangements.',
+      text: 'We help guide our students/delegates to reliable websites like Zoopla, Rightmove, and Gumtree, where you can explore a variety of options for suitable accommodations. This way, you can focus on your learning without worrying about where to stay.',
     },
   ]
 
   const notePoints = [
     {
-      text: 'Accommodation is not included in the course / training fees',
+      text: 'Accommodation costs are not included in the course/training fees.',
     },
-    { text: 'Payment must be made directly to accommodation provider' },
+    { text: 'You will need to make payments for accommodations directly to the providers.' },
     {
-      text: 'As cost of your stay is your responsibility and all outstanding payments must be settled prior to departure',
-    },
-    {
-      text: 'Students / Participants should make an advance request if they wish to be met at the airport on arrival by a Education House Leeds representative',
+      text: 'You are responsible for covering the expenses of your stay, and all outstanding payments must be settled before you depart.',
     },
   ]
   return (
@@ -47,10 +41,9 @@ const Accomodation: FC = () => {
 
           <Box sx={{ mb: 3 }}>
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
-              Participants are free to arrange their own accommodations; however, Education House Leeds would make
-              arrangements for accommodation on request. Delegates are strongly advised to book accommodation prior to
-              their Visa application and obtain a booking confirmation. Proof of accommodation is a necessary
-              requirement for most Student Visitor Visa applicants.
+              At Education House Leeds, we want to make sure you have a smooth experience during your 
+              course or training. Although we don't handle accommodation bookings directly, 
+              we encourage our participants to take charge and find their own places to stay.
             </Typography>
           </Box>
 
