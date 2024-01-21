@@ -12,19 +12,14 @@ const StudentAndStaffGuidance: FC = () => {
         { name: 'Prospectus', fileName: 'prospectus_student.pdf' },
         { name: 'Student Handbook', fileName: 'student_handbook.pdf' },
         { name: 'Learning Resources Guide', fileName: 'learning_resources_student.pdf' },
-        { name: 'Policies and Procedure Manual - Student', fileName: 'policies.pdf' },
-        { name: 'Guidance for Potential Students', fileName: 'guidance_potential_students.pdf' },
+        { name: 'Policies and Procedure Manual - Student', fileName: 'student_policies_and_procedure_manual.pdf' },
+        { name: 'Guidance for Potential Students', fileName: 'guidance_for_potential_students.pdf' },
     ];
 
     const staffFileNames = [
         { name: 'Staff Handbook', fileName: 'staff_handbook.pdf' },
         { name: 'Management and Staff Manual', fileName: 'management_staff_manual.pdf' },
     ];
-
-    const openPdfInNewWindow = (fileName: string): void => {
-        const pdfPath = `/files/${fileName}.pdf`;
-        window.open(pdfPath, '_blank');
-    };
 
     return (
         <Box>
