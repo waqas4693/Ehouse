@@ -57,9 +57,7 @@ const RefundPolicy: FC = () => {
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Refund request will be processed within 4 weeks after receiving the refund application with necessary documentation.
                 </li>
               </ul>
-
             </Box>
-
 
             <Box sx={{ mb: 2 }}>
               <Typography
@@ -112,8 +110,6 @@ const RefundPolicy: FC = () => {
                     <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If course or training is cancelled or stopped permanently by Education House Leeds because of National or International Crisis or Disaster.
                   </li>
                 </li>
-
-
               </ul>
             </Box>
 
@@ -129,19 +125,15 @@ const RefundPolicy: FC = () => {
                   lineHeight: 1.3,
                 }}
               >
-                Refundable Situation
+                Cooling-Off Period: 2 Weeks
               </Typography>
             </Box>
-
 
             <Box sx={{ mb: 3 }}>
               <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
-                Student / participant will receive refund minus £300 admin charges and bank / other charges from paid amount if student / participant cancels the course / training
-                for any reason before applying visa.
+                If a student or participant decides to cancel the course or training within the two-week cooling-off period that starts after the course fee payment, refund applicant will be eligible for a refund. The refund will be issued after deducting £300 for administrative charges and any applicable bank or other charges. It is important to note that this refund provision applies only if the student or participant has not applied for a UK Visa using the eHouse visa letter during this period.
               </Typography>
-
             </Box>
-
 
             <Box sx={{ mb: 2 }}>
               <Typography
@@ -166,17 +158,13 @@ const RefundPolicy: FC = () => {
                 </li>
               </ul>
             </Box>
-
-
-
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ backgroundColor: '#fff' }}>
 
+      <Box sx={{ backgroundColor: '#fff' }}>
         <Grid container sx={{ px: 10, py: 7 }}>
           <Grid item xs={12} md={6}>
-
             <Box sx={{}}>
               <Typography
                 variant="h2"
@@ -192,11 +180,9 @@ const RefundPolicy: FC = () => {
                 Reach out to us
               </Typography>
             </Box>
-
           </Grid>
 
           <Grid item xs={12} md={6}>
-
             <Box sx={{ float: 'right' }}>
               <Typography
                 variant="h2"
@@ -212,11 +198,8 @@ const RefundPolicy: FC = () => {
                 +447455 222161
               </Typography>
             </Box>
-
           </Grid>
         </Grid>
-
-
       </Box>
     </Box>
   )
