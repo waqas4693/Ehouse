@@ -266,7 +266,7 @@ const HomeCourse: FC = () => {
           xs: 6,
           md: 8,
         },
-        pb: 14,
+        pb: 8,
         backgroundColor: 'background.default',
       }}
     >
@@ -280,13 +280,13 @@ const HomeCourse: FC = () => {
             my: 3,
           }}
         >
-          <Typography variant='body1' sx={{ my: 2 }}>
+          <Typography variant='body1' sx={{ mt: 1, mb: 2 }}>
             Welcome to Education House Leeds – the place where language learning comes alive! We&apos;re not your typical college; we&apos;re a close-knit community that believes in the magic of mastering English. Here at Education House Leeds, our teachers aren&apos;t just educators; they&apos;re mentors who genuinely care about your progress. We keep our classes small so that you get the attention you deserve, making learning feel like a personalized adventure.
           </Typography>
           <Typography variant='body1' sx={{ my: 2 }}>
             Whether you&apos;re prepping for your academic journey, aiming for career growth, or just looking to conquer those language exams, our programs are designed to meet your unique needs. Imagine studying with students from all corners of the world, sharing stories and experiences that enrich your learning beyond the classroom.
           </Typography>
-          <Typography variant='h3' sx={{ my: 2 }}>
+          <Typography variant='h4' sx={{ my: 2, color: 'secondary.main' }}>
             Mission Statement
           </Typography>
           <Typography variant='body1' sx={{ mt: 2, mb: 1 }}>
@@ -297,9 +297,11 @@ const HomeCourse: FC = () => {
 
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {missionStatementPoints.map((item, index) => (
-              <li key={index} style={{ fontSize: '14px', fontWeight: 400,  }}>
-                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>
-                {item.text}
+              <li key={index}>
+                <Typography variant='body1'>
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>
+                  {item.text}
+                </Typography>
               </li>
             ))}
           </ul>
