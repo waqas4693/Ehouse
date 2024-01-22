@@ -206,24 +206,24 @@ const HomeCourse: FC = () => {
     console.log("Form submittion started");
 
     // if (validateForm()) {
-      console.log("Form validated");
-      try {
-        const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
+    console.log("Form validated");
+    try {
+      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
 
-        const message = response.data.message;
+      const message = response.data.message;
 
-        if (response.data.status === 'success') {
-          handleClose();
-          handleSnackbarOpen('success', message);
-          resetForm();
-        } else if (response.data.status === 'failure') {
-          handleClose();
-          handleSnackbarOpen('error', message);
-          resetForm();
-        }
-      } catch (error) {
-        console.error('Error submitting the form:', error);
+      if (response.data.status === 'success') {
+        handleClose();
+        handleSnackbarOpen('success', message);
+        resetForm();
+      } else if (response.data.status === 'failure') {
+        handleClose();
+        handleSnackbarOpen('error', message);
+        resetForm();
       }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
     // }
   };
 
@@ -252,6 +252,12 @@ const HomeCourse: FC = () => {
     ),
   };
 
+  const missionStatementPoints = [
+    { text: 'To ensure that our teachers are committed to creating a stimulating, supportive and active learning environment in which students can make rapid progress.' },
+    { text: 'To create an atmosphere of tolerance and respect and to help students learn from not just the teachers but also from each other.' },
+    { text: 'To be kind, patient, supportive and attentive to our students and to ask for, and listen to their views and comments and, where possible, to act upon their suggestions, as they are the most important people in and every member of staff is here to help them get the most out of their learning journey with us.' },
+  ]
+
   return (
     <Box
       id='popular-course'
@@ -265,6 +271,39 @@ const HomeCourse: FC = () => {
       }}
     >
       <Container maxWidth='lg'>
+        <Box
+          sx={{
+            height: '100%',
+            width: { xs: '100%' },
+            alignItems: 'center',
+            justifyContent: { xs: 'center' },
+            my: 3,
+          }}
+        >
+          <Typography variant='body1' sx={{ my: 2 }}>
+            Welcome to Education House Leeds – the place where language learning comes alive! We're not your typical college; we're a close-knit community that believes in the magic of mastering English. Here at Education House Leeds, our teachers aren't just educators; they're mentors who genuinely care about your progress. We keep our classes small so that you get the attention you deserve, making learning feel like a personalized adventure.
+          </Typography>
+          <Typography variant='body1' sx={{ my: 2 }}>
+            Whether you're prepping for your academic journey, aiming for career growth, or just looking to conquer those language exams, our programs are designed to meet your unique needs. Imagine studying with students from all corners of the world, sharing stories and experiences that enrich your learning beyond the classroom.
+          </Typography>
+          <Typography variant='h3' sx={{ my: 2 }}>
+            Mission Statement
+          </Typography>
+          <Typography variant='body1' sx={{ mt: 2, mb: 1 }}>
+            Our mission is to provide high quality education in the English language for students aged 18+,
+            focussing on teaching General English and preparing students successfully for the IELTS
+            examinations.
+          </Typography>
+
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {missionStatementPoints.map((item, index) => (
+              <li key={index} style={{ fontSize: '14px', fontWeight: 400,  }}>
+                <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.3em' }}>&bull; </span>
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </Box>
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
             <Box
