@@ -4,16 +4,21 @@ import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
 const EntryRequirements: FC = () => {
-  const entryRequirements = [
-    { text: 'Age: 18 or plus years' },
-    { text: 'Language Proficiency: Basic understanding of english language' },
+  const entryRequirementsCompulsory = [
+    { text: 'Age: Over 18 years' },
     {
-      text: 'Educational background: Minimum 10 years schooling or above with 50 % marks in English in latest qualification',
+      text: 'Qualification: 12 years schooling or above',
     },
+    { text: 'English language proficiency: Basic to intermediate' }
+  ]
+
+  const entryRequirementsRecommended = [
+    { text: 'Minimum marks in most recent qualification: 50%' },
     {
-      text: 'Payment of course fees: Ensure that you can meet the financial obligations associated with the course, including tuition fees and any additional costs',
+      text: 'English subject minimum marks in most recent qualification: 50%',
     },
-    { text: 'Proof of Identity: A passport valid for at least six months is required' },
+    { text: 'English language proficiency certificate: Preferred' },
+    { text: 'Maximum study gap: Few months' }
   ]
 
   return (
@@ -36,16 +41,43 @@ const EntryRequirements: FC = () => {
             </Typography>
           </Box>
 
-          {/* <Box sx={{ mb: 1 }}>
-            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
-              There are no specific recommended prior learning requirements for business and management training at
-              level 2. Communicating in English at a reasonable competency level will be expected of all trainees. It is
-              expected that trainees will have
-            </Typography>
-          </Box> */}
-
+          <Typography
+            variant="h3"
+            sx={{
+              position: 'relative',
+              color: '#000',
+              fontSize: { xs: 15, md: 20 },
+              letterSpacing: 1.5,
+              fontWeight: 'bold',
+              lineHeight: 1.3,
+            }}
+          >
+            Compulsory
+          </Typography>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            {entryRequirements.map((item, index) => (
+            {entryRequirementsCompulsory.map((item, index) => (
+              <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>
+                <img src='/images/red-arrow.svg' alt='Arrow' style={{ marginRight: '8px' }} />
+                {item.text}
+              </li>
+            ))}
+          </ul>
+
+          <Typography
+            variant="h3"
+            sx={{
+              position: 'relative',
+              color: '#000',
+              fontSize: { xs: 15, md: 20 },
+              letterSpacing: 1.5,
+              fontWeight: 'bold',
+              lineHeight: 1.3,
+            }}
+          >
+            Recommended
+          </Typography>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {entryRequirementsRecommended.map((item, index) => (
               <li key={index} style={{ fontSize: '14px', fontWeight: 400, paddingBottom: 15 }}>
                 <img src='/images/red-arrow.svg' alt='Arrow' style={{ marginRight: '8px' }} />
                 {item.text}

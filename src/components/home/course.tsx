@@ -281,7 +281,7 @@ const HomeCourse: FC = () => {
           }}
         >
           <Typography variant='body1' sx={{ mb: 2 }}>
-            Welcome to Education House Leeds – the place where language learning comes alive! We&apos;re not your typical college; we&apos;re a close-knit community that believes in the magic of mastering English. Here at Education House Leeds, our teachers aren&apos;t just educators; they&apos;re mentors who genuinely care about your progress. We keep our classes small so that you get the attention you deserve, making learning feel like a personalized adventure.
+            Welcome to Education House Leeds – the place where language learning comes alive! We&apos;re not your typical college; we&apos;re a close-knit community that believes in the magic of mastering English. Here at Education House Leeds, our teachers aren&apos;t just educators; they&apos;re mentors who genuinely care about your progress. We keep our classes small so that you get the attention you deserve, making learning feel like a personalised adventure.
           </Typography>
           <Typography variant='body1' sx={{ my: 2 }}>
             Whether you&apos;re prepping for your academic journey, aiming for career growth, or just looking to conquer those language exams, our programs are designed to meet your unique needs. Imagine studying with students from all corners of the world, sharing stories and experiences that enrich your learning beyond the classroom.

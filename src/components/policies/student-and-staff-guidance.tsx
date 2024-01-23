@@ -12,7 +12,7 @@ const StudentAndStaffGuidance: FC = () => {
         { name: 'Prospectus', fileName: 'prospectus_student.pdf' },
         { name: 'Student Handbook', fileName: 'student_handbook.pdf' },
         { name: 'Learning Resources Guide', fileName: 'learning_resources_student.pdf' },
-        { name: 'Policies and Procedure Manual - Student', fileName: 'student_policies_and_procedure_manual.pdf' },
+        { name: 'Student Policies and Procedure Manual', fileName: 'student_policies_and_procedure_manual.pdf' },
         { name: 'Guidance for Potential Students', fileName: 'guidance_for_potential_students.pdf' },
     ];
 
