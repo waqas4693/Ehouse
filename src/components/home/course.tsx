@@ -129,6 +129,11 @@ const HomeCourse: FC = () => {
     setFormData(prevData => ({ ...prevData, [name]: value }));
   };
 
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    const { name, checked } = e.target;
+    setFormData(prevData => ({ ...prevData, [name]: checked }));
+  };
+
   const validateForm = (): boolean => {
     let isValid = true;
 
@@ -187,7 +192,7 @@ const HomeCourse: FC = () => {
     if (!formData.acceptTerms) {
       setErrors(prevErrors => ({
         ...prevErrors,
-        checkbox: 'Please accept the Terms and Conditions.',
+        checkbox: 'Terms and Conditions not accepted',
       }));
       isValid = false;
     } else {
@@ -197,6 +202,9 @@ const HomeCourse: FC = () => {
       }));
     }
 
+    console.log("Form Is Valid = ");
+    console.log(isValid);
+
     return isValid;
   };
 
@@ -205,26 +213,26 @@ const HomeCourse: FC = () => {
 
     console.log("Form submittion started");
 
-    // if (validateForm()) {
-    console.log("Form validated");
-    try {
-      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
+    if (validateForm()) {
+      console.log("Form validated");
+      try {
+        const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData);
 
-      const message = response.data.message;
+        const message = response.data.message;
 
-      if (response.data.status === 'success') {
-        handleClose();
-        handleSnackbarOpen('success', message);
-        resetForm();
-      } else if (response.data.status === 'failure') {
-        handleClose();
-        handleSnackbarOpen('error', message);
-        resetForm();
+        if (response.data.status === 'success') {
+          handleClose();
+          handleSnackbarOpen('success', message);
+          resetForm();
+        } else if (response.data.status === 'failure') {
+          handleClose();
+          handleSnackbarOpen('error', message);
+          resetForm();
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
       }
-    } catch (error) {
-      console.error('Error submitting the form:', error);
     }
-    // }
   };
 
   const handleSnackbarOpen = (newSeverity: string, newMessage: string): void => {
@@ -371,6 +379,16 @@ const HomeCourse: FC = () => {
               style={{ cursor: 'pointer' }}
             />
           </IconButton>
+          {/* {Object.values(errors).every(value => !value) && (
+            <>
+              <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
+                Admission Form!
+              </Typography>
+              <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
+                Please fill in the form below
+              </Typography>
+            </>
+          )} */}
           <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
             Admission Form!
           </Typography>
@@ -389,6 +407,8 @@ const HomeCourse: FC = () => {
                 sx={{ mt: 1 }}
                 value={formData.firstName}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                error={!!errors.firstName}
+                helperText={errors.firstName}
               />
               <TextField
                 name='lastName'
@@ -400,6 +420,8 @@ const HomeCourse: FC = () => {
                 sx={{ mt: 1 }}
                 value={formData.lastName}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                error={!!errors.lastName}
+                helperText={errors.lastName}
               />
               <TextField
                 name='email'
@@ -411,6 +433,8 @@ const HomeCourse: FC = () => {
                 sx={{ mt: 1 }}
                 value={formData.email}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                error={!!errors.email}
+                helperText={errors.email}
               />
               <TextField
                 name='contactNo'
@@ -422,6 +446,8 @@ const HomeCourse: FC = () => {
                 sx={{ mt: 1 }}
                 value={formData.contactNo}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+                error={!!errors.contactNo}
+                helperText={errors.contactNo}
               />
               <TextField
                 name='selectedCourse'
@@ -438,9 +464,12 @@ const HomeCourse: FC = () => {
                 sx={{ display: 'flex', alignItems: 'center', mt: 1 }}
               >
                 <Checkbox
-                // Handle the checkbox state
+                  name='acceptTerms'
+                  checked={formData.acceptTerms}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
                 />
                 By submitting this form you agree to our Terms and Conditions
+                {errors.checkbox && <span style={{ color: 'red' }}>{errors.checkbox}</span>}
               </Typography>
             </Box>
             <Button type='submit' variant='contained' color='secondary' fullWidth sx={{ mt: 3, borderRadius: '8px' }}>

@@ -41,4 +41,3 @@ export const navigations: Navigation[] = [
     label: 'Contact Us',
     path: '/contact-us',
   }
-]

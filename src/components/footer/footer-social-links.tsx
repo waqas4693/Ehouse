@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YoutubeIcon from '@mui/icons-material/YouTube';
-import PinterestIcon from '@mui/icons-material/Pinterest';
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import YoutubeIcon from '@mui/icons-material/YouTube'
+import PinterestIcon from '@mui/icons-material/Pinterest'
 import { SocialLink } from '@/interfaces/social-link'
 
 export const socialLinks: SocialLink[] = [
