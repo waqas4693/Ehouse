@@ -14,7 +14,7 @@ const itemData = [
     {
         img: '/images/institutes/2.jpg',
         title: 'BAC',
-        link: '/images/BAC-Certificate.png'
+        link: '/files/BAC-Certificate.pdf'
     },
     {
         img: '/images/institutes/3.jpg',
