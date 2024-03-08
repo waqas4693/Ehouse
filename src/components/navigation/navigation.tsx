@@ -43,11 +43,11 @@ const Navigation: FC = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Set isClient to true when the component is mounted.
+    setIsClient(true);
   }, []);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }}}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label, dropdownItems }) => (
         <Box
           key={destination}
@@ -77,15 +77,14 @@ const Navigation: FC = () => {
             },
           }}
         >
-          {isClient ? ( // Render when the client-side JavaScript takes over
+          {isClient ? (
             <Link href={destination} passHref>
               <a>{label}</a>
             </Link>
           ) : (
-            // Render a loading placeholder until the client-side JavaScript takes over
-            <div>Loading...</div>
+            <div></div>
           )}
-          {dropdownItems && isClient && <Dropdown items={dropdownItems} />} {/* Render the dropdown only when isClient is true */}
+          {dropdownItems && isClient && <Dropdown items={dropdownItems} />}
         </Box>
       ))}
     </Box>
