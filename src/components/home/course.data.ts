@@ -6,20 +6,20 @@ export const data: Array<Course> = [
     cover: '/images/courses/course-1.png',
     title: 'General English Course',
     duration: '11 Months',
-    price: 4500
+    price: 5500
   },
   {
     id: 2,
     cover: '/images/courses/course-2.png',
     title: 'IELTS Preparation Course',
     duration: '11 Months',
-    price: 4500
+    price: 5500
   },
   {
     id: 3,
     cover: '/images/courses/course-3.png',
     title: 'Business English Course',
     duration: '11 Months',
-    price: 4500
+    price: 5500
   }
 ]

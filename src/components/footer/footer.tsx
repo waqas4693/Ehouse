@@ -5,7 +5,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
-import { FooterNavigation, FooterSocialLinks, FooterFacebookLinks } from '@/components/footer'
+import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 
 const Footer: FC = () => {
@@ -157,9 +157,7 @@ const Footer: FC = () => {
                 Copyright © 2014 - 2024 Education House Leeds
               </Typography>
             </Box>
-          
           </Grid>
-          
         </Grid>
       </Container>
     </Box>

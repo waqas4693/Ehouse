@@ -18,6 +18,10 @@ const courseMenu: Array<Navigation> = [
   {
     label: 'IXL',
     path: 'https://uk.ixl.com/',
+  },
+  {
+    label: 'IELTS Registration',
+    path: 'https://ieltsregistration.britishcouncil.org/',
   }
 ]
 

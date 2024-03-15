@@ -198,7 +198,7 @@ const ApplyForACourse: FC = () => {
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Certificate</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£4500</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£5500</TableCell>
                     <TableCell>
                       <Button
                         type='submit'

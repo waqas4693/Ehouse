@@ -13,7 +13,7 @@ export const data: Array<DescriptiveCourse> = [
     suitableFor: 'Education, Work or Socializing',
     level: 'Beginner to Advance',
     registerationFee: '£300 (Non-refundable)',
-    price: '£4500'
+    price: '£5500'
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const data: Array<DescriptiveCourse> = [
     suitableFor: 'Education, Work or Socializing',
     level: 'Beginner to Advance',
     registerationFee: '£300 (Non-refundable)',
-    price: '£4500'
+    price: '£5500'
   },
   {
     id: 3,
@@ -41,6 +41,6 @@ export const data: Array<DescriptiveCourse> = [
     suitableFor: 'Education, Work or Socializing',
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
-    price: '£4500'
+    price: '£5500'
   }
 ]
