@@ -1,5 +1,6 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
 import Slider, { Settings } from 'react-slick'
+import { Grid } from '@mui/material'
 import { useTheme, styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -13,7 +14,7 @@ import Modal from '@mui/material/Modal'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
-import Checkbox from '@mui/material/Checkbox' 
+import Checkbox from '@mui/material/Checkbox'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import axios from 'axios'
 import { data } from './all-english-courses.data'
@@ -177,15 +178,20 @@ const AllEnglishCourses: FC = () => {
         <Typography variant='h1' sx={{ fontSize: 40, color: 'secondary.main' }}>
           Courses
         </Typography>
-        <Slider {...sliderConfig}>
-          {data.map(item => (
-            <DescriptiveCourseCardItem
-              key={String(item.id)}
-              item={item}
-              onRegisterClick={() => handleSelectCourse(item.title)}
-            />
+        {/* <Slider {...sliderConfig}> */}
+        <Grid spacing={2} direction="row" alignItems="flex-start" container component="section">          
+        {data.map(item => (
+            <Grid item xs={12} sm={6} md={4} key={String(item.id)}>
+              <DescriptiveCourseCardItem
+                key={String(item.id)}
+                item={item}
+                onRegisterClick={() => handleSelectCourse(item.title)}
+              />
+            </Grid>
           ))}
-        </Slider>
+        </Grid>
+
+        {/* </Slider> */}
       </Container>
       <Modal
         aria-labelledby='register-now-modal-title'
@@ -226,7 +232,7 @@ const AllEnglishCourses: FC = () => {
             Admission Form!
           </Typography>
           <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
-          Please fill in the form below
+            Please fill in the form below
           </Typography>
           <form onSubmit={handleSubmit}>
             <Box sx={customInputStyle}>

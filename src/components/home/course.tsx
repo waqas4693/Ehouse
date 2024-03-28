@@ -326,7 +326,8 @@ const HomeCourse: FC = () => {
               }}
             >
               <Typography variant='h2' sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
-                English Language Courses
+                {/* English Language Courses */}
+                Ehouse Courses
               </Typography>
             </Box>
           </Grid>
