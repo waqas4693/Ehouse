@@ -45,7 +45,7 @@ export const data: Array<DescriptiveCourse> = [
   },
   {
     id: 4,
-    cover: '/images/courses/course-1.svg',
+    cover: '/images/courses/course-4.png',
     title: 'Principles of Customer Service',
     duration: '11 Months',
     description: 'In order to have a truly successful business, you need to provide good customer service. Handling a business’s issues in a professional and courteous manner is an essential day-to-day task.',
@@ -59,7 +59,7 @@ export const data: Array<DescriptiveCourse> = [
   },
   {
     id: 5,
-    cover: '/images/courses/course-2.svg',
+    cover: '/images/courses/course-5.png',
     title: 'Principles of Business Administration',
     duration: '11 Months',
     description: 'With an estimated 5.5 million private sector businesses in the UK, it’s imperative to learn the basic principles of business administration. Despite the recent economic difficulties, the trend',
@@ -73,7 +73,7 @@ export const data: Array<DescriptiveCourse> = [
   },
   {
     id: 6,
-    cover: '/images/courses/course-3.svg',
+    cover: '/images/courses/course-6.png',
     title: 'Principles of Team Leading',
     duration: '11 Months',
     description: 'Strong team leadership is essential for providing guidance, direction and instruction within a group and inevitably leads to more effective teamwork and more motivated employees',

@@ -24,21 +24,21 @@ export const data: Array<Course> = [
   },
   {
     id: 4,
-    cover: '/images/courses/course-1.svg',
+    cover: '/images/courses/course-4.png',
     title: 'Principles of Customer Service',
     duration: '11 Months',
     price: 5500
   },
   {
     id: 5,
-    cover: '/images/courses/course-2.svg',
+    cover: '/images/courses/course-5.png',
     title: 'Principles of Business Administration',
     duration: '11 Months',
     price: 5500
   },
   {
     id: 6,
-    cover: '/images/courses/course-3.svg',
+    cover: '/images/courses/course-6.png',
     title: 'Principles of Team Leading',
     duration: '11 Months',
     price: 5500
