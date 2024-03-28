@@ -35,14 +35,6 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                     },
                 }}
             >
-                {/* <Box
-                    sx={{
-                        // overflow: 'hidden',
-                        borderRadius: 4,
-                        mb: 2,
-                        backgroundColor: 'primary.main',
-                    }}
-                > */}
                 <div style={{ position: 'relative', width: '100%', height: '200px', marginBottom: '20px' }}>
                     <Image
                         src={item.cover}
@@ -52,12 +44,12 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                         style={{ borderRadius: '16px 16px 0 0' }}
                     />
                 </div>
-                {/* <Image src={item.cover} width={512} height={393} alt={'Course ' + item.id} /> */}
-                {/* </Box> */}
                 <Box sx={{ px: 2 }}>
-                    <Typography variant='h5' sx={{ fontSize: '28px', fontWeight: 600 }}>
+                    <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600 }}>
                         {item.title}
                     </Typography>
+                </Box>
+                <Box sx={{ px: 2 }}>
                     <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 500, color: 'text.secondary' }}>
                         {item.duration}
                     </Typography>

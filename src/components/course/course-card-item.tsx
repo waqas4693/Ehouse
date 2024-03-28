@@ -8,7 +8,8 @@ import Button from '@mui/material/Button'
 
 interface Props {
   item: Course,
-  onRegisterClick: (courseName: string) => void;}
+  onRegisterClick: (courseName: string) => void;
+}
 
 const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
 
@@ -44,10 +45,12 @@ const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
         >
           <Image src={item.cover} width={512} height={393} alt={'Course ' + item.id} />
         </Box>
-        <Box sx={{ px: 2 }}>
+        <Box sx={{ px: 2, height: '40px' }}>
           <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 600 }}>
             {item.title}
           </Typography>
+        </Box>
+        <Box sx={{ px: 2 }}>
           <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 500, color: 'text.secondary' }}>
             {item.duration}
           </Typography>
