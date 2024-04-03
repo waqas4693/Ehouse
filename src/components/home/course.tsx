@@ -88,6 +88,8 @@ const HomeCourse: FC = () => {
   const handleClose = (): void => setOpen(false);
   const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' });
   const [selectedCourse, setSelectedCourse] = useState<string>('');
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const carouselTitles = ['English Language Courses', 'Business Management Training', 'Life Skills'];
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -248,9 +250,9 @@ const HomeCourse: FC = () => {
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,
-    speed: 300,
+    speed: 2000,
     slidesToShow: matchMobileView ? 1 : 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     prevArrow: <SliderArrow type='prev' />,
     nextArrow: <SliderArrow type='next' />,
     dots: true,
@@ -258,6 +260,27 @@ const HomeCourse: FC = () => {
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
+    afterChange: () => {
+
+    },
+    beforeChange: (oldIndex, newIndex) => {
+      switch (newIndex) {
+        case 0:
+          setCurrentTextIndex(0);
+          break;
+        case 3:
+          setCurrentTextIndex(1);
+          break;
+        case 6:
+          setCurrentTextIndex(2);
+          break;
+        case 9:
+          setCurrentTextIndex(2);
+          break;
+        default:
+          break;
+      }
+    },
   };
 
   const missionStatementPoints = [
@@ -326,8 +349,7 @@ const HomeCourse: FC = () => {
               }}
             >
               <Typography variant='h2' sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 20, md: 38 } }}>
-                {/* English Language Courses */}
-                Ehouse Courses
+                {carouselTitles[currentTextIndex]}
               </Typography>
             </Box>
           </Grid>
@@ -381,15 +403,15 @@ const HomeCourse: FC = () => {
             />
           </IconButton>
           {/* {Object.values(errors).every(value => !value) && (
-            <>
-              <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
-                Admission Form!
-              </Typography>
-              <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
-                Please fill in the form below
-              </Typography>
-            </>
-          )} */}
+              <>
+                <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
+                  Admission Form!
+                </Typography>
+                <Typography align='center' sx={{ mt: 1, fontSize: '20px', color: '#232323' }}>
+                  Please fill in the form below
+                </Typography>
+              </>
+            )} */}
           <Typography variant='h2' align='center' color='secondary.main' fontSize='48px'>
             Admission Form!
           </Typography>

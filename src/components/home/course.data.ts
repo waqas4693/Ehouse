@@ -42,5 +42,33 @@ export const data: Array<Course> = [
     title: 'Principles of Team Leading',
     duration: '11 Months',
     price: 5500
+  },
+  {
+    id: 7,
+    cover: '/images/courses/course-4.png',
+    title: 'A2 Test',
+    duration: '20 Minutes',
+    price: 200
+  },
+  {
+    id: 8,
+    cover: '/images/courses/course-5.png',
+    title: 'Driving Theory Test',
+    duration: '8 Weeks',
+    price: 300
+  },
+  {
+    id: 9,
+    cover: '/images/courses/course-6.png',
+    title: 'Life In The Uk Test',
+    duration: '6 Weeks',
+    price: 300
+  },
+  {
+    id: 10,
+    cover: '/images/courses/course-6.png',
+    title: 'B1 Test',
+    duration: '10 To 20 Minutes',
+    price: 200
   }
 ]
