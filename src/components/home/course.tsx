@@ -260,9 +260,6 @@ const HomeCourse: FC = () => {
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
-    afterChange: () => {
-
-    },
     beforeChange: (oldIndex, newIndex) => {
       switch (newIndex) {
         case 0:
