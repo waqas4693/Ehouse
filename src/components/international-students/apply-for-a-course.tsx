@@ -34,7 +34,7 @@ const customInputStyle = {
 const ApplyForACourse: FC = () => {
   const columns = ['Short Course', 'Qualification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
 
-  const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course', 'Principles of Customer Service', 'Principles of Business Administration', 'Principles of Team Leading']
+  const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course', 'Principles of Customer Service', 'Principles of Business Administration', 'Principles of Team Leading', 'A2 Test', 'Driving Theory Test', 'Life In The UK Test', 'B1 Test']
 
   // const applyforacourse = [
   //   { text: 'Fill in Online Registration Assessment Form' },

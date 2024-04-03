@@ -84,5 +84,61 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£5500'
+  },
+  {
+    id: 7,
+    cover: '/images/courses/course-7.png',
+    title: 'A2 Test',
+    duration: '20 Minutes',
+    description: '',
+    lessonsPerWeek: 0,
+    hoursPerWeek: 0,
+    classTime: '',
+    suitableFor: '',
+    level: '',
+    registerationFee: '',
+    price: '£200'
+  },
+  {
+    id: 8,
+    cover: '/images/courses/course-8.png',
+    title: 'Driving Theory Test',
+    duration: '8 Weeks',
+    description: '',
+    lessonsPerWeek: 0,
+    hoursPerWeek: 0,
+    classTime: '',
+    suitableFor: '',
+    level: '',
+    registerationFee: '',
+    price: '£300'
+  },
+  {
+    id: 9,
+    cover: '/images/courses/course-9.png',
+    title: 'Life In The Uk Test',
+    duration: '6 Weeks',
+    description: '',
+    lessonsPerWeek: 0,
+    hoursPerWeek: 0,
+    classTime: '',
+    suitableFor: '',
+    level: '',
+    registerationFee: '',
+    price: '£300'
+  },
+  {
+    id: 10,
+    cover: '/images/courses/course-10.png',
+    title: 'B1 Test',
+    duration: '10 To 20 Minutes',
+    description: '',
+    lessonsPerWeek: 0,
+    hoursPerWeek: 0,
+    classTime: '',
+    suitableFor: '',
+    level: '',
+    registerationFee: '',
+    price: '£200'
   }
 ]
