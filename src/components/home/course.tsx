@@ -250,7 +250,7 @@ const HomeCourse: FC = () => {
   const sliderConfig: Settings = {
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: matchMobileView ? 1 : 3,
     slidesToScroll: 3,
     prevArrow: <SliderArrow type='prev' />,
