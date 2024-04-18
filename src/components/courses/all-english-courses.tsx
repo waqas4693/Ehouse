@@ -132,7 +132,7 @@ const AllEnglishCourses: FC = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.post('https://www.ai2terminator.com/form-submission.php', formData)
+      const response = await axios.post('https://www.admin.ehouse.org.uk/form-submission.php', formData)
       const message = response.data.message
 
       if (response.data.status === 'success') {
@@ -179,8 +179,8 @@ const AllEnglishCourses: FC = () => {
           Courses
         </Typography>
         {/* <Slider {...sliderConfig}> */}
-        <Grid spacing={2} direction="row" alignItems="flex-start" container component="section">          
-        {data.map(item => (
+        <Grid spacing={2} direction="row" alignItems="flex-start" container component="section">
+          {data.map(item => (
             <Grid item xs={12} sm={6} md={4} key={String(item.id)}>
               <DescriptiveCourseCardItem
                 key={String(item.id)}
