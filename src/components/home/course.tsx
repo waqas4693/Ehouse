@@ -213,13 +213,9 @@ const HomeCourse: FC = () => {
   const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
 
-    console.log("Form submittion started");
-
     if (validateForm()) {
-      console.log("Form validated");
       try {
-        const response = await axios.post('https://www.admin.ehouse.org.uk/form-submission.php', formData);
-
+        const response = await axios.post('https://admin.ehouse.org.uk/form-submission.php', formData);
         const message = response.data.message;
 
         if (response.data.status === 'success') {
