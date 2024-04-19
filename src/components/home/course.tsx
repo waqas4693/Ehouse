@@ -203,10 +203,6 @@ const HomeCourse: FC = () => {
         checkbox: '',
       }));
     }
-
-    console.log("Form Is Valid = ");
-    console.log(isValid);
-
     return isValid;
   };
 

@@ -9,8 +9,8 @@ const AuthNavigation: FC = () => {
       {/* <StyledButton disableHoverEffect={true} variant="outlined">
         Sign In
       </StyledButton> */}
-      <Link href="https://student.ehouse.org.uk/" target="_blank" rel="noopener noreferrer">
-        <StyledButton color="secondary" disableHoverEffect={true}>Student Login</StyledButton>
+      <Link href="/international-students/apply-for-a-course" target="_blank" rel="noopener noreferrer">
+        <StyledButton color="secondary" disableHoverEffect={true}>Register Now</StyledButton>
       </Link>
     </Box>
   )

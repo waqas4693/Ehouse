@@ -33,7 +33,6 @@ const customInputStyle = {
 
 const ApplyForACourse: FC = () => {
   const columns = ['Short Course', 'Qualification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
-
   const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course', 'Principles of Customer Service', 'Principles of Business Administration', 'Principles of Team Leading', 'A2 Test', 'Driving Theory Test', 'Life In The UK Test', 'B1 Test']
 
   // const applyforacourse = [
@@ -76,7 +75,6 @@ const ApplyForACourse: FC = () => {
 
     try {
       const response = await axios.post('https://www.admin.ehouse.org.uk/form-submission.php', formData)
-
       const message = response.data.message
 
       if (response.data.status === 'success') {
@@ -162,6 +160,18 @@ const ApplyForACourse: FC = () => {
       <Box sx={{ px: 10, py: 5, backgroundColor: 'white' }}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={12}>
+            <Typography
+              variant="h3"
+              sx={{
+                pb: 3,
+                position: 'relative',
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
+                fontWeight: 'bold',
+              }}
+            >
+              International Courses
+            </Typography>
             <Table
               sx={{
                 border: '1px solid lightgray',
@@ -175,7 +185,7 @@ const ApplyForACourse: FC = () => {
                   backgroundColor: 'background.default',
                 }}
               >
-                <TableRow sx={{}}>
+                <TableRow>
                   {columns.map((column, index) => (
                     <TableCell
                       key={index}
@@ -190,7 +200,73 @@ const ApplyForACourse: FC = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {coursesNames.map((row, rowIndex) => (
+                {coursesNames.slice(0, 6).map((row, rowIndex) => (
+                  <TableRow key={rowIndex}>
+                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
+                      {row}
+                    </TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Certificate</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£5500</TableCell>
+                    <TableCell>
+                      <Button
+                        type='submit'
+                        variant='contained'
+                        color='secondary'
+                        sx={{ borderRadius: '8px' }}
+                        onClick={() => handleSelectCourse(row)}
+                      >
+                        Register Now
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <Typography
+              variant="h3"
+              sx={{
+                pb: 3,
+                position: 'relative',
+                color: '#000',
+                fontSize: { xs: 15, md: 20 },
+                fontWeight: 'bold',
+              }}
+            >
+              Local Courses
+            </Typography>
+            <Table
+              sx={{
+                border: '1px solid lightgray',
+                borderRadius: '12px',
+                textAlign: 'center',
+              }}
+            >
+              <TableHead
+                sx={{
+                  position: 'relative',
+                  backgroundColor: 'background.default',
+                }}
+              >
+                <TableRow>
+                  {columns.map((column, index) => (
+                    <TableCell
+                      key={index}
+                      sx={{
+                        fontSize: '16px',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {column}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {coursesNames.slice(7, 10).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
                       {row}

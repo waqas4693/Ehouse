@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
+import Link from '@mui/material/Link'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
@@ -69,11 +70,13 @@ const HomeHero: FC = () => {
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
+                {/* <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}> */}
+                <Link href="/international-students/apply-for-a-course" target="_blank" rel="noopener noreferrer">
                   <StyledButton color="secondary" size="large" variant="contained">
                     Register Now
                   </StyledButton>
-                </ScrollLink>
+                  </Link>
+                {/* </ScrollLink> */}
               </Box>
             </Box>
           </Grid>
