@@ -74,7 +74,7 @@ const ApplyForACourse: FC = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.post('https://www.admin.ehouse.org.uk/form-submission.php', formData)
+      const response = await axios.post('https://admin.ehouse.org.uk/form-submission.php', formData)
       const message = response.data.message
 
       if (response.data.status === 'success') {
