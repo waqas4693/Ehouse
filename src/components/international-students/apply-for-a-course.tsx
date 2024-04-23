@@ -268,7 +268,7 @@ const ApplyForACourse: FC = () => {
                         variant='contained'
                         color='secondary'
                         sx={{ borderRadius: '8px' }}
-                        onClick={() => handleSelectCourse(row)}
+                        onClick={() => handleSelectCourse(row.title)}
                       >
                         Register Now
                       </Button>
