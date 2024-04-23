@@ -4,7 +4,7 @@ export interface DescriptiveCourse {
     title: string
     description: string
     duration: string
-    lessonsPerWeek: number
+    lessonsPerWeek: string
     hoursPerWeek: number
     classTime: string
     suitableFor: string
