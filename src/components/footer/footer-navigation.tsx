@@ -48,36 +48,24 @@ const usefulLinkItems: Array<Navigation> = [
 const quickLinkItems: Array<Navigation> = [
   {
     label: 'Accreditations And Affiliations',
-    path: 'https://seltbooking.trinitycollege.co.uk/OEWeb/loadExamDtl.do'
+    path: ''
   },
   {
-    label: 'Test Your Level Of English',
-    path: 'https://class.efset.org/school/start-test?test_id=ea45c32e-779c-4f5e-8f3f-c3220f1fac3f'
+    label: 'Courses',
+    path: ''
   },
   {
-    label: 'Book Life In The UK Test',
-    path: 'https://www.lituktestbooking.co.uk/lituk-web/'
+    label: 'Pay By Bank Transfer',
+    path: ''
   },
   {
-    label: 'Driving Theory Test Students',
-    path: 'https://app.theorytestpro.co.uk/login'
+    label: 'Terms & Conditions',
+    path: ''
   },
   {
-    label: 'Book Driving Theory Test',
-    path: 'https://www.gov.uk/book-theory-test',
-  },
-  {
-    label: 'IELTS Registration',
-    path: 'https://ieltsregistration.britishcouncil.org/',
-  },
-  {
-    label: 'Road 2 IELTS',
-    path: 'https://rtigt.clarityenglish.com/#prefix=EHL',
-  },
-  {
-    label: 'IXL',
-    path: 'https://uk.ixl.com/',
-  },
+    label: 'Vacancies',
+    path: '',
+  }
 ]
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
@@ -125,7 +113,7 @@ const FooterNavigation: FC = () => {
         ))}
       </Grid>
       <Grid item xs={12} md={5}>
-        <FooterSectionTitle title="Menu" />
+        <FooterSectionTitle title="Quick Links" />
         {quickLinkItems.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
