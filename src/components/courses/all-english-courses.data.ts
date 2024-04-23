@@ -47,35 +47,35 @@ export const data: Array<DescriptiveCourse> = [
     id: 4,
     cover: '/images/courses/course-4.png',
     title: 'Principles of Customer Service',
-    duration: '11 Months',
+    duration: '3 Weeks',
     description: 'In order to have a truly successful business, you need to provide good customer service. Handling a business’s issues in a professional and courteous manner is an essential day-to-day task.',
     lessonsPerWeek: 5,
     hoursPerWeek: 15,
     classTime: 'MON to FRI From 10 AM-1 PM',
     suitableFor: 'Education, Work or Socializing',
-    level: 'Beginner to Advance',
+    level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
-    price: '£5500'
+    price: '£3500'
   },
   {
     id: 5,
     cover: '/images/courses/course-5.png',
     title: 'Principles of Business Administration',
-    duration: '11 Months',
+    duration: '3 Weeks',
     description: 'With an estimated 5.5 million private sector businesses in the UK, it’s imperative to learn the basic principles of business administration. Despite the recent economic difficulties, the trend',
     lessonsPerWeek: 5,
     hoursPerWeek: 15,
     classTime: 'MON to FRI From 10 AM-1 PM',
     suitableFor: 'Education, Work or Socializing',
-    level: 'Beginner to Advance',
+    level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
-    price: '£5500'
+    price: '£3500'
   },
   {
     id: 6,
     cover: '/images/courses/course-6.png',
     title: 'Principles of Team Leading',
-    duration: '11 Months',
+    duration: '3 Weeks',
     description: 'Strong team leadership is essential for providing guidance, direction and instruction within a group and inevitably leads to more effective teamwork and more motivated employees',
     lessonsPerWeek: 5,
     hoursPerWeek: 15,
@@ -83,35 +83,35 @@ export const data: Array<DescriptiveCourse> = [
     suitableFor: 'Education, Work or Socializing',
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
-    price: '£5500'
+    price: '£3500'
   },
   {
     id: 7,
     cover: '/images/courses/course-7.png',
     title: 'A2 Test',
-    duration: '20 Minutes',
+    duration: '4 Months',
     description: '',
     lessonsPerWeek: 0,
     hoursPerWeek: 0,
     classTime: '',
     suitableFor: '',
-    level: '',
+    level: 'N/A',
     registerationFee: '',
-    price: '£200'
+    price: '£300'
   },
   {
     id: 8,
     cover: '/images/courses/course-8.png',
     title: 'Driving Theory Test',
-    duration: '8 Weeks',
+    duration: '4 Months',
     description: '',
     lessonsPerWeek: 0,
     hoursPerWeek: 0,
     classTime: '',
     suitableFor: '',
-    level: '',
+    level: 'N/A',
     registerationFee: '',
-    price: '£300'
+    price: '£400'
   },
   {
     id: 9,
@@ -123,22 +123,22 @@ export const data: Array<DescriptiveCourse> = [
     hoursPerWeek: 0,
     classTime: '',
     suitableFor: '',
-    level: '',
+    level: 'N/A',
     registerationFee: '',
-    price: '£300'
+    price: '£400'
   },
   {
     id: 10,
     cover: '/images/courses/course-10.png',
     title: 'B1 Test',
-    duration: '10 To 20 Minutes',
+    duration: '4 Months',
     description: '',
     lessonsPerWeek: 0,
     hoursPerWeek: 0,
     classTime: '',
     suitableFor: '',
-    level: '',
+    level: 'N/A',
     registerationFee: '',
-    price: '£200'
+    price: '£300'
   }
 ]

@@ -10,14 +10,7 @@ import Grid from '@mui/material/Grid'
 import axios from 'axios'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material'
-
-// function courseData(
-//   courseName: string,
-//   duration: string,
-//   price: string
-// ): { courseName: string; duration: string; price: string } {
-//   return { courseName, duration, price }
-// }
+import { data } from '../courses/all-english-courses.data'
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
   return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />
@@ -33,13 +26,7 @@ const customInputStyle = {
 
 const ApplyForACourse: FC = () => {
   const columns = ['Short Course', 'Qualification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
-  const coursesNames = ['General English Course', 'IELTS Preparation Course', 'Business English Course', 'Principles of Customer Service', 'Principles of Business Administration', 'Principles of Team Leading', 'A2 Test', 'Driving Theory Test', 'Life In The UK Test', 'B1 Test']
-
-  // const applyforacourse = [
-  //   { text: 'Fill in Online Registration Assessment Form' },
-  //   { text: 'Wait for approval of Registration Assessment Form' },
-  //   { text: 'Get Visa Support Letter and apply for UK Visitor Visa to join course' }
-  // ];
+  const columnsLifeSkills = ['Prepration', 'Qualification', 'Duration', 'Lessons Per Week', 'Fees', 'Action']
 
   const [open, setOpen] = React.useState(false)
   const handleOpen = (): void => setOpen(true)
@@ -200,22 +187,22 @@ const ApplyForACourse: FC = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {coursesNames.slice(0, 6).map((row, rowIndex) => (
+                {data.slice(0, 6).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
-                      {row}
+                      {row.title}
                     </TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Certificate</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£5500</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.level}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.duration}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.lessonsPerWeek}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.price}</TableCell>
                     <TableCell>
                       <Button
                         type='submit'
                         variant='contained'
                         color='secondary'
                         sx={{ borderRadius: '8px' }}
-                        onClick={() => handleSelectCourse(row)}
+                        onClick={() => handleSelectCourse(row.title)}
                       >
                         Register Now
                       </Button>
@@ -252,7 +239,7 @@ const ApplyForACourse: FC = () => {
                 }}
               >
                 <TableRow>
-                  {columns.map((column, index) => (
+                  {columnsLifeSkills.map((column, index) => (
                     <TableCell
                       key={index}
                       sx={{
@@ -266,15 +253,15 @@ const ApplyForACourse: FC = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {coursesNames.slice(7, 10).map((row, rowIndex) => (
+                {data.slice(6, 10).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
-                      {row}
+                      {row.title}
                     </TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>Certificate</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>11 Months</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>5</TableCell>
-                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>£5500</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.level}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.duration}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.lessonsPerWeek}</TableCell>
+                    <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.price}</TableCell>
                     <TableCell>
                       <Button
                         type='submit'

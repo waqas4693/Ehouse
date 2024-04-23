@@ -7,13 +7,12 @@ import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
-
 const Footer: FC = () => {
   return (
     <Box component="footer" sx={{ backgroundColor: 'secondary.main', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}>
-      <Container sx={{ pb: 15, width: '70%' }}>
+      <Container sx={{ pb: 15, width: '80%' }}>
         <Grid container spacing={1}>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Typography component="h3" variant="h3" sx={{ mb: 2, color: '#FFFFFF' }}>
                 Education House Leeds
@@ -23,12 +22,11 @@ const Footer: FC = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <FooterNavigation />
           </Grid>
         </Grid>
       </Container>
-
 
       <hr style={{
         backgroundColor: '#FFFFFF',
@@ -60,8 +58,7 @@ const Footer: FC = () => {
       >
         <ul>
           <li>eduSupplements</li>
-          <li>Business Management</li>
-          <li>Life Skills</li>
+          <li>Student Login</li>
         </ul>
       </Box>
       <hr style={{
@@ -75,7 +72,7 @@ const Footer: FC = () => {
       <Container sx={{ pt: 5, width: '70%' }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={9}>
-          <Box
+            <Box
               component="li"
               sx={{
                 display: 'inline-block',
@@ -152,7 +149,7 @@ const Footer: FC = () => {
       <Container sx={{ pt: 5, width: '30%' }}>
         <Grid container spacing={1} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={12}>
-          <Box sx={{ width: { xs: '100%', md: 360 } }}>
+            <Box sx={{ width: { xs: '100%', md: 360 } }}>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
                 Copyright © 2014 - 2024 Education House Leeds
               </Typography>
