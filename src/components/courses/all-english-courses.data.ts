@@ -89,7 +89,7 @@ export const data: Array<DescriptiveCourse> = [
     id: 7,
     cover: '/images/courses/course-7.png',
     title: 'A2 Test',
-    duration: '4 Months',
+    duration: '4 Weeks',
     description: '',
     lessonsPerWeek: 'TBA',
     hoursPerWeek: 0,
