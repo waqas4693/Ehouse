@@ -183,7 +183,7 @@ const AllEnglishCourses: FC = () => {
           {data.map(item => (
             <Grid item xs={12} sm={6} md={4} key={String(item.id)}>
               <Link href={`/course-detailed-page/${item.id}`}>
-                <a style={{ textDecoration: 'none' }}>
+                <a style={{ textDecoration: 'none', color: 'inherit' }}>
                   <DescriptiveCourseCardItem
                     key={String(item.id)}
                     item={item}
