@@ -11,4 +11,8 @@ export interface DescriptiveCourse {
     level: string
     registerationFee: string
     price: string
+    contents: string[]
+    courseBenefits: string[]
+    courseObjectives: string[]
+    whoIsThisCourseFor: string[]
   }

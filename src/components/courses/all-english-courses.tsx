@@ -17,6 +17,7 @@ import Snackbar from '@mui/material/Snackbar'
 import Checkbox from '@mui/material/Checkbox'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import axios from 'axios'
+import Link from 'next/link'
 import { data } from './all-english-courses.data'
 
 interface SliderArrowArrow {
@@ -178,20 +179,22 @@ const AllEnglishCourses: FC = () => {
         <Typography variant='h1' sx={{ fontSize: 40, color: 'secondary.main' }}>
           Courses
         </Typography>
-        {/* <Slider {...sliderConfig}> */}
         <Grid spacing={2} direction="row" alignItems="flex-start" container component="section">
           {data.map(item => (
             <Grid item xs={12} sm={6} md={4} key={String(item.id)}>
-              <DescriptiveCourseCardItem
-                key={String(item.id)}
-                item={item}
-                onRegisterClick={() => handleSelectCourse(item.title)}
-              />
+              <Link href={`/course-detailed-page/${item.id}`}>
+                <a>
+                  <DescriptiveCourseCardItem
+                    key={String(item.id)}
+                    item={item}
+                    onRegisterClick={() => handleSelectCourse(item.title)}
+                  />
+                </a>
+              </Link>
             </Grid>
+
           ))}
         </Grid>
-
-        {/* </Slider> */}
       </Container>
       <Modal
         aria-labelledby='register-now-modal-title'

@@ -3,7 +3,7 @@ import { MainLayout } from '@/components/layout'
 import { NextPageWithLayout } from '@/interfaces/layout'
 import dynamic from 'next/dynamic'
 
-const DynamicBusinessCourseDetails = dynamic(() => import('@/components/courses/business-english-course-details'));
+const DynamicBusinessCourseDetails = dynamic(() => import('@/components/courses/course-detailed-page'));
 
 const BusinessCourseDetailsPage: NextPageWithLayout = () => {
     return (
