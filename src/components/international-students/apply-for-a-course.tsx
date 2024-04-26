@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField'
 import IconButton from '@mui/material/IconButton'
 import Grid from '@mui/material/Grid'
 import axios from 'axios'
+import Link from 'next/link'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material'
 import { data } from '../courses/all-english-courses.data'
@@ -189,8 +190,10 @@ const ApplyForACourse: FC = () => {
               <TableBody>
                 {data.slice(0, 6).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
-                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
-                      {row.title}
+                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500, color: 'secondary.main' }}>
+                      <Link href={`/course-detailed-page/${row.id}`}>
+                        <a style={{ textDecoration: 'none', color: 'inherit' }}>{row.title}</a>
+                      </Link>
                     </TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.level}</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.duration}</TableCell>
@@ -255,8 +258,11 @@ const ApplyForACourse: FC = () => {
               <TableBody>
                 {data.slice(6, 10).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
-                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500 }}>
-                      {row.title}
+
+                    <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 700, color: 'secondary.main' }}>
+                      <Link href={`/course-detailed-page/${row.id}`}>
+                        <a style={{ textDecoration: 'none', color: 'inherit' }}>{row.title}</a>
+                      </Link>
                     </TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.level}</TableCell>
                     <TableCell sx={{ color: '#808080', fontSize: '14px', fontWeight: 400 }}>{row.duration}</TableCell>

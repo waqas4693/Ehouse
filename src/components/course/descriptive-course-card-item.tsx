@@ -13,6 +13,8 @@ interface Props {
 }
 
 const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <Box
             sx={{
@@ -21,6 +23,8 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
             }}
         >
             <Box
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 4,
@@ -45,7 +49,7 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                     />
                 </div>
                 <Box sx={{ px: 2 }}>
-                    <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600 }}>
+                    <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600, color: isHovered ? 'secondary.main' : 'inherit' }}>
                         {item.title}
                     </Typography>
                 </Box>

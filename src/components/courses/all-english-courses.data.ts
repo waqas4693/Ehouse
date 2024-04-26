@@ -15,25 +15,37 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£5500',
-    contents: [],
+    contents: [
+      'Comprehensive language instruction covering grammar, vocabulary, and pronunciation.',
+      'Interactive activities and exercises to practice listening and speaking skills.',
+      'Reading comprehension tasks focused on improving understanding of written English.',
+      'Writing assignments aimed at developing written communication skills for various purposes.',
+      'Role-plays and discussions to simulate real-life communication scenarios.',
+      'Cultural exploration sessions to broaden understanding of English-speaking countries and cultures.'
+    ],
     courseBenefits: [
-    //   'Gain a deeper understanding of the IELTS exam format, scoring criteria, and expectations.',
-    //   'Increase confidence in tackling each section of the IELTS exam through targeted practice and feedback.',
-    //   'Acquire essential test-taking strategies to maximize performance and efficiency during the exam.',
-    //   'Develop strong language skills that are transferable beyond the IELTS exam to academic and professional contexts.',
-    //   'Experience immersion in native English culture, particularly for those considering studying or working in the UK.',
-    //   'Receive personalized guidance and support from experienced instructors throughout the course.',
-    //   'Access to authentic practice materials and simulated exam environments to simulate real test conditions.',
-    //   'Improve overall English language proficiency, not just for the exam, but for future academic and professional pursuits.',
-     ],
+      'Gain fluency and accuracy in English language usage.',
+      'Enhance academic performance through improved reading, writing, and verbal communication skills.',
+      'Expand career opportunities by developing language skills applicable to a wide range of professions and industries.',
+      'Cultivate strong interpersonal skills for effective social interaction in English-speaking environments.',
+      'Experience immersion in native English culture, particularly for those considering studying or working in the UK.',
+      'Receive personalized guidance and support from experienced instructors throughout the course.',
+      'Access to authentic language materials and resources to enhance learning outcomes.'
+    ],
     courseObjectives: [
-    //   'Improve proficiency in all four components of the IELTS exam: Listening, Reading, Writing, and Speaking.',
-    //   'Enhance understanding and application of various test-taking strategies specific to the IELTS exam format.',
-    //   'Develop vocabulary and language skills necessary for success in both academic and general IELTS modules.',
-    //   'Refine grammatical accuracy and fluency in written and spoken English.',
-    //   'Provide comprehensive practice opportunities to build confidence and familiarity with the IELTS exam structure and content.',
-     ],
-    whoIsThisCourseFor: [],
+      'Enhance overall proficiency in the English language, covering reading, writing, listening, and speaking skills.',
+      'Develop a solid foundation in grammar, vocabulary, and pronunciation.',
+      'Improve communication skills for everyday situations, academic studies, and professional environments.',
+      'Increase confidence in using English in various real-life contexts.',
+      'Foster cultural awareness and understanding through language learning.'
+    ],
+    whoIsThisCourseFor: [
+      'Individuals seeking to improve their English language skills for academic purposes, such as preparing for university studies in English-speaking countries.',
+      'Professionals looking to enhance their English proficiency for career advancement or international business communication.',
+      'Expatriates or immigrants who want to integrate more effectively into English-speaking communities.',
+      'Tourists or travelers aiming to develop practical language skills for navigating English-speaking destinations.',
+      'Anyone interested in expanding their language abilities for personal enrichment and cultural appreciation.'
+    ],
   },
   {
     id: 2,
@@ -89,7 +101,7 @@ export const data: Array<DescriptiveCourse> = [
     title: 'Business English Course',
     duration: '11 Months',
     description:
-      'Business English Course is designed to help students develop and enhance their language skills in the context of professional settings. This course focuses on improving English proficiency in',
+      'Business English Course is designed to help students develop and enhance their language skills in the context of professional settings.',
     lessonsPerWeek: '5',
     hoursPerWeek: 15,
     classTime: 'MON to FRI From 10 AM-1 PM',
@@ -97,7 +109,18 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£5500',
-    contents: [],
+    contents: [
+      "Specialized vocabulary and terminology used in business contexts.",
+      "Effective communication strategies for written and verbal correspondence.",
+      "Presentation skills development, including structuring and delivering professional presentations.",
+      "Negotiation techniques and language for business transactions and deals.",
+      "Cross-cultural communication awareness to navigate diverse business environments.",
+      "Business writing skills, such as composing emails, reports, and proposals.",
+      "Networking skills and strategies for building professional relationships.",
+      "Case studies and real-life business scenarios for practical application of language skills.",
+      "Role-plays and simulations of business meetings, negotiations, and presentations.",
+      "Feedback and coaching sessions to refine language proficiency and communication effectiveness."
+    ],
     courseBenefits: [
       'Develop business-specific and professional vocabulary',
       'Enhances the skills of listening, speaking, reading, and writing necessary for general and Business environment',
@@ -114,7 +137,13 @@ export const data: Array<DescriptiveCourse> = [
       'Improve reading skills to comprehend business-related texts, reports, and articles.',
       'Strengthen writing skills to effectively convey information and ideas in various business formats.',
     ],
-    whoIsThisCourseFor: [],
+    whoIsThisCourseFor: [
+      "Professionals seeking to enhance their business communication skills in English.",
+      "Employees working in multinational companies or in roles requiring interaction with international clients or colleagues.",
+      "Entrepreneurs and business owners looking to expand their global reach and networks.",
+      "Students pursuing business-related studies or planning to enter the workforce in business environments.",
+      "Individuals preparing for job interviews or seeking career advancement opportunities in English-speaking workplaces."
+    ],
   },
   {
     id: 4,
@@ -130,7 +159,12 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£3500',
-    contents: [],
+    contents: [
+      'Learn to deliver excellent customer service',
+      'Increase awareness of understanding and meeting customers’ needs',
+      'Giving a great customer experience',
+      'Learn from feedback and promote products and services'
+    ],
     courseBenefits: [
       'Accredited Level 2 qualification',
       'Increment in competency level that matters for employer',
@@ -139,7 +173,10 @@ export const data: Array<DescriptiveCourse> = [
       'Skills to reduce customer complaints',
     ],
     courseObjectives: ['Principles of customer service', 'Understand customers', 'Understand employer organizations'],
-    whoIsThisCourseFor: [],
+    whoIsThisCourseFor: [
+      'Who wish to achieve a qualification to move up in their career',
+      'For those looking for customer service position in any business'
+    ],
   },
   {
     id: 5,
@@ -147,7 +184,7 @@ export const data: Array<DescriptiveCourse> = [
     title: 'Principles of Business Administration',
     duration: '3 Weeks',
     description:
-      'With an estimated 5.5 million private sector businesses in the UK, it’s imperative to learn the basic principles of business administration. Despite the recent economic difficulties, the trend',
+      'With an estimated 5.5 million private sector businesses in the UK, it’s imperative to learn the basic principles of business administration. Despite the recent economic difficulties, the trend has been steadily increasing in the business population. Today’s global economy brings with it a wealth of new markets, shrinking profit margins and increasing operating expenses; the need for good business administration has never been greater.',
     lessonsPerWeek: '5',
     hoursPerWeek: 15,
     classTime: 'MON to FRI From 10 AM-1 PM',
@@ -155,7 +192,13 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£3500',
-    contents: [],
+    contents: [
+      'Principles of Providing Administrative Services',
+      'Principles of Business Document Production and Information Management',
+      'Understand Communication in a Business Environment',
+      'Understand Employer Organisations',
+      'Understand How to Develop Working Relationships with Colleagues',
+    ],
     courseBenefits: [
       'Accredited Level 2 qualification',
       'Evidence of your competency to employers',
@@ -167,9 +210,12 @@ export const data: Array<DescriptiveCourse> = [
       'Principles of Business Document Production and Information Management',
       'Understand Communication in a Business Environment',
       'Understand Employer Organisations',
-      'Understand How to Develop Working Relationships with Colleagues',
+      'Understand How to Develop Working Relationships with Colleagues'
     ],
-    whoIsThisCourseFor: [],
+    whoIsThisCourseFor: [
+      'It is suitable for those wanting to embark on a career in management and who wish to achieve a qualification to support their work',
+      'It is ideal for those either looking for their first management position or those already working in a team leading role who are looking for ways to enhance their knowledge and skills',
+    ],
   },
   {
     id: 6,
@@ -185,14 +231,7 @@ export const data: Array<DescriptiveCourse> = [
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
     price: '£3500',
-    contents: [],
-    courseBenefits: [
-      'Accredited Level 2 qualification',
-      'Increment in competency level that matters for employer',
-      'Enhancement in personal and professional development',
-      'Importance of clear communication',
-    ],
-    courseObjectives: [
+    contents: [
       'Principles of team leading',
       'Understanding business',
       'Understanding how to communicate work-related information',
@@ -202,7 +241,25 @@ export const data: Array<DescriptiveCourse> = [
       'Introduction to mentoring',
       'Understanding personal development',
     ],
-    whoIsThisCourseFor: [],
+    courseBenefits: [
+      'Accredited Level 2 qualification',
+      'Increment in competency level that matters for employer',
+      'Enhancement in personal and professional development',
+      'Importance of clear communication',
+    ],
+    courseObjectives: [
+      "Develop essential leadership skills necessary for effectively guiding and managing a team.",
+      "Gain a deep understanding of the principles and practices of team leadership within organizational contexts.",
+      "Enhance communication skills to effectively convey work-related information and instructions to team members.",
+      "Acquire knowledge of customer service principles and techniques for resolving issues and ensuring customer satisfaction.",
+      "Learn strategies for developing and maintaining positive working relationships with colleagues and team members.",
+      "Introduction to coaching methodologies to support team members in achieving their goals and improving performance.",
+      "Introduction to mentoring techniques for providing guidance and support to team members in their professional development."
+    ],
+    whoIsThisCourseFor: [
+      'It is suitable for those wanting to embark on a career in management and who wish to achieve a qualification to support their work',
+      'It is ideal for those either looking for their first management position or those already working in a team leading role who are looking for ways to enhance their knowledge and skills',
+    ],
   },
   {
     id: 7,
