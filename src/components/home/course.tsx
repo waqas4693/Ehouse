@@ -346,10 +346,9 @@ const HomeCourse: FC = () => {
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
               {data.map(item => (
-                <Link href={`/course-detailed-page/${item.id}`}>
+                <Link key={String(item.id)} href={`/course-detailed-page/${item.id}`}>
                   <a style={{ textDecoration: 'none', color: 'inherit' }}>
                     <CourseCardItem
-                      key={String(item.id)}
                       item={item}
                       onRegisterClick={() => handleSelectCourse(item.title)}
                     />
