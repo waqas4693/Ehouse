@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
 import { iconButtonClasses } from '@mui/material/IconButton'
-import { Course } from '@/interfaces/course'
+import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 
 interface Props {
-  item: Course,
+  item: DescriptiveCourse,
   onRegisterClick: (courseName: string) => void;
 }
 

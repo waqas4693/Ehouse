@@ -16,9 +16,9 @@ import axios from 'axios';
 import { useTheme, styled } from '@mui/material/styles';
 import { IconButton, useMediaQuery } from '@mui/material';
 
-import { data } from './course.data';
+import { data } from '../courses/all-english-courses.data'
 import { CourseCardItem } from '@/components/course';
-
+import Link from 'next/link';
 interface SliderArrowArrow {
   onClick?: () => void;
   type: 'next' | 'prev';
@@ -346,11 +346,15 @@ const HomeCourse: FC = () => {
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
               {data.map(item => (
-                <CourseCardItem
-                  key={String(item.id)}
-                  item={item}
-                  onRegisterClick={() => handleSelectCourse(item.title)}
-                />
+                <Link href={`/course-detailed-page/${item.id}`}>
+                  <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <CourseCardItem
+                      key={String(item.id)}
+                      item={item}
+                      onRegisterClick={() => handleSelectCourse(item.title)}
+                    />
+                  </a>
+                </Link>
               ))}
             </Slider>
           </Grid>

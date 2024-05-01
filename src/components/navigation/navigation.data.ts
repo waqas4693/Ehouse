@@ -25,7 +25,6 @@ export const navigations: Navigation[] = [
     path: '',
     dropdownItems: [
       { path: '/policies/participant-attendance-policy', label: 'Student / Participant Attendance And Punctuality Policy' },
-      { path: '/course-detailed-page', label: 'Details Page' },
       { path: '/policies/refund-policy', label: 'Refund Policy' },
       { path: '/policies/synopsis-of-policies', label: 'Synopsis Of Policies' },
       { path: '/policies/terms-and-conditions', label: 'Terms And Conditions' },

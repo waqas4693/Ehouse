@@ -48,23 +48,23 @@ const usefulLinkItems: Array<Navigation> = [
 const quickLinkItems: Array<Navigation> = [
   {
     label: 'Accreditations And Affiliations',
-    path: ''
+    path: 'accreditations-and-affiliations',
   },
   {
     label: 'Courses',
-    path: ''
+    path: '/courses'
   },
   {
     label: 'Pay By Bank Transfer',
-    path: ''
+    path: '/pay-by-bank-transfer'
   },
   {
     label: 'Terms & Conditions',
-    path: ''
+    path: '/terms-and-conditions'
   },
   {
     label: 'Vacancies',
-    path: '',
+    path: '/vacancies',
   }
 ]
 

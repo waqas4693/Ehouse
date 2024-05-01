@@ -64,8 +64,6 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
     >
       
       {/* eslint-disable-next-line */}
-      {item.name === 'Instagram' && <InstagramIcon />}
-      {item.name === 'Facebook' && <FacebookIcon />}
       {item.name === 'Linkedin' && <LinkedInIcon />}
       {item.name === 'Youtube' && <YoutubeIcon />}
       {item.name === 'Pinterest' && <PinterestIcon />}
