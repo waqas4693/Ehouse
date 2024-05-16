@@ -12,7 +12,7 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
-  const handleRegisterClick = (e: React.MouseEvent) => {
+  const handleRegisterClick = (e: React.MouseEvent) : void => {
     e.stopPropagation();
     onRegisterClick(item.title);
   };

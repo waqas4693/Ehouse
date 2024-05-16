@@ -1,5 +1,5 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
-import Slider, { Settings } from 'react-slick'
+import { Settings } from 'react-slick'
 import { Grid } from '@mui/material'
 import { useTheme, styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
@@ -90,21 +90,6 @@ const AllEnglishCourses: FC = () => {
   const handleClose = (): void => setOpen(false)
   const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' })
   const [selectedCourse, setSelectedCourse] = useState<string>('')
-
-  const sliderConfig: Settings = {
-    infinite: true,
-    // autoplay: true,
-    speed: 300,
-    slidesToShow: matchMobileView ? 1 : 3,
-    slidesToScroll: 1,
-    prevArrow: <SliderArrow type='prev' />,
-    nextArrow: <SliderArrow type='next' />,
-    dots: true,
-    appendDots: dots => <StyledDots>{dots}</StyledDots>,
-    customPaging: () => (
-      <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
-    ),
-  }
 
   const [formData, setFormData] = useState({
     firstName: '',

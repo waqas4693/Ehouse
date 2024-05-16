@@ -400,7 +400,7 @@
 
 
 
-import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
+import React, { FC, useState, ChangeEvent } from 'react'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -440,9 +440,8 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props,
 
 const ContactForm: FC = () => {
     const { breakpoints } = useTheme()
-    const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
-    const { register, handleSubmit, setValue, formState: { errors } } = useForm<FormData>();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const onSubmit = async (data: FormData): Promise<void> => {
         try {
             const response = await axios.post('https://admin.ehouse.org.uk/contact-us-form.php', data)
@@ -463,7 +462,6 @@ const ContactForm: FC = () => {
     };
 
     const [open, setOpen] = React.useState(false)
-    const handleOpen = (): void => setOpen(true)
     const handleClose = (): void => setOpen(false)
     const [snackbar, setSnackbar] = useState({ open: false, severity: 'success', message: '' })
 

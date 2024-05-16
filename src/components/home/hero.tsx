@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid'
 import Link from '@mui/material/Link'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 
 const HomeHero: FC = () => {
