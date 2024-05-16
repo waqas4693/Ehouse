@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
-import YoutubeIcon from '@mui/icons-material/Youtube'
+import YouTubeIcon from '@mui/icons-material/YouTube'
 import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer: FC = () => {
@@ -186,7 +186,7 @@ const Footer: FC = () => {
                 mr: 3,
               }}
             >
-              <YoutubeIcon />
+              <YouTubeIcon />
             </Box>
             <Box
               component='li'

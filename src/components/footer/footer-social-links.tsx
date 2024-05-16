@@ -1,11 +1,9 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import YoutubeIcon from '@mui/icons-material/YouTube'
 import PinterestIcon from '@mui/icons-material/Pinterest'
+import YouTubeIcon from '@mui/icons-material/YouTube'
 import { SocialLink } from '@/interfaces/social-link'
 
 export const socialLinks: SocialLink[] = [
@@ -65,7 +63,7 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
       
       {/* eslint-disable-next-line */}
       {item.name === 'Linkedin' && <LinkedInIcon />}
-      {item.name === 'Youtube' && <YoutubeIcon />}
+      {item.name === 'Youtube' && <YouTubeIcon />}
       {item.name === 'Pinterest' && <PinterestIcon />}
     </Link>
   </Box>
