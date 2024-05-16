@@ -25,8 +25,9 @@ const AccreditationsAndAffiliations: FC = () => {
           </Box>
         </Grid>
       </Grid>
+
       <Grid container spacing={3}>
-        <Grid item xs={12} md={4}>
+        <Grid key="image1" item xs={12} md={4}> {/* Added key prop */}
           <img src='/images/institutes/2.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -42,8 +43,10 @@ const AccreditationsAndAffiliations: FC = () => {
             </Typography>
           </Box>
         </Grid>
+      </Grid>
 
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={3}>
+        <Grid key="image2" item xs={12} md={4}> {/* Added key prop */}
           <img src='/images/institutes/1.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -51,8 +54,10 @@ const AccreditationsAndAffiliations: FC = () => {
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'></Typography>
           </Box>
         </Grid>
+      </Grid>
 
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={3}>
+        <Grid key="image3" item xs={12} md={4}>
           <img src='/images/institutes/3.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -60,31 +65,32 @@ const AccreditationsAndAffiliations: FC = () => {
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
               Education House Leeds is registered by the prestigious UK’s independent authority, ICO.
             </Typography>
-
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
               ICO was established to uphold information rights in the public interest, promoting openness by public
               bodies and data privacy for individuals.
             </Typography>
           </Box>
         </Grid>
+      </Grid>
 
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={3}>
+        <Grid key="image4" item xs={12} md={4}> {/* Added key prop */}
           <img src='/images/institutes/4.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
           <Box sx={{ mb: 2 }}>
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
               Education House Leeds is registered as Verified Learning Providers in the UK by the foremost UKRLP.
-              <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
-                The United Kingdom Register of Learning Providers (UKRLP) is a Government Register of Verified Learning
-                Providers in the UK and is used by government departments agencies such as the Learning and Skills
-                Council, Careers Advice Service, HESA, HEFCE and UCAS, and by learners and employers.
-              </Typography>
-              <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
-                The UKRLP has grown its registration base by verifying each training provider against a recognised
-                external source and allocating them a unique UK Provider Reference Number (UKPRN) which is used to share
-                information with the UKRLP partner agencies.{' '}
-              </Typography>
+            </Typography>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
+              The United Kingdom Register of Learning Providers (UKRLP) is a Government Register of Verified Learning
+              Providers in the UK and is used by government departments agencies such as the Learning and Skills
+              Council, Careers Advice Service, HESA, HEFCE and UCAS, and by learners and employers.
+            </Typography>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
+              The UKRLP has grown its registration base by verifying each training provider against a recognised
+              external source and allocating them a unique UK Provider Reference Number (UKPRN) which is used to share
+              information with the UKRLP partner agencies.
             </Typography>
           </Box>
         </Grid>

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import YoutubeIcon from '@mui/icons-material/Youtube'
 import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer: FC = () => {
@@ -63,8 +64,17 @@ const Footer: FC = () => {
         }}
       >
         <ul>
-          <li>eduSupplements</li>
-          <li>Student Login</li>
+          <li>
+            <Link href="https://www.edusupplements.co.uk" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: 'none', color: 'inherit' }}>
+              eduSupplements
+            </Link>
+          </li>
+
+          <li>
+            <Link href="https://student.ehouse.org.uk" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: 'none', color: 'inherit' }}>
+              Student Login
+            </Link>
+          </li>
         </ul>
       </Box>
       <hr
@@ -176,6 +186,56 @@ const Footer: FC = () => {
                 mr: 3,
               }}
             >
+              <YoutubeIcon />
+            </Box>
+            <Box
+              component='li'
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 3,
+              }}
+            >
+              <Link
+                target='_blank'
+                sx={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+                href={'https://www.youtube.com/channel/UC-CyIMZ3GcC6C4U8ihkUptQ'}
+              >
+                eduSupplements
+              </Link>
+            </Box>
+            <Box
+              component='li'
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 3,
+              }}
+            >
+              <Link
+                target='_blank'
+                sx={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+                href={'https://www.youtube.com/@educationhouseleeds5792'}
+              >
+                Education House Leeds
+              </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={12} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Box
+              component='li'
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 3,
+              }}
+            >
               <InstagramIcon />
             </Box>
             <Box
@@ -233,6 +293,25 @@ const Footer: FC = () => {
                 href={'https://www.instagram.com/drivingtheorytestleeds'}
               >
                 Driving Theory Test
+              </Link>
+            </Box>
+            <Box
+              component='li'
+              sx={{
+                display: 'inline-block',
+                color: 'primary.contrastText',
+                mr: 3,
+              }}
+            >
+              <Link
+                target='_blank'
+                sx={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+                href={'https://www.instagram.com/ehouseint/'}
+              >
+                eHouse International
               </Link>
             </Box>
           </Grid>

@@ -12,7 +12,10 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
-
+  const handleRegisterClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onRegisterClick(item.title);
+  };
   return (
     <Box
       sx={{
@@ -57,11 +60,11 @@ const CourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
         </Box>
         <Box sx={{ px: 2 }}>
           <Typography variant='h5' sx={{ fontSize: '14px', fontWeight: 500 }}>
-            {'£' + item.price}
+            {item.price}
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 2, py: '20px' }}>
-          <Button variant='contained' onClick={() => onRegisterClick(item.title)} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
+          <Button variant='contained' onClick={handleRegisterClick} color='secondary' sx={{ flex: 1, borderRadius: '8px' }}>
             Register Now
           </Button>
         </Box>

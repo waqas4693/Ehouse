@@ -9,7 +9,7 @@ const itemData = [
     {
         img: '/images/institutes/1.jpg',
         title: 'Traning Qualifications Uk',
-        link: ''
+        link: 'accreditations-and-affiliations'
     },
     {
         img: '/images/institutes/2.jpg',
@@ -19,12 +19,12 @@ const itemData = [
     {
         img: '/images/institutes/3.jpg',
         title: 'ico',
-        link: ''
+        link: 'accreditations-and-affiliations'
     },
     {
         img: '/images/institutes/4.jpg',
         title: 'ukrlp',
-        link: ''
+        link: 'accreditations-and-affiliations'
     }
 ];
 

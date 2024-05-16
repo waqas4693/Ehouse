@@ -48,7 +48,7 @@ const usefulLinkItems: Array<Navigation> = [
 const quickLinkItems: Array<Navigation> = [
   {
     label: 'Accreditations And Affiliations',
-    path: 'accreditations-and-affiliations',
+    path: '/accreditations-and-affiliations',
   },
   {
     label: 'Courses',
