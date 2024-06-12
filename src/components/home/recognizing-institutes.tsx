@@ -6,11 +6,11 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 const itemData = [
-    {
-        img: '/images/institutes/1.jpg',
-        title: 'Traning Qualifications Uk',
-        link: 'accreditations-and-affiliations'
-    },
+    // {
+    //     img: '/images/institutes/1.jpg',
+    //     title: 'Traning Qualifications Uk',
+    //     link: 'accreditations-and-affiliations'
+    // },
     {
         img: '/images/institutes/2.jpg',
         title: 'BAC',

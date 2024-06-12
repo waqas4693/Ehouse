@@ -45,8 +45,8 @@ const AccreditationsAndAffiliations: FC = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3}>
-        <Grid key="image2" item xs={12} md={4}> {/* Added key prop */}
+      {/* <Grid container spacing={3}>
+        <Grid key="image2" item xs={12} md={4}>
           <img src='/images/institutes/1.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -54,7 +54,7 @@ const AccreditationsAndAffiliations: FC = () => {
             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'></Typography>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
 
       <Grid container spacing={3}>
         <Grid key="image3" item xs={12} md={4}>
