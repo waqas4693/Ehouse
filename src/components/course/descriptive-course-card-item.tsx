@@ -1,9 +1,10 @@
 import React, { FC, useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 import { iconButtonClasses } from '@mui/material/IconButton'
 import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 
@@ -48,11 +49,13 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                         style={{ borderRadius: '16px 16px 0 0' }}
                     />
                 </div>
-                <Box sx={{ px: 2 }}>
-                    <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600, color: isHovered ? 'secondary.main' : 'inherit' }}>
-                        {item.title}
-                    </Typography>
-                </Box>
+                <Link href={`/course-detailed-page/${item.id}`}>
+                    <Box sx={{ px: 2 }}>
+                        <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600, color: isHovered ? 'secondary.main' : 'inherit' }}>
+                            {item.title}
+                        </Typography>
+                    </Box>
+                </Link>
                 <Box sx={{ px: 2 }}>
                     <Typography variant='h5' sx={{ fontSize: '16px', fontWeight: 500, color: 'text.secondary' }}>
                         {item.duration}

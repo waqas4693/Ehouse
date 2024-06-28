@@ -1,5 +1,4 @@
 import React, { FC, useState, ChangeEvent, FormEvent } from 'react'
-import { Settings } from 'react-slick'
 import { Grid } from '@mui/material'
 import { useTheme, styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
@@ -17,7 +16,6 @@ import Snackbar from '@mui/material/Snackbar'
 import Checkbox from '@mui/material/Checkbox'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import axios from 'axios'
-import Link from 'next/link'
 import { data } from './all-english-courses.data'
 
 interface SliderArrowArrow {
@@ -167,7 +165,6 @@ const AllEnglishCourses: FC = () => {
         <Grid spacing={2} direction="row" alignItems="flex-start" container component="section">
           {data.map(item => (
             <Grid item xs={12} sm={6} md={4} key={String(item.id)}>
-              <Link href={`/course-detailed-page/${item.id}`}>
                 <a style={{ textDecoration: 'none', color: 'inherit' }}>
                   <DescriptiveCourseCardItem
                     key={String(item.id)}
@@ -175,7 +172,6 @@ const AllEnglishCourses: FC = () => {
                     onRegisterClick={() => handleSelectCourse(item.title)}
                   />
                 </a>
-              </Link>
             </Grid>
           ))}
         </Grid>
