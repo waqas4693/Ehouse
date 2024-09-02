@@ -530,7 +530,7 @@ const ContactForm: FC = () => {
                         <Box sx={{ mb: 3, display: 'flex', alignItems: 'center' }}>
                             <img src="/images/icons/location.svg" alt="Image" style={{ width: '30px', marginRight: '15px' }} />
                             <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
-                                5 - 11 Hares ViewLeeds, LS8 4LH, UK
+                                5 - 11 Hares View, Leeds, LS8 4LH, UK
                             </Typography>
                         </Box>
 
