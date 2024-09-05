@@ -12,7 +12,7 @@ export const data: Array<DescriptiveCourse> = [
     suitableFor: 'Improve language skills for various purposes',
     level: 'Certificate',
     registerationFee: '£300 (Non-refundable)',
-    price: '£5500',
+    price: '£5000',
     contents: [
       'Comprehensive language instruction covering grammar, vocabulary, and pronunciation.',
       'Interactive activities and exercises to practice listening and speaking skills.',
