@@ -263,7 +263,7 @@ export const data: Array<DescriptiveCourse> = [
   },
   {
     id: 7,
-    cover: '/images/courses/course-7.png',
+    cover: '/images/courses/course-11.png',
     title: 'OTHM Level 3 Diploma',
     duration: '1 Year',
     description: 'The OTHM Level 3 Diploma in Business Management is an Ofqual-regulated qualification designed to provide learners with a strong foundation in the principles of business and management. This course is perfect for those looking to kickstart their career in business or management, offering insights into the core functions of business operations and management practices. By the end of this course, learners will be equipped with the knowledge to handle various business challenges and progress to higher academic qualifications or employment in business management roles.',
