@@ -161,7 +161,7 @@ export const data: Array<DescriptiveCourse> = [
     price: '£3500',
     contents: [
       'Learn to deliver excellent customer service',
-      'Increase awareness of understanding and meeting customers’ needs',
+      'Increase awareness of understanding and meeting  needs',
       'Giving a great customer experience',
       'Learn from feedback and promote products and services',
     ],
@@ -264,6 +264,47 @@ export const data: Array<DescriptiveCourse> = [
   {
     id: 7,
     cover: '/images/courses/course-7.png',
+    title: 'OTHM Level 3 Diploma',
+    duration: '1 Year',
+    description: 'The OTHM Level 3 Diploma in Business Management is an Ofqual-regulated qualification designed to provide learners with a strong foundation in the principles of business and management. This course is perfect for those looking to kickstart their career in business or management, offering insights into the core functions of business operations and management practices. By the end of this course, learners will be equipped with the knowledge to handle various business challenges and progress to higher academic qualifications or employment in business management roles.',
+    lessonsPerWeek: 'TBA',
+    hoursPerWeek: '',
+    classTime: '',
+    suitableFor: 'Individuals looking to start a career in business or management',
+    level: 'Level 3',
+    registerationFee: '',
+    price: 'Contact for pricing',
+    contents: [
+      'Communication for Business',
+      'The Business Environment',
+      'People Management',
+      'Customer Service',
+      'Finance in Business',
+      'Marketing'
+    ],
+    courseBenefits: [
+      'Flexible Learning: Study at your convenience with flexible course delivery options.',
+      'Expert Support: Our dedicated tutors and support team are here to guide you throughout your learning journey.',
+      'Recognized Qualification: The course is regulated by Ofqual, ensuring a globally recognized certification.',
+      'Career Advancement: This qualification opens doors to entry-level management roles or further academic study.'
+    ],
+    courseObjectives: [
+      'Provide a strong foundation in business and management principles',
+      'Develop essential business communication skills',
+      'Understand internal and external factors affecting business',
+      'Explore leadership styles and management strategies',
+      'Learn financial management and marketing skills'
+    ],
+    whoIsThisCourseFor: [
+      'Individuals aged 16 years or above',
+      'Those looking to start a career in business or management',
+      'Students seeking a foundation for further study in business-related fields',
+      'Professionals aiming to enhance their business management skills'
+    ],
+  },
+  {
+    id: 8,
+    cover: '/images/courses/course-7.png',
     title: 'A2 Test',
     duration: '4 Weeks',
     description: '',
@@ -306,7 +347,7 @@ export const data: Array<DescriptiveCourse> = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     cover: '/images/courses/course-8.png',
     title: 'Driving Theory Test',
     duration: '4 Months',
@@ -347,7 +388,7 @@ export const data: Array<DescriptiveCourse> = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     cover: '/images/courses/course-9.png',
     title: 'Life In The Uk Test',
     duration: '4 Months',
@@ -387,7 +428,7 @@ export const data: Array<DescriptiveCourse> = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     cover: '/images/courses/course-10.png',
     title: 'B1 Test',
     duration: '4 Weeks',

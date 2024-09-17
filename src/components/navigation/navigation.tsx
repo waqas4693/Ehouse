@@ -1,8 +1,11 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
-
 import { navigations } from './navigation.data';
+
+interface OpenState {
+  [index: number]: boolean;
+}
 
 const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items }) => (
   <Box
@@ -40,19 +43,19 @@ const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items
 );
 
 const Navigation: FC = () => {
-  const [isClient, setIsClient] = useState(false);
+  const [isOpen, setIsOpen] = useState<OpenState>({});
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const handleToggle = (index: number) => {
+    setIsOpen((prevOpen) => ({...prevOpen, [index]:!prevOpen[index] }));
+  };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
-      {navigations.map(({ path: destination, label, dropdownItems }) => (
+      {navigations.map(({ path: destination, label, dropdownItems }, index) => (
         <Box
           key={destination}
           sx={{
-            position: 'relative',
+            position: 'elative',
             cursor: 'pointer',
             fontWeight: 600,
             display: 'inline-flex',
@@ -61,7 +64,7 @@ const Navigation: FC = () => {
             px: { xs: 0, md: 3 },
             mb: { xs: 3, md: 0 },
             fontSize: { xs: '1.2rem', md: 'inherit' },
-            ...(destination === '/' && {
+           ...(destination === '/' && {
               color: 'primary.main',
             }),
             '& a': {
@@ -70,21 +73,62 @@ const Navigation: FC = () => {
               transition: 'color 0.3s',
             },
             '&:hover a': {
-              color: 'secondary.main',
-            },
-            '&:hover > div': {
-              display: dropdownItems ? 'block' : 'none',
+              color: 'econdary.main',
             },
           }}
         >
-          {isClient ? (
-            <Link href={destination} passHref>
-              <a>{label}</a>
-            </Link>
-          ) : (
-            <div></div>
+          {label}
+          {dropdownItems && (
+            <Box
+              sx={{
+                position: 'absolute',
+                right: 0,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                cursor: 'pointer',
+              }}
+              onClick={() => handleToggle(index)}
+            >
+              {isOpen[index]? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7 7-7"
+                  />
+                </svg>
+              )}
+            </Box>
           )}
-          {dropdownItems && isClient && <Dropdown items={dropdownItems} />}
+          {dropdownItems && (
+            <Box
+              sx={{
+                display: isOpen[index]? 'block' : 'none',
+              }}
+            >
+              <Dropdown items={dropdownItems} />
+            </Box>
+          )}
         </Box>
       ))}
     </Box>

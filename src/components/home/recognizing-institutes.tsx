@@ -1,7 +1,5 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-
-import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
@@ -24,6 +22,11 @@ const itemData = [
     {
         img: '/images/institutes/4.jpg',
         title: 'ukrlp',
+        link: 'accreditations-and-affiliations'
+    },
+    {
+        img: '/images/institutes/5.jpg',
+        title: 'othm',
         link: 'accreditations-and-affiliations'
     }
 ];

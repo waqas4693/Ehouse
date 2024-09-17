@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
 const AccreditationsAndAffiliations: FC = () => {
   return (
@@ -27,7 +27,9 @@ const AccreditationsAndAffiliations: FC = () => {
       </Grid>
 
       <Grid container spacing={3}>
-        <Grid key="image1" item xs={12} md={4}> {/* Added key prop */}
+        <Grid key='image1' item xs={12} md={4}>
+          {' '}
+          {/* Added key prop */}
           <img src='/images/institutes/2.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -57,7 +59,7 @@ const AccreditationsAndAffiliations: FC = () => {
       </Grid> */}
 
       <Grid container spacing={3}>
-        <Grid key="image3" item xs={12} md={4}>
+        <Grid key='image3' item xs={12} md={4}>
           <img src='/images/institutes/3.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -74,7 +76,9 @@ const AccreditationsAndAffiliations: FC = () => {
       </Grid>
 
       <Grid container spacing={3}>
-        <Grid key="image4" item xs={12} md={4}> {/* Added key prop */}
+        <Grid key='image4' item xs={12} md={4}>
+          {' '}
+          {/* Added key prop */}
           <img src='/images/institutes/4.jpg' alt='Image' style={{ width: '100%' }} />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -91,6 +95,27 @@ const AccreditationsAndAffiliations: FC = () => {
               The UKRLP has grown its registration base by verifying each training provider against a recognised
               external source and allocating them a unique UK Provider Reference Number (UKPRN) which is used to share
               information with the UKRLP partner agencies.
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={3}>
+        <Grid key='image5' item xs={12} md={4}>
+          <img src='/images/institutes/5.jpg' alt='Image' style={{ width: '100%' }} />
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Box sx={{ mb: 2 }}>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
+              Education House Leeds is accredited by the Organisation for Tourism and Hospitality Management (OTHM).
+              This prestigious accreditation allows us to deliver high-quality training and qualifications. OTHM’s
+              rigorous accreditation process ensures that our teaching, course structure, and assessments meet the
+              highest standards. As an Ofqual-regulated awarding body, OTHM guarantees that the qualifications learners
+              receive are recognized both nationally and internationally.
+            </Typography>
+            <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant='body1'>
+              This accreditation reassures our students and stakeholders that our institution provides
+              industry-recognized qualifications, equipping learners with the skills needed to excel in their careers.
             </Typography>
           </Box>
         </Grid>
