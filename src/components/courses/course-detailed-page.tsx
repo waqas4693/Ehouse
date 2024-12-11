@@ -75,6 +75,13 @@ const CourseDetails: FC = () => {
                 <span style={{ fontWeight: 600, fontSize: '16px', marginRight: '8px' }}>Course Fee</span>
                 <span style={{ fontSize: '16px', color: '#909090' }}>{detail?.price}</span>
               </li>
+              {detail?.deliveryMethod && (
+                <li>
+                  <img src="/images/red-arrow.svg" alt="Arrow" style={{ marginRight: '8px' }} />
+                  <span style={{ fontWeight: 600, fontSize: '16px', marginRight: '8px' }}>Delivery Method</span>
+                  <span style={{ fontSize: '16px', color: '#909090' }}>{detail?.deliveryMethod}</span>
+                </li>
+              )}
             </ul>
           </Paper>
         </Grid>

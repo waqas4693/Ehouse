@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Box from '@mui/material/Box';
 import Link from 'next/link';
+import Box from '@mui/material/Box';
 import { navigations } from './navigation.data';
 
 const Dropdown: FC<{ items: typeof navigations[0]['dropdownItems'] }> = ({ items }) => (

@@ -51,7 +51,16 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                 </div>
                 <Link href={`/course-detailed-page/${item.id}`}>
                     <Box sx={{ px: 2 }}>
-                        <Typography variant='h5' sx={{ height: '80px', fontSize: '28px', fontWeight: 600, color: isHovered ? 'secondary.main' : 'inherit' }}>
+                        <Typography
+                            variant='h5'
+                            sx={{
+                                height: '80px',
+                                fontSize: '28px',
+                                fontWeight: 600,
+                                color: isHovered ? 'secondary.main' : 'inherit',
+                                cursor: 'pointer'
+                            }}
+                        >
                             {item.title}
                         </Typography>
                     </Box>

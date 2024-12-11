@@ -15,4 +15,5 @@ export interface DescriptiveCourse {
     courseBenefits: string[]
     courseObjectives: string[]
     whoIsThisCourseFor: string[]
+    deliveryMethod: string
   }

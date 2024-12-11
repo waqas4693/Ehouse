@@ -46,6 +46,7 @@ export const data: Array<DescriptiveCourse> = [
       'Tourists or travelers aiming to develop practical language skills for navigating English-speaking destinations.',
       'Anyone interested in expanding their language abilities for personal enrichment and cultural appreciation.',
     ],
+    deliveryMethod: 'Face To Face',
   },
   {
     id: 2,
@@ -94,6 +95,7 @@ export const data: Array<DescriptiveCourse> = [
       'Anyone planning to take the IELTS exam and in need of structured preparation and guidance.',
       'Non-native English speakers who want to validate their English language skills through a globally recognized certification like IELTS.',
     ],
+    deliveryMethod: 'Face To Face',
   },
   {
     id: 3,
@@ -144,6 +146,7 @@ export const data: Array<DescriptiveCourse> = [
       'Students pursuing business-related studies or planning to enter the workforce in business environments.',
       'Individuals preparing for job interviews or seeking career advancement opportunities in English-speaking workplaces.',
     ],
+    deliveryMethod: 'Face To Face',
   },
   {
     id: 4,
@@ -177,6 +180,7 @@ export const data: Array<DescriptiveCourse> = [
       'Who wish to achieve a qualification to move up in their career',
       'For those looking for customer service position in any business',
     ],
+    deliveryMethod: '',
   },
   {
     id: 5,
@@ -216,6 +220,7 @@ export const data: Array<DescriptiveCourse> = [
       'It is suitable for those wanting to embark on a career in management and who wish to achieve a qualification to support their work',
       'It is ideal for those either looking for their first management position or those already working in a team leading role who are looking for ways to enhance their knowledge and skills',
     ],
+    deliveryMethod: '',
   },
   {
     id: 6,
@@ -260,6 +265,7 @@ export const data: Array<DescriptiveCourse> = [
       'It is suitable for those wanting to embark on a career in management and who wish to achieve a qualification to support their work',
       'It is ideal for those either looking for their first management position or those already working in a team leading role who are looking for ways to enhance their knowledge and skills',
     ],
+    deliveryMethod: '',
   },
   {
     id: 7,
@@ -301,6 +307,7 @@ export const data: Array<DescriptiveCourse> = [
       'Students seeking a foundation for further study in business-related fields',
       'Professionals aiming to enhance their business management skills'
     ],
+    deliveryMethod: '',
   },
   {
     id: 8,
@@ -340,11 +347,11 @@ export const data: Array<DescriptiveCourse> = [
       'To facilitate access to additional support services, including B1 test booking assistance and immigration-related consultations.',
     ],
     whoIsThisCourseFor: [
-      'Individuals applying for Permanent Residence in the UK and required to pass the A2 Test as part of the application process.',
-      'Applicants seeking to obtain a B1 CEFR level English qualification for immigration purposes.',
+      'Individuals planning to settle in the UK or apply for British citizenship.',
       'Candidates looking for structured training and support to prepare for the A2 Test and improve their English language proficiency.',
       'International applicants requiring assistance with language support and immigration-related consultations.',
     ],
+    deliveryMethod: '',
   },
   {
     id: 9,
@@ -386,6 +393,7 @@ export const data: Array<DescriptiveCourse> = [
       'International applicants seeking to drive in the UK who may benefit from multi-language instruction and comprehensive test preparation services.',
       'Students looking for a structured and efficient training program with flexible scheduling options and additional support services.',
     ],
+    deliveryMethod: '',
   },
   {
     id: 10,
@@ -426,6 +434,7 @@ export const data: Array<DescriptiveCourse> = [
       'International applicants seeking comprehensive test preparation services, including multi-language instruction and practice sessions.',
       'Students looking for a structured and efficient training program with flexible scheduling options and additional support services.',
     ],
+    deliveryMethod: '',
   },
   {
     id: 11,
@@ -470,5 +479,6 @@ export const data: Array<DescriptiveCourse> = [
       'Candidates looking for structured training and support to prepare for the B1 Test and improve their English language proficiency.',
       'International applicants requiring assistance with language support and immigration-related consultations.',
     ],
+    deliveryMethod: '',
   },
 ]
