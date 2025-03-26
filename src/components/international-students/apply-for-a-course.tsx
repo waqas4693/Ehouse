@@ -188,7 +188,7 @@ const ApplyForACourse: FC = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {data.slice(0, 6).map((row, rowIndex) => (
+                {data.slice(0, 7).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 500, color: 'secondary.main' }}>
                       <Link href={`/course-detailed-page/${row.id}`}>
@@ -256,7 +256,7 @@ const ApplyForACourse: FC = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {data.slice(6, 10).map((row, rowIndex) => (
+                {data.slice(7, 10).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
 
                     <TableCell key={rowIndex} sx={{ fontSize: '14px', fontWeight: 700, color: 'secondary.main' }}>

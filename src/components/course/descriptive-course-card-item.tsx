@@ -102,26 +102,30 @@ const DescriptiveCourseCardItem: FC<Props> = ({ item, onRegisterClick }) => {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={6}>
-                            <Box sx={{ p: 2 }}>
-                                <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
-                                    Hours Per Week
-                                </Typography>
-                                <Typography variant="body1" sx={{ color: '#909090' }}>
-                                    {item.hoursPerWeek}
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Box sx={{ p: 2 }}>
-                                <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
-                                    Class Time
-                                </Typography>
-                                <Typography variant="body1" sx={{ color: '#909090' }}>
-                                    {item.classTime}
-                                </Typography>
-                            </Box>
-                        </Grid>
+                        {item.id !== 7 && (
+                            <>
+                                <Grid item xs={6}>
+                                    <Box sx={{ p: 2 }}>
+                                        <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
+                                            Hours Per Week
+                                        </Typography>
+                                        <Typography variant="body1" sx={{ color: '#909090' }}>
+                                            {item.hoursPerWeek}
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Box sx={{ p: 2 }}>
+                                        <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
+                                            Class Time
+                                        </Typography>
+                                        <Typography variant="body1" sx={{ color: '#909090' }}>
+                                            {item.classTime}
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                            </>
+                        )}
                         <Grid item xs={6}>
                             <Box sx={{ p: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
