@@ -17,7 +17,8 @@ export const navigations: Navigation[] = [
       { path: '/international-students/arriving-in-uk', label: 'Arriving In The UK' },
       { path: '/international-students/direction-and-location', label: 'Direction And Location' },
       { path: '/international-students/accomodation', label: 'Accomodation' },
-      { path: '/international-students/uk-visa', label: 'Short Term Study Visa' }
+      { path: '/international-students/uk-visa', label: 'Short Term Study Visa' },
+      { path: '/international-students/recruitment', label: 'Recruitment' }
     ]
   },
   {

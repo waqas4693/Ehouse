@@ -1,12 +1,13 @@
-import React, { FC, useState } from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import useMediaQuery from '@mui/material/useMediaQuery'
+
+import { FC, useState } from 'react'
 import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
+import { Navigation, AuthNavigation } from '@/components/navigation'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)

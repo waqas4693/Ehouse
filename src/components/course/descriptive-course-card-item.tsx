@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import { FC, useState } from 'react'
 import { iconButtonClasses } from '@mui/material/IconButton'
 import { DescriptiveCourse } from '@/interfaces/descriptive-course'
 
