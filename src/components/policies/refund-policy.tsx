@@ -156,6 +156,9 @@ const RefundPolicy: FC = () => {
                 <li >
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Course or training fee is not transferable to any other participant.
                 </li>
+                <li >
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>In case of a refund dispute, we will make every effort to resolve the matter within 28 days.
+                </li>
               </ul>
             </Box>
           </Grid>
