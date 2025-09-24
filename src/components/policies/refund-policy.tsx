@@ -26,11 +26,11 @@ const RefundPolicy: FC = () => {
               </Typography>
             </Box>
 
-            {/* <Box sx={{ mb: 3 }}>
+            <Box sx={{ mb: 3 }}>
               <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
-                Refund Policy For Short Term Study Visa & Short-Term Study Visa
+                Refund Policy For Short Term Study Visa & Standard Visitor Visa
               </Typography>
-            </Box> */}
+            </Box>
 
             <Box sx={{ mb: 2 }}>
               <Typography
@@ -82,7 +82,7 @@ const RefundPolicy: FC = () => {
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant obtains a Visa, regardless of his / her travel or entry to UK.
                 </li>
                 <li>
-                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant / student failure to prove guanine intention of training or study.
+                  <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If participant / student failure to prove genuine intention of training or study.
                 </li>
                 <li>
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>If training is not being attended for any reason after obtaining Visa.
@@ -156,9 +156,9 @@ const RefundPolicy: FC = () => {
                 <li >
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>Course or training fee is not transferable to any other participant.
                 </li>
-                <li >
+                {/* <li >
                   <span style={{ color: 'red', fontSize: '1.7em', marginRight: '0.30em' }}>&bull; </span>In case of a refund dispute, we will make every effort to resolve the matter within 28 days.
-                </li>
+                </li> */}
               </ul>
             </Box>
           </Grid>
