@@ -26,11 +26,11 @@ const RefundPolicy: FC = () => {
               </Typography>
             </Box>
 
-            <Box sx={{ mb: 3 }}>
+            {/* <Box sx={{ mb: 3 }}>
               <Typography sx={{ lineHeight: 1.6, fontSize: '16px' }} variant="body1">
                 Refund Policy For Short Term Study Visa & Short-Term Study Visa
               </Typography>
-            </Box>
+            </Box> */}
 
             <Box sx={{ mb: 2 }}>
               <Typography
